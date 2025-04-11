@@ -1,0 +1,42 @@
+{
+	"name": "moinframe/loop",
+	"description": "Interactive feedback tool for Kirby CMS websites that allows users to add contextual comments directly on page elements",
+	"homepage": "https://github.com/moinframe/kirby-loop",
+	"license": "MIT",
+	"type": "kirby-plugin",
+	"version": "1.0.0",
+	"keywords": ["kirby", "cms", "plugin", "feedback", "comments", "review", "loop"],
+	"authors": [
+		{
+			"name": "Justus Kraft",
+			"email": "justus@moinfra.me",
+			"homepage": "https://moinfra.me"
+		}
+	],
+	"require": {
+		"getkirby/composer-installer": "^1.1",
+		"getkirby/cms": "^4.6"
+	},
+	"autoload": {
+		"psr-4": {
+			"Moinframe\\Loop\\": "src/"
+		}
+	},
+	"support": {
+		"docs": "https://moinfra.me/docs/kirby-loop",
+		"source": "https://github.com/moinframe/kirby-loop",
+		"issues": "https://github.com/moinframe/kirby-loop/issues"
+	},
+	"config": {
+		"optimize-autoloader": true,
+		"allow-plugins": {
+			"getkirby/composer-installer": true
+		}
+	},
+    "installer-name": "loop",
+	"require-dev": {
+		"phpstan/phpstan": "^2.1",
+		"phpstan/phpstan-strict-rules": "^2.0",
+		"phpstan/phpstan-deprecation-rules": "^2.0"
+	}
+}

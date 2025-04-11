@@ -1,0 +1,142 @@
+kirby-loop {
+  --color-base: var(--color-neutral-900);
+  --color-base-background: var(--color-neutral-0);
+  --color-base-background-o: oklch(1 var(--color-neutral-c) var(--color-neutral-h) / 0.95);
+
+  --color-accent-h: 900;
+  --color-accent-c: 0.18;
+  --color-accent-l: 0.75;
+  --color-accent-dark-factor: 0.4;
+  --color-accent-light-factor: 1.2;
+
+  --color-neutral-h: 900;
+  --color-neutral-c: 0;
+
+  --color-accent-light: oklch(calc(var(--color-accent-l) * var(--color-accent-light-factor)) var(--color-accent-c) var(--color-accent-h));
+  --color-accent: oklch(var(--color-accent-l) var(--color-accent-c) var(--color-accent-h));
+  --color-accent-dark: oklch(calc(var(--color-accent-l) * var(--color-accent-dark-factor)) var(--color-accent-c) var(--color-accent-h));
+
+  --color-neutral-0: oklch(1 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-100: oklch(0.95 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-200: oklch(0.9 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-300: oklch(0.7 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-400: oklch(0.6 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-1000: oklch(0.5 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-600: oklch(0.4 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-700: oklch(0.3 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-800: oklch(0.2 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-900: oklch(0.1 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-1000: oklch(0 var(--color-neutral-c) var(--color-neutral-h));
+
+  --color-success: oklch(0.65 0.15 150);
+  --color-warning: oklch(0.75 0.15 80);
+  --color-error: oklch(0.65 0.18 25);
+  --color-info: oklch(0.65 0.15 220);
+
+  --font-family: -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    sans-serif;
+
+  --line-height: 1.4;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 550;
+  --font-weight-bold: 700;
+
+  --font-size-3: clamp(1.9531rem, 1.4262rem + 1.7565vw, 3.5339rem);
+  --font-size-4: clamp(1.5625rem, 1.2503rem + 1.0408vw, 2.4992rem);
+  --font-size-5: clamp(1.25rem, 1.0775rem + 0.575vw, 1.7675rem);
+  --font-size-6: clamp(1rem, 0.9167rem + 0.2778vw, 1.25rem);
+  --font-size-7: clamp(0.8rem, 0.772rem + 0.0934vw, 0.884rem);
+  --font-size-8: clamp(0.6252rem, 0.6449rem + -0.0165vw, 0.64rem);
+
+  --border-radius-s: 0.125rem;
+  --border-radius: 0.25rem;
+  --border-radius-rounded: 4096px;
+
+  --space-2xs: clamp(0.25rem, 0.2292rem + 0.0694vw, 0.3125rem);
+  --space-xs: clamp(0.5rem, 0.4583rem + 0.1389vw, 0.625rem);
+  --space-s: clamp(1rem, 0.9167rem + 0.2778vw, 1.25rem);
+  --space-m: clamp(1.5rem, 1.375rem + 0.4167vw, 1.875rem);
+  --space-l: clamp(2rem, 1.8333rem + 0.5556vw, 2.5rem);
+  --space-2xs-xs: clamp(0.25rem, 0.125rem + 0.4167vw, 0.625rem);
+  --space-xs-s: clamp(0.5rem, 0.25rem + 0.8333vw, 1.25rem);
+  --space-s-m: clamp(1rem, 0.7083rem + 0.9722vw, 1.875rem);
+  --space-m-l: clamp(1.5rem, 1.1667rem + 1.1111vw, 2.5rem);
+  --space-s-l: clamp(1rem, 0.5rem + 1.6667vw, 2.5rem);
+
+  --loop-dialog-background: transparent;
+
+  /* Shadow tokens */
+  --shadow-xs: 0 0.1em 0.25em rgba(0, 0, 0, 0.1);
+  --shadow-s: 0 0rem 2rem rgba(0, 0, 0, 0.2);
+  --shadow-m: 0 10px 30px rgba(0, 0, 0, 0.2);
+  --shadow-l: 0 20px 40px rgba(0, 0, 0, 0.25);
+
+  /* Backdrop tokens */
+  --backdrop-overlay: rgba(0, 0, 0, 0.5);
+  --backdrop-blur: blur(4px);
+  --backdrop-panel: blur(10px);
+
+  /* Transition tokens */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+  --transition-slow: 0.4s ease;
+  --transition-transform: transform 0.2s ease;
+
+  /* Opacity tokens */
+  --opacity-subtle: 0.5;
+  --opacity-medium: 0.7;
+  --opacity-strong: 0.9;
+
+  /* Outline tokens */
+  --outline-color: var(--color-accent);
+  --outline-offset: 0.25rem;
+
+  /* Z-index tokens */
+  --z-loop-marker: 9998;
+  --z-loop-panel: 9999;
+  --z-loop-dialog: 10000;
+
+  /* Component-specific tokens */
+  --loop-glass-effect-background: var(--color-base-background-o);
+  --loop-glass-effect-backdrop: var(--backdrop-panel);
+  --loop-marker-size: 2rem;
+  --loop-marker-background: var(--color-accent);
+  --loop-marker-color: var(--color-accent-dark);
+  --loop-avatar-size: 2.5rem;
+  --loop-panel-width: 380px;
+  --loop-button-height: 2.25rem;
+  --loop-button-header-height: 3rem;
+  --loop-textarea-height: 15ch;
+  --loop-textarea-font-size: var(--font-size-7);
+  --loop-textarea-font-size-large: var(--font-size-6);
+  --loop-comment-dialog-max-width: 300px;
+  --loop-welcome-dialog-max-width: 500px;
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+  kirby-loop {
+    --color-base-background-o: oklch(0.1 var(--color-neutral-c) var(--color-neutral-h) / 0.6);
+    --color-neutral-100: oklch(0.1 var(--color-neutral-c) var(--color-neutral-h));
+    --color-neutral-100: oklch(0.2 var(--color-neutral-c) var(--color-neutral-h));
+    --color-neutral-200: oklch(0.25 var(--color-neutral-c) var(--color-neutral-h));
+    --color-neutral-300: oklch(0.3 var(--color-neutral-c) var(--color-neutral-h));
+    --color-neutral-1000: oklch(0.5 var(--color-neutral-c) var(--color-neutral-h));
+    --color-neutral-600: oklch(0.6 var(--color-neutral-c) var(--color-neutral-h));
+    --color-neutral-700: oklch(0.7 var(--color-neutral-c) var(--color-neutral-h));
+    --color-neutral-800: oklch(0.8 var(--color-neutral-c) var(--color-neutral-h));
+    --color-neutral-900: oklch(0.85 var(--color-neutral-c) var(--color-neutral-h));
+  }
+}
