@@ -172,7 +172,7 @@ Kirby::plugin('moinframe/loop', [
     'hooks' => [
         'page.render:after' => function (string $contentType, array $data, string $html, \Kirby\Cms\Page $page) {
             if ($contentType === 'html' && Options::autoInject() && Options::enabled()) {
-                $snippet = snippet('loop/app', [], true);
+                $snippet = snippet('loop/app', ['page' => $page], true);
                 // @phpstan-ignore-next-line
                 $html = str_replace('</body>', $snippet . '</body>', $html);
             }
