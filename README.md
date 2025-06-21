@@ -25,6 +25,10 @@ Kirby Loop transforms your website into a collaborative workspace where teams ca
 
 ## Quick Start
 
+> [!WARNING]
+> This plugin is currently in beta and is not yet ready for production use.
+
+
 1. **Install**: `composer require moinframe/kirby-loop`
 2. **Use**: Kirby Loop is automatically active on all pages for authenticated users
 3. **Configure**: Customize settings in `site/config/config.php` (optional)
@@ -33,10 +37,10 @@ Kirby Loop transforms your website into a collaborative workspace where teams ca
 
 Detailed documentation is available in the `docs/` folder:
 
-- **[Installation Guide](https://moinfra.me/docs/kirby-loop/01-installation)** - Complete installation instructions for all methods
+- **[Installation Guide](https://moinfra.me/docs/kirby-loop/01-installation)** - Complete installation instructions
 - **[Configuration Guide](https://moinfra.me/docs/kirby-loop/02-configuration)** - All configuration options and advanced settings
 - **[Multi-Language Support](https://moinfra.me/docs/kirby-loop/03-multi-language)** - Setup and customization for multi-language sites
-- **[API Reference](https://moinfra.me/docs/kirby-loop/04-api)** - Complete API documentation for custom implementations
+- **[API Reference](https://moinfra.me/docs/kirby-loop/04-api)** - API documentation
 
 ## Basic Configuration
 
@@ -67,14 +71,6 @@ return [
 ```
 
 See the [Configuration Guide](https://moinfra.me/docs/kirby-loop/02-configuration) for all available options.
-
-## Manual Usage
-
-If you disable auto-injection, add the snippet manually:
-
-```php
-<?php snippet('loop/app') ?>
-```
 
 ## Requirements
 
