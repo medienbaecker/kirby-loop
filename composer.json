@@ -41,7 +41,9 @@
             "getkirby/composer-installer": true
         }
     },
-    "installer-name": "loop",
+    "extra": {
+        "installer-name": "loop"
+    },
     "require-dev": {
         "phpstan/phpstan": "^2.1",
         "phpstan/phpstan-strict-rules": "^2.0",
