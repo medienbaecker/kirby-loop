@@ -1,5 +1,5 @@
 {
-    "name": "moinframe/loop",
+    "name": "moinframe/kirby-loop",
     "description": "Interactive feedback tool for Kirby CMS websites that allows users to add contextual comments directly on page elements",
     "homepage": "https://github.com/moinframe/kirby-loop",
     "license": "MIT",
