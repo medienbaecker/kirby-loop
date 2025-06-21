@@ -23,6 +23,7 @@
   const {
     position,
     language,
+    apibase,
     pageId,
     authenticated,
     "welcome-enabled": welcomeEnabled,
@@ -144,7 +145,8 @@
     const translationsData = JSON.parse(translations || "{}");
     setTranslations(translationsData);
 
-    getComments(pageId, language);
+    getComments(pageId);
+
     // Initialize guest name from session storage
     guestName.get();
 

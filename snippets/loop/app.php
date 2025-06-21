@@ -43,6 +43,7 @@ if (Options::enabled() && (Options::public() || kirby()->user() !== null)): ?>
         csrf-token="<?= csrf() ?>"
         position="<?= Options::position() ?>"
         language="<?= kirby()->language() ? kirby()->language()->code() : '' ?>"
+        apiBase="<?= kirby()->site()->url() ?>"
         pageId="<?= $page->id() ?>"
         authenticated="<?= kirby()->user() !== null ? 'true' : 'false' ?>"
         welcome-enabled="<?= Options::welcomeDialogEnabled() ? 'true' : 'false' ?>"

@@ -6,14 +6,15 @@ export const store: { comments: Comment[] } = $state({
 
 const apiPrefix = 'loop';
 const KirbyLoop = document.querySelector('kirby-loop');
-const csrfToken = KirbyLoop?.getAttribute('csrf-token');
+const csrfToken = KirbyLoop?.getAttribute('csrf-token') || '';
+const apiBase = KirbyLoop?.getAttribute('apibase') || '/';
 const headers = {
   'Content-Type': 'application/json',
   'X-CSRF-Token': csrfToken || ''
 };
 
-export const getComments = async (pageId: string, language?: string) => {
-  const url = language ? `/${language}/${apiPrefix}/comments/${pageId}` : `/${apiPrefix}/comments/${pageId}`;
+export const getComments = async (pageId: string) => {
+  const url = `${apiBase}/${apiPrefix}/comments/${pageId}`;
   const response = await fetch(url, {
     headers
   });
@@ -22,7 +23,7 @@ export const getComments = async (pageId: string, language?: string) => {
 }
 
 export const addComment = async (comment: CommentPayload) => {
-  const url = comment.lang ? `/${comment.lang}/${apiPrefix}/comment/new` : `/${apiPrefix}/comment/new`;
+  const url = `${apiBase}/${apiPrefix}/comment/new`;
   const response = await fetch(url, {
     method: 'POST',
     headers,
@@ -33,7 +34,7 @@ export const addComment = async (comment: CommentPayload) => {
 }
 
 export const resolveComment = async (comment: Comment) => {
-  const url = comment.lang ? `/${comment.lang}/${apiPrefix}/comment/resolve` : `/${apiPrefix}/comment/resolve`;
+  const url = `${apiBase}/${apiPrefix}/comment/resolve`;
   const response = await fetch(url, {
     method: 'POST',
     headers,
@@ -50,7 +51,7 @@ export const resolveComment = async (comment: Comment) => {
 }
 
 export const unresolveComment = async (comment: Comment) => {
-  const url = comment.lang ? `/${comment.lang}/${apiPrefix}/comment/unresolve` : `/${apiPrefix}/comment/unresolve`;
+  const url = `${apiBase}/${apiPrefix}/comment/unresolve`;
   const response = await fetch(url, {
     method: 'POST',
     headers,
@@ -67,7 +68,7 @@ export const unresolveComment = async (comment: Comment) => {
 }
 
 export const setGuestName = async (name: string) => {
-  const response = await fetch(`/${apiPrefix}/guest/name`, {
+  const response = await fetch(`${apiBase}/${apiPrefix}/guest/name`, {
     method: 'POST',
     headers,
     body: JSON.stringify({ name })
@@ -76,8 +77,7 @@ export const setGuestName = async (name: string) => {
 }
 
 export const addReply = async (reply: ReplyPayload) => {
-  const language = KirbyLoop?.getAttribute('language');
-  const url = language ? `/${language}/${apiPrefix}/comment/reply` : `/${apiPrefix}/comment/reply`;
+  const url = `${apiBase}/${apiPrefix}/comment/reply`;
   const response = await fetch(url, {
     method: 'POST',
     headers,
