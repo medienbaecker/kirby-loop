@@ -1,6 +1,6 @@
 # Kirby Loop
 
-A powerful visual loop plugin for Kirby CMS that allows users to add comments directly on web pages by clicking on elements. Perfect for client reviews, content collaboration, and team feedback workflows.
+A powerful visual feedback plugin for Kirby CMS that allows users to add comments directly on web pages by clicking on elements. Perfect for client reviews, content collaboration, and team feedback workflows.
 
 ## Features
 
