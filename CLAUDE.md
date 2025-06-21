@@ -15,7 +15,7 @@ This is a Kirby CMS plugin that provides a feedback tool for web pages. The arch
 
 **Frontend (Svelte):**
 - Svelte 5 component library in `frontend/src/`
-- Builds to UMD/ES modules in `assets/` directory
+- Builds to ES modules in `assets/` directory
 - Uses Vite for build process with custom element compilation
 - State management via Svelte stores in `frontend/src/store/`
 
@@ -42,14 +42,8 @@ vendor/bin/phpstan analyse
 # Configuration in phpstan.neon
 ```
 
-**Testing:**
-```bash
-# Run frontend tests
-cd frontend && npm test
-```
-
 **Documentation:**
-use context7 to find out about Kirby CMS
+Use context7 to find out about Kirby CMS, Documentation for this plugin is placed in the `docs/` folder.
 
 ## Key Architecture Details
 
@@ -59,21 +53,16 @@ use context7 to find out about Kirby CMS
 - Requires authenticated users (see `Middleware::auth()`)
 
 **API Endpoints:**
-- `GET /comments/{pageId}` - Get comments for a specific page
-- `POST /comment/new` - Create new comment with CSRF protection
-- `POST /comment/reply` - Reply to existing comment
-- `POST /comment/resolve` - Mark comment as resolved
-
-**Frontend Build Process:**
-- Builds to both UMD and ES module formats
-- CSS injection via vite-plugin-css-injected-by-js
-- Custom element compilation for Svelte components
-- Outputs to `assets/loop.js` and `assets/loop.umd.cjs`
+- `GET /loop/comments/{pageId}` - Get comments for a specific page
+- `POST /loop/comment/new` - Create new comment
+- `POST /loop/comment/reply` - Reply to existing comment
+- `POST /loop/comment/resolve` - Mark comment as resolved
+- `POST /loop/comment/unresolve` - Mark comment as unresolved
+- `POST /loop/guest/name` - Set guest name for non-authenticated users
 
 **Data Flow:**
-- Comments are tied to Kirby page UUIDs
+- Comments are tied to Kirby page ids
 - Position tracking via CSS selectors and page coordinates
-- Database abstraction with singleton pattern in `App::db()`
 - Validation happens at model level before database operations
 
 ## Translations
