@@ -3381,19 +3381,20 @@ function create_custom_element(Component, props_definition, slots, exports, use_
 const store = proxy({ comments: [] });
 const apiPrefix = "loop";
 const KirbyLoop = document.querySelector("kirby-loop");
-const csrfToken = KirbyLoop == null ? void 0 : KirbyLoop.getAttribute("csrf-token");
+const csrfToken = (KirbyLoop == null ? void 0 : KirbyLoop.getAttribute("csrf-token")) || "";
+const apiBase = (KirbyLoop == null ? void 0 : KirbyLoop.getAttribute("apibase")) || "/";
 const headers = {
   "Content-Type": "application/json",
   "X-CSRF-Token": csrfToken || ""
 };
-const getComments = async (pageId, language) => {
-  const url = language ? `/${language}/${apiPrefix}/comments/${pageId}` : `/${apiPrefix}/comments/${pageId}`;
+const getComments = async (pageId) => {
+  const url = `${apiBase}/${apiPrefix}/comments/${pageId}`;
   const response = await fetch(url, { headers });
   const data = await response.json();
   store.comments = data.comments;
 };
 const addComment = async (comment2) => {
-  const url = comment2.lang ? `/${comment2.lang}/${apiPrefix}/comment/new` : `/${apiPrefix}/comment/new`;
+  const url = `${apiBase}/${apiPrefix}/comment/new`;
   const response = await fetch(url, {
     method: "POST",
     headers,
@@ -3403,7 +3404,7 @@ const addComment = async (comment2) => {
   store.comments = [data.comment, ...store.comments];
 };
 const resolveComment = async (comment2) => {
-  const url = comment2.lang ? `/${comment2.lang}/${apiPrefix}/comment/resolve` : `/${apiPrefix}/comment/resolve`;
+  const url = `${apiBase}/${apiPrefix}/comment/resolve`;
   const response = await fetch(url, {
     method: "POST",
     headers,
@@ -3419,7 +3420,7 @@ const resolveComment = async (comment2) => {
   return data.success;
 };
 const unresolveComment = async (comment2) => {
-  const url = comment2.lang ? `/${comment2.lang}/${apiPrefix}/comment/unresolve` : `/${apiPrefix}/comment/unresolve`;
+  const url = `${apiBase}/${apiPrefix}/comment/unresolve`;
   const response = await fetch(url, {
     method: "POST",
     headers,
@@ -3435,7 +3436,7 @@ const unresolveComment = async (comment2) => {
   return data.success;
 };
 const setGuestName = async (name) => {
-  const response = await fetch(`/${apiPrefix}/guest/name`, {
+  const response = await fetch(`${apiBase}/${apiPrefix}/guest/name`, {
     method: "POST",
     headers,
     body: JSON.stringify({ name })
@@ -3443,8 +3444,7 @@ const setGuestName = async (name) => {
   return await response.json();
 };
 const addReply = async (reply) => {
-  const language = KirbyLoop == null ? void 0 : KirbyLoop.getAttribute("language");
-  const url = language ? `/${language}/${apiPrefix}/comment/reply` : `/${apiPrefix}/comment/reply`;
+  const url = `${apiBase}/${apiPrefix}/comment/reply`;
   const response = await fetch(url, {
     method: "POST",
     headers,
@@ -5376,7 +5376,7 @@ const $$css = {
 function App($$anchor, $$props) {
   push($$props, true);
   append_styles($$anchor, $$css);
-  const position = prop($$props, "position", 7), language = prop($$props, "language", 7), pageId = prop($$props, "pageId", 7), authenticated = prop($$props, "authenticated", 7), welcomeEnabled = prop($$props, "welcome-enabled", 7), welcomeHeadline = prop($$props, "welcome-headline", 7), welcomeText = prop($$props, "welcome-text", 7), translations2 = prop($$props, "translations", 7);
+  const position = prop($$props, "position", 7), language = prop($$props, "language", 7), apibase = prop($$props, "apibase", 7), pageId = prop($$props, "pageId", 7), authenticated = prop($$props, "authenticated", 7), welcomeEnabled = prop($$props, "welcome-enabled", 7), welcomeHeadline = prop($$props, "welcome-headline", 7), welcomeText = prop($$props, "welcome-text", 7), translations2 = prop($$props, "translations", 7);
   let showModal = state(false);
   let welcomeDialog;
   let isAuthenticated = /* @__PURE__ */ derived(() => authenticated() === "true");
@@ -5442,7 +5442,7 @@ function App($$anchor, $$props) {
   onMount(() => {
     const translationsData = JSON.parse(translations2() || "{}");
     setTranslations(translationsData);
-    getComments(pageId(), language());
+    getComments(pageId());
     guestName.get();
     if (get(isWelcomeEnabled)) {
       if (get(isAuthenticated) && !isWelcomeDismissed() || !get(isAuthenticated) && !guestName.get()) {
@@ -5530,6 +5530,13 @@ function App($$anchor, $$props) {
       language($$value);
       flushSync();
     },
+    get apibase() {
+      return apibase();
+    },
+    set apibase($$value) {
+      apibase($$value);
+      flushSync();
+    },
     get pageId() {
       return pageId();
     },
@@ -5579,6 +5586,7 @@ customElements.define("kirby-loop", create_custom_element(
   {
     position: {},
     language: {},
+    apibase: {},
     pageId: {},
     authenticated: {},
     "welcome-enabled": {},
