@@ -102,4 +102,13 @@ class Options
     {
         return option('moinframe.loop.language', null);
     }
+
+    /**
+     * Set a theme
+     * @return string
+     */
+    public static function theme(): string
+    {
+        return option('moinframe.loop.theme', 'default');
+    }
 }

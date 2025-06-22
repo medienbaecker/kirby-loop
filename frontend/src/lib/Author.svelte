@@ -8,15 +8,15 @@
 
 <style scoped>
   .author {
-    font-size: var(--font-size-6);
+    font-size: var(--author-avatar-font-size);
     text-transform: uppercase;
-    color: var(--color-neutral-600);
-    background-color: var(--color-neutral-100);
+    color: var(--author-avatar-color);
+    background-color: var(--author-avatar-background-color);
     aspect-ratio: 1;
-    flex: 0 0 var(--_avatar-size);
+    flex: 0 0 var(--author-avatar-size);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: var(--border-radius-rounded);
+    border-radius: var(--author-avatar-border-radius);
   }
 </style>

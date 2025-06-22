@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { store } from "../store/api.svelte";
   import { panel, overlay } from "../store/ui.svelte";
   import { t } from "../store/translations.svelte";
   import IconComment from "./Icon/IconComment.svelte";
@@ -15,7 +14,7 @@
   } = $props();
 </script>
 
-<header class="glass-effect" class:bottom={position === "bottom"}>
+<header class:bottom={position === "bottom"}>
   <div class="toggle">
     <Button
       onclick={() => {
@@ -39,7 +38,7 @@
     </Button>
   </div>
   <Button onclick={() => (panel.open = !panel.open)} style="button--panel">
-    <span class="count glass-effect-small">{commentsCount}</span>
+    <span class="count">{commentsCount}</span>
   </Button>
 </header>
 
@@ -49,30 +48,39 @@
   }
 
   header {
-    position: fixed;
-    top: var(--space-xs);
+    position: var(--header-position);
+    top: var(--header-top);
     left: 50%;
     max-width: 100%;
-    transform: translateX(-50%);
-    color: var(--color-base);
+    transform: var(--header-transform);
+    color: var(--header-color);
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    border-radius: var(--border-radius-rounded);
-    z-index: 9999;
+    border-radius: var(--header-border-radius);
+    z-index: var(--header-z-index);
+    overflow: hidden;
+    backdrop-filter: var(--header-backdrop-filter);
+    box-shadow: var(--shadow-l), var(--shadow-light-edge),
+      var(--shadow-dark-edge);
+    background: var(--header-background);
 
     &.bottom {
       top: auto;
-      bottom: var(--space-xs);
+      bottom: var(--header-bottom-position);
     }
   }
 
   .count {
-    width: 2rem;
-    height: 2rem;
+    width: var(--header-count-size);
+    height: var(--header-count-size);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: var(--border-radius-rounded);
+    border-radius: var(--header-count-border-radius);
+    backdrop-filter: var(--header-count-backdrop-filter);
+    box-shadow: var(--shadow-s), var(--shadow-light-edge),
+      var(--shadow-dark-edge);
+    background: var(--header-count-background);
   }
 </style>

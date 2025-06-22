@@ -25,30 +25,30 @@
 <style>
   .reply {
     display: flex;
-    gap: var(--space-s);
+    gap: var(--reply-gap);
     flex-direction: row;
     align-items: start;
   }
 
   .reply__content {
-    padding: var(--space-xs);
-    background-color: var(--color-neutral-100);
-    border-radius: var(--border-radius);
+    padding: var(--reply-content-padding);
+    background-color: var(--reply-content-background);
+    border-radius: var(--reply-content-border-radius);
 
     header {
       display: flex;
-      gap: var(--space-xs);
+      gap: var(--reply-header-gap);
       align-items: flex-start;
       justify-content: flex-start;
-      margin-bottom: var(--space-2xs);
+      margin-bottom: var(--reply-header-margin-bottom);
       time {
-        font-size: var(--font-size-8);
-        color: var(--color-neutral-300);
+        font-size: var(--reply-timestamp-font-size);
+        color: var(--reply-timestamp-color);
       }
     }
 
     @media (prefers-color-scheme: dark) {
-      background-color: var(--color-neutral-200);
+      background-color: var(--reply-content-background-dark);
     }
   }
 

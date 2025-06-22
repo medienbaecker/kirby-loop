@@ -40,6 +40,7 @@ function getTranslations(): array
 
 if (Options::enabled() && (Options::public() || kirby()->user() !== null)): ?>
     <kirby-loop
+        theme="<?= Options::theme() ?>"
         csrf-token="<?= csrf() ?>"
         position="<?= Options::position() ?>"
         language="<?= kirby()->language() ? kirby()->language()->code() : '' ?>"

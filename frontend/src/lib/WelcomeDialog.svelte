@@ -99,39 +99,40 @@
 
 <style>
   dialog {
-    background-color: var(--color-base-background);
-    border: 1px solid var(--color-neutral-100);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-m);
+    backdrop-filter: var(--welcome-dialog-backdrop-filter);
+    border: var(--welcome-dialog-border);
+    border-radius: var(--welcome-dialog-border-radius);
+    box-shadow: var(--welcome-dialog-shadow);
     width: 100%;
-    max-width: var(--loop-welcome-dialog-max-width);
+    max-width: var(--welcome-dialog-max-width);
     padding: 0;
+    background: var(--welcome-dialog-background);
     &::backdrop {
-      background: var(--backdrop-overlay);
-      backdrop-filter: var(--backdrop-blur);
+      background: var(--welcome-dialog-backdrop-background);
+      backdrop-filter: var(--welcome-dialog-backdrop-backdrop-filter);
     }
   }
 
   form {
-    padding: var(--space-l);
+    padding: var(--welcome-dialog-form-padding);
   }
 
   h2 {
-    margin: 0 0 var(--space-s) 0;
-    font-size: var(--font-size-4);
-    color: var(--color-base);
-    font-weight: var(--font-weight-bold);
+    margin: var(--welcome-dialog-title-margin);
+    font-size: var(--welcome-dialog-title-font-size);
+    color: var(--welcome-dialog-title-color);
+    font-weight: var(--welcome-dialog-title-font-weight);
   }
 
   .welcome-text {
-    margin: 0 0 var(--space-m) 0;
-    font-size: var(--font-size-6);
-    color: var(--color-neutral-600);
-    line-height: var(--line-height);
+    margin: var(--welcome-dialog-text-margin);
+    font-size: var(--welcome-dialog-text-font-size);
+    color: var(--welcome-dialog-text-color);
+    line-height: var(--welcome-dialog-text-line-height);
   }
 
   .name-section {
-    margin-bottom: var(--space-l);
+    margin-bottom: var(--welcome-dialog-name-section-margin);
   }
 
   .name-section.no-welcome {
@@ -141,24 +142,24 @@
 
   input {
     width: 100%;
-    border: 1px solid var(--color-neutral-300);
-    border-radius: var(--border-radius-s);
-    padding: var(--space-xs);
+    border: var(--welcome-dialog-input-border);
+    border-radius: var(--welcome-dialog-input-border-radius);
+    padding: var(--welcome-dialog-input-padding);
     box-sizing: border-box;
-    font-family: var(--font-family);
-    font-size: var(--font-size-6);
-    color: var(--color-base);
-    background: var(--color-base-background);
+    font-family: var(--welcome-dialog-input-font-family);
+    font-size: var(--welcome-dialog-input-font-size);
+    color: var(--welcome-dialog-input-color);
+    background: var(--welcome-dialog-input-background);
 
     &:focus-visible {
-      outline-color: var(--outline-color);
-      outline-offset: var(--outline-offset);
+      outline-color: var(--welcome-dialog-input-outline-color);
+      outline-offset: var(--welcome-dialog-input-outline-offset);
     }
   }
 
   footer {
     display: flex;
-    gap: var(--space-xs);
+    gap: var(--welcome-dialog-footer-gap);
   }
 
   footer :global(button) {

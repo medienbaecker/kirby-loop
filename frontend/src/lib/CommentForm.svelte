@@ -53,23 +53,23 @@
   form {
     padding: 0;
     cursor: auto;
-    background-color: var(--color-base-background);
-    color: var(--color-base);
-    border-radius: var(--border-radius);
+    background-color: var(--comment-form-background);
+    color: var(--comment-form-color);
+    border-radius: var(--comment-form-border-radius);
     overflow: hidden;
-    border: 1px solid var(--color-neutral-200);
+    border: var(--comment-form-border);
   }
 
   textarea {
     width: 100%;
     border: 0;
-    height: var(--loop-textarea-height);
+    height: var(--comment-form-textarea-height);
     resize: none;
-    padding: var(--space-s);
+    padding: var(--comment-form-textarea-padding);
     box-sizing: border-box;
-    background-color: var(--color-base-background);
-    font-family: var(--font-family);
-    font-size: var(--loop-textarea-font-size);
+    background-color: var(--comment-form-textarea-background);
+    font-family: var(--comment-form-textarea-font-family);
+    font-size: var(--comment-form-textarea-font-size);
     color: currentColor;
     margin: 0;
 
@@ -80,18 +80,18 @@
   }
 
   footer {
-    padding: var(--space-xs);
+    padding: var(--comment-form-footer-padding);
     display: flex;
-    gap: var(--space-xs);
+    gap: var(--comment-form-footer-gap);
     :global(button) {
       flex: 1;
     }
   }
 
   .keyboard-hint {
-    font-size: var(--font-size-8);
-    color: var(--color-neutral-300);
-    padding: 0 var(--space-xs) var(--space-xs) var(--space-xs);
+    font-size: var(--comment-form-hint-font-size);
+    color: var(--comment-form-hint-color);
+    padding: var(--comment-form-hint-padding);
     align-self: center;
     white-space: nowrap;
     margin-left: auto;
