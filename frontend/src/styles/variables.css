@@ -1,14 +1,5 @@
-kirby-loop {
-  /* Color Customization */
-  --color-neutral-h: 900;
-  --color-neutral-c: 0;
-
-  --color-accent-h: 900;
-  --color-accent-c: 0.18;
-  --color-accent-l: 0.75;
-  --color-accent-dark-factor: 0.4;
-  --color-accent-light-factor: 1.2;
-}
+@import "./theme-light.css";
+@import "./theme-dark.css";
 
 kirby-loop {
   /* Colors */
@@ -20,17 +11,17 @@ kirby-loop {
   --color-accent: oklch(var(--color-accent-l) var(--color-accent-c) var(--color-accent-h));
   --color-accent-dark: oklch(calc(var(--color-accent-l) * var(--color-accent-dark-factor)) var(--color-accent-c) var(--color-accent-h));
 
-  --color-neutral-0: oklch(1 var(--color-neutral-c) var(--color-neutral-h));
-  --color-neutral-100: oklch(0.95 var(--color-neutral-c) var(--color-neutral-h));
-  --color-neutral-200: oklch(0.9 var(--color-neutral-c) var(--color-neutral-h));
-  --color-neutral-300: oklch(0.7 var(--color-neutral-c) var(--color-neutral-h));
-  --color-neutral-400: oklch(0.6 var(--color-neutral-c) var(--color-neutral-h));
-  --color-neutral-500: oklch(0.5 var(--color-neutral-c) var(--color-neutral-h));
-  --color-neutral-600: oklch(0.4 var(--color-neutral-c) var(--color-neutral-h));
-  --color-neutral-700: oklch(0.3 var(--color-neutral-c) var(--color-neutral-h));
-  --color-neutral-800: oklch(0.2 var(--color-neutral-c) var(--color-neutral-h));
-  --color-neutral-900: oklch(0.1 var(--color-neutral-c) var(--color-neutral-h));
-  --color-neutral-1000: oklch(0 var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-0: oklch(var(--color-neutral-l-0) var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-100: oklch(var(--color-neutral-l-100) var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-200: oklch(var(--color-neutral-l-200) var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-300: oklch(var(--color-neutral-l-300) var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-400: oklch(var(--color-neutral-l-400) var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-500: oklch(var(--color-neutral-l-500) var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-600: oklch(var(--color-neutral-l-600) var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-700: oklch(var(--color-neutral-l-700) var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-800: oklch(var(--color-neutral-l-800) var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-900: oklch(var(--color-neutral-l-900) var(--color-neutral-c) var(--color-neutral-h));
+  --color-neutral-1000: oklch(var(--color-neutral-l-1000) var(--color-neutral-c) var(--color-neutral-h));
 
   --color-success: oklch(0.65 0.15 150);
   --color-warning: oklch(0.75 0.15 80);
@@ -388,4 +379,19 @@ kirby-loop {
 
   /* Icon */
   --icon-size: 1em;
+}
+
+/* Dark theme overrides */
+kirby-loop[data-theme="dark"] {
+  --color-neutral-l-0: 0;
+  --color-neutral-l-100: 0.1;
+  --color-neutral-l-200: 0.2;
+  --color-neutral-l-300: 0.3;
+  --color-neutral-l-400: 0.4;
+  --color-neutral-l-500: 0.5;
+  --color-neutral-l-600: 0.6;
+  --color-neutral-l-700: 0.7;
+  --color-neutral-l-800: 0.9;
+  --color-neutral-l-900: 0.95;
+  --color-neutral-l-1000: 1;
 }
