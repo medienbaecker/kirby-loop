@@ -10,6 +10,7 @@ kirby-loop {
   --color-base-background-o-10: oklch(var(--color-neutral-l-0) var(--color-neutral-c) var(--color-neutral-h) / 0.1);
   --color-base-background-o-20: oklch(var(--color-neutral-l-0) var(--color-neutral-c) var(--color-neutral-h) / 0.2);
   --color-base-background-o-50: oklch(var(--color-neutral-l-0) var(--color-neutral-c) var(--color-neutral-h) / 0.5);
+  --color-base-background-o-60: oklch(var(--color-neutral-l-0) var(--color-neutral-c) var(--color-neutral-h) / 0.6);
   --color-base-background-o-75: oklch(var(--color-neutral-l-0) var(--color-neutral-c) var(--color-neutral-h) / 0.75);
   --color-base-background-o-95: oklch(var(--color-neutral-l-0) var(--color-neutral-c) var(--color-neutral-h) / 0.95);
 
@@ -93,7 +94,7 @@ kirby-loop {
 
   /* Background tokens */
   --background-glass: linear-gradient(135deg, transparent, var(--color-base-background-o-95));
-  --background-glass-frosted: linear-gradient(0deg, var(--color-base-background-o-50) 0%, var(--color-base-background-o-95) 50%);
+  --background-glass-frosted: linear-gradient(0deg, var(--color-base-background-o-75) 0%, var(--color-base-background-o-95) 50%);
 
   /* Opacity tokens */
   --opacity-subtle: 0.5;
