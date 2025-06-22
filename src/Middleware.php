@@ -24,6 +24,12 @@ class Middleware
                 ], 403);
             }
 
+            // Check rate limiting
+            $rateLimitResponse = RateLimit::check();
+            if ($rateLimitResponse !== null) {
+                return $rateLimitResponse;
+            }
+
             $csrfToken = kirby()->request()->header('X-CSRF-Token');
             if (csrf($csrfToken) !== true) {
                 return Response::json([

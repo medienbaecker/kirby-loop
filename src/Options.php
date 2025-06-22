@@ -102,4 +102,31 @@ class Options
     {
         return option('moinframe.loop.language', null);
     }
+
+    /**
+     * Check if rate limiting is enabled
+     * @return bool
+     */
+    public static function rateLimitEnabled(): bool
+    {
+        return option('moinframe.loop.rateLimit.enabled', true);
+    }
+
+    /**
+     * Get rate limit requests per window
+     * @return int
+     */
+    public static function rateLimitRequests(): int
+    {
+        return option('moinframe.loop.rateLimit.requests', 10);
+    }
+
+    /**
+     * Get rate limit window in seconds
+     * @return int
+     */
+    public static function rateLimitWindow(): int
+    {
+        return option('moinframe.loop.rateLimit.window', 60);
+    }
 }
