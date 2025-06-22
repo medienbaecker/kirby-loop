@@ -49,30 +49,30 @@
   }
 
   header {
-    position: fixed;
-    top: var(--space-xs);
+    position: var(--header-position);
+    top: var(--header-top);
     left: 50%;
     max-width: 100%;
-    transform: translateX(-50%);
-    color: var(--color-base);
+    transform: var(--header-transform);
+    color: var(--header-color);
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    border-radius: var(--border-radius-rounded);
-    z-index: 9999;
+    border-radius: var(--header-border-radius);
+    z-index: var(--header-z-index);
 
     &.bottom {
       top: auto;
-      bottom: var(--space-xs);
+      bottom: var(--header-bottom-position);
     }
   }
 
   .count {
-    width: 2rem;
-    height: 2rem;
+    width: var(--header-count-size);
+    height: var(--header-count-size);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: var(--border-radius-rounded);
+    border-radius: var(--header-count-border-radius);
   }
 </style>

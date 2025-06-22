@@ -39,39 +39,36 @@
 
 <style>
   button {
-    --button-background: transparent;
-    --button-color: var(--color-neutral-600);
-    --button-height: var(--loop-button-height);
     appearance: none;
     background-color: var(--button-background);
     color: var(--button-color);
-    padding: 0 var(--space-xs);
+    padding: var(--button-padding);
     border: 0;
     font-family: var(--font-family);
     letter-spacing: 0.01em;
-    border-radius: var(--border-radius);
+    border-radius: var(--button-border-radius);
     display: inline-flex;
-    gap: var(--space-2xs);
+    gap: var(--button-gap);
     align-items: center;
     cursor: pointer;
-    font-size: var(--font-size-7);
+    font-size: var(--button-font-size);
     justify-content: center;
     flex: 0 0 auto;
-    font-weight: var(--font-weight-medium);
-    transition: all var(--transition-fast);
+    font-weight: var(--button-font-weight);
+    transition: var(--button-transition);
     white-space: nowrap;
     line-height: 1;
     height: var(--button-height);
-    outline-color: var(--outline-color);
+    outline-color: var(--button-outline-color);
 
     &:focus-visible {
-      outline-offset: var(--outline-offset);
+      outline-offset: var(--button-outline-offset);
     }
 
     &:hover,
     &:focus-visible {
-      --button-color: var(--color-neutral-900);
-      --button-background: var(--color-neutral-200);
+      color: var(--button-hover-color);
+      background-color: var(--button-hover-background);
     }
 
     span {
@@ -82,22 +79,22 @@
     }
 
     &.button--header {
-      --button-background: transparent;
-      --button-height: var(--loop-button-header-height);
-      padding: 0 var(--space-s);
+      background-color: var(--button-header-background);
+      height: var(--button-header-height);
+      padding: var(--button-header-padding);
       border-radius: 0;
       border: 0;
 
       &:hover,
       &:focus-visible {
-        --button-background: var(--color-base-background-o);
+        background-color: var(--button-header-hover-background);
       }
     }
 
     &.button--panel {
-      --button-background: transparent;
-      --button-height: auto;
-      padding: 0 calc(var(--space-s) * 0.4);
+      background-color: var(--button-panel-background);
+      height: auto;
+      padding: var(--button-panel-padding);
       border-radius: 0;
       border: 0;
       span {
@@ -106,44 +103,44 @@
     }
 
     &.button--solid {
-      --button-background: var(--color-neutral-100);
+      background-color: var(--button-solid-background);
       &:hover,
       &:focus-visible {
-        --button-color: var(--color-neutral-900);
-        --button-background: var(--color-neutral-200);
+        color: var(--button-solid-hover-color);
+        background-color: var(--button-solid-hover-background);
       }
     }
 
     &.button--small {
-      --button-height: 1.5rem;
-      font-size: var(--font-size-7);
+      height: var(--button-small-height);
+      font-size: var(--button-small-font-size);
     }
 
     &.button--icon {
-      --button-background: var(--color-neutral-0);
-      --button-color: var(--color-neutral-900);
-      --button-height: 3rem;
-      box-shadow: var(--shadow-s);
+      background-color: var(--button-icon-background);
+      color: var(--button-icon-color);
+      height: var(--button-icon-height);
+      box-shadow: var(--button-icon-shadow);
       aspect-ratio: 1;
       padding: 0;
-      font-size: var(--font-size-6);
-      border-radius: var(--border-radius-rounded);
+      font-size: var(--button-icon-font-size);
+      border-radius: var(--button-icon-border-radius);
       border: 0;
       &:hover,
       &:focus-visible {
-        --button-background: var(--color-neutral-100);
-        --button-color: var(--color-neutral-900);
+        background-color: var(--button-icon-hover-background);
+        color: var(--button-icon-color);
       }
     }
 
     &.button--marker {
-      --button-background: var(--loop-marker-background);
-      --button-color: var(--loop-marker-color);
+      background-color: var(--button-marker-background);
+      color: var(--button-marker-color);
       padding: 0;
       height: var(--marker-size);
       width: var(--marker-size);
-      font-weight: var(--font-weight-bold);
-      border-radius: var(--border-radius-rounded);
+      font-weight: var(--button-marker-font-weight);
+      border-radius: var(--button-marker-border-radius);
       border: 0;
 
       * {
@@ -151,88 +148,88 @@
       }
 
       &.button--marker-highlighted {
-        --button-background: var(--color-accent);
-        --button-color: var(--color-accent-dark);
+        background-color: var(--button-marker-highlighted-background);
+        color: var(--button-marker-highlighted-color);
       }
     }
 
     &.button--marker-open {
-      --button-background: var(--color-accent);
-      --button-color: var(--color-accent-dark);
+      background-color: var(--color-accent);
+      color: var(--color-accent-dark);
     }
 
     &.button--filter {
-      --button-background: transparent;
-      --button-color: var(--color-neutral-500);
-      --button-height: 1.75rem;
+      background-color: var(--button-filter-background);
+      color: var(--button-filter-color);
+      height: var(--button-filter-height);
       flex: 1;
-      font-size: var(--font-size-8);
-      padding: 0 var(--space-xs);
-      border-radius: calc(var(--border-radius) - 2px);
+      font-size: var(--button-filter-font-size);
+      padding: var(--button-filter-padding);
+      border-radius: var(--button-filter-border-radius);
 
       &:hover,
       &:focus-visible {
-        --button-color: var(--color-neutral-700);
-        --button-background: var(--color-neutral-200);
+        color: var(--button-filter-hover-color);
+        background-color: var(--button-filter-hover-background);
       }
 
       &.button--filter-active {
-        --button-background: var(--color-base-background);
-        --button-color: var(--color-base);
-        font-weight: var(--font-weight-medium);
+        background-color: var(--button-filter-active-background);
+        color: var(--button-filter-active-color);
+        font-weight: var(--button-filter-active-font-weight);
 
         &:hover,
         &:focus-visible {
-          --button-background: var(--color-base-background);
-          --button-color: var(--color-base);
+          background-color: var(--button-filter-active-background);
+          color: var(--button-filter-active-color);
         }
       }
     }
 
     &.button--menu-item {
-      --button-background: transparent;
-      --button-color: var(--color-neutral-700);
+      background-color: var(--button-menu-item-background);
+      color: var(--button-menu-item-color);
       width: 100%;
       justify-content: flex-start;
-      padding: var(--space-2xs) var(--space-xs);
-      border-radius: calc(var(--border-radius) - 2px);
-      font-size: var(--font-size-7);
-      gap: var(--space-2xs);
+      padding: var(--button-menu-item-padding);
+      border-radius: var(--button-menu-item-border-radius);
+      font-size: var(--button-menu-item-font-size);
+      gap: var(--button-menu-item-gap);
 
       &:hover,
       &:focus-visible {
-        --button-background: var(--color-neutral-100);
-        --button-color: var(--color-neutral-900);
+        background-color: var(--button-menu-item-hover-background);
+        color: var(--button-menu-item-hover-color);
       }
 
       &.button--menu-item-active {
-        --button-background: var(--color-accent-light);
-        --button-color: var(--color-accent-dark);
-        font-weight: var(--font-weight-medium);
+        background-color: var(--button-menu-item-active-background);
+        color: var(--button-menu-item-active-color);
+        font-weight: var(--button-menu-item-active-font-weight);
 
         &:hover,
         &:focus-visible {
-          --button-background: var(--color-accent-light);
-          --button-color: var(--color-accent-dark);
+          background-color: var(--button-menu-item-active-background);
+          color: var(--button-menu-item-active-color);
         }
       }
     }
 
     &.is-active {
-      --button-background: var(--color-accent);
-      --button-color: var(--color-accent-dark);
+      background-color: var(--button-active-background);
+      color: var(--button-active-color);
       &:hover {
-        --button-color: var(--color-accent-dark);
-        --button-background: var(--color-accent);
+        color: var(--button-active-color);
+        background-color: var(--button-active-background);
       }
     }
 
     &:disabled {
-      opacity: var(--opacity-subtle);
+      opacity: var(--button-disabled-opacity);
       cursor: not-allowed;
       &:hover {
-        --button-color: var(--color-neutral-700);
-        --button-background: var(--color-neutral-100);
+        color: var(--button-disabled-hover-color);
+        background-color: var(--button-disabled-hover-background);
       }
     }
   }

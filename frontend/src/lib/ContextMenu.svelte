@@ -92,71 +92,70 @@
 <style>
   .context-menu-container {
     position: absolute;
-    bottom: var(--space-s);
-    right: var(--space-s);
-    z-index: 10;
+    bottom: var(--context-menu-container-bottom);
+    right: var(--context-menu-container-right);
+    z-index: var(--context-menu-container-z-index);
   }
 
   .context-menu-trigger {
-    --button-size: 2.5rem;
-    width: var(--button-size);
-    height: var(--button-size);
-    border-radius: var(--border-radius-rounded);
+    width: var(--context-menu-trigger-size);
+    height: var(--context-menu-trigger-size);
+    border-radius: var(--context-menu-trigger-border-radius);
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .context-menu {
-    background: var(--color-base-background);
+    background: var(--context-menu-background);
     border: 0;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-m);
-    padding: var(--space-xs);
-    min-width: 12rem;
+    border-radius: var(--context-menu-border-radius);
+    box-shadow: var(--context-menu-shadow);
+    padding: var(--context-menu-padding);
+    min-width: var(--context-menu-min-width);
     position: fixed;
     margin: 0;
 
     &::backdrop {
-      background: transparent;
+      background: var(--context-menu-backdrop-background);
     }
   }
 
   .menu-section {
     display: flex;
     flex-direction: column;
-    gap: var(--space-2xs);
+    gap: var(--context-menu-section-gap);
   }
 
   .menu-section-title {
-    font-size: var(--font-size-8);
-    font-weight: var(--font-weight-medium);
-    color: var(--color-neutral-500);
+    font-size: var(--context-menu-title-font-size);
+    font-weight: var(--context-menu-title-font-weight);
+    color: var(--context-menu-title-color);
     padding: 0;
-    margin-bottom: var(--space-2xs);
+    margin-bottom: var(--context-menu-title-margin-bottom);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: var(--context-menu-title-letter-spacing);
   }
 
   .filter-options {
     display: flex;
     flex-direction: column;
-    gap: 1px;
+    gap: var(--context-menu-filter-gap);
   }
 
   .filter-dot {
-    width: 0.5em;
-    height: 0.5em;
-    border-radius: 50%;
+    width: var(--context-menu-filter-dot-size);
+    height: var(--context-menu-filter-dot-size);
+    border-radius: var(--context-menu-filter-dot-border-radius);
     display: inline-block;
-    margin-right: var(--space-2xs);
+    margin-right: var(--context-menu-filter-dot-margin-right);
   }
 
   .filter-dot--open {
-    background: var(--color-accent);
+    background: var(--context-menu-filter-dot-open-background);
   }
 
   .filter-dot--resolved {
-    background: var(--color-neutral-400);
+    background: var(--context-menu-filter-dot-resolved-background);
   }
 </style>

@@ -146,39 +146,38 @@
 
 <style>
   .marker {
-    --marker-size: var(--loop-marker-size);
-    position: absolute;
-    z-index: var(--z-loop-marker);
-    transform: translate(-50%, -50%);
-    border-radius: var(--border-radius-rounded);
+    position: var(--marker-position);
+    z-index: var(--marker-z-index);
+    transform: var(--marker-transform);
+    border-radius: var(--marker-border-radius);
   }
 
   .marker--pulse {
-    animation: pulse 1s ease-in-out;
+    animation: var(--marker-pulse-animation);
   }
 
   @keyframes pulse {
     0% {
       box-shadow:
-        0 0 0 0 var(--color-accent),
+        var(--marker-pulse-shadow-start),
         0 0 0 0 rgba(128, 128, 128, 0.3),
         0 0 0 0 rgba(128, 128, 128, 0.2);
     }
     30% {
       box-shadow:
-        0 0 0 8px transparent,
+        var(--marker-pulse-shadow-transparent),
         0 0 0 0 rgba(128, 128, 128, 0.3),
         0 0 0 0 rgba(128, 128, 128, 0.2);
     }
     60% {
       box-shadow:
         0 0 0 12px transparent,
-        0 0 0 8px rgba(128, 128, 128, 0.15),
+        var(--marker-pulse-shadow-subtle),
         0 0 0 0 rgba(128, 128, 128, 0.2);
     }
     100% {
       box-shadow:
-        0 0 0 16px transparent,
+        var(--marker-pulse-shadow-final),
         0 0 0 12px transparent,
         0 0 0 8px transparent;
     }

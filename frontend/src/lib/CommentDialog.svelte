@@ -31,26 +31,26 @@
 
 <style>
   dialog {
-    --loop-textarea-font-size: var(--loop-textarea-font-size-large);
-    position: absolute;
+    --loop-textarea-font-size: var(--comment-dialog-textarea-font-size);
+    position: var(--comment-dialog-position);
     top: var(--top);
     left: var(--left);
-    max-width: var(--loop-comment-dialog-max-width);
+    max-width: var(--comment-dialog-max-width);
     max-height: none;
     width: 100%;
     margin: 0;
     border: 0;
     padding: 0;
-    border-radius: var(--border-radius);
+    border-radius: var(--comment-dialog-border-radius);
     overflow: hidden;
     visibility: hidden;
-    box-shadow: var(--shadow-s);
+    box-shadow: var(--comment-dialog-shadow);
     &.is-visible {
       visibility: visible;
     }
 
     &::backdrop {
-      background-color: var(--loop-dialog-background);
+      background-color: var(--comment-dialog-backdrop-background);
     }
   }
 </style>
