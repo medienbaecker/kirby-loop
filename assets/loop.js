@@ -1,4 +1,4 @@
-!function(){"use strict";try{if("undefined"!=typeof document){var r=document.createElement("style");r.appendChild(document.createTextNode('kirby-loop{--color-neutral-h:900;--color-neutral-c:0;--color-accent-h:900;--color-accent-c:.18;--color-accent-l:.75;--color-accent-dark-factor:.4;--color-accent-light-factor:1.2;--color-neutral-l-0:1;--color-neutral-l-100:.95;--color-neutral-l-200:.9;--color-neutral-l-300:.7;--color-neutral-l-400:.6;--color-neutral-l-600:.4;--color-neutral-l-500:.5;--color-neutral-l-700:.3;--color-neutral-l-800:.2;--color-neutral-l-900:.1;--color-neutral-l-1000:0}kirby-loop[theme=dark]{--color-accent-l:.75;--color-accent-dark-factor:.4;--color-accent-light-factor:1.2;--color-neutral-l-0:0;--color-neutral-l-100:.1;--color-neutral-l-200:.2;--color-neutral-l-300:.3;--color-neutral-l-400:.4;--color-neutral-l-600:.5;--color-neutral-l-500:.6;--color-neutral-l-700:.7;--color-neutral-l-800:.8;--color-neutral-l-900:.95;--color-neutral-l-1000:1}kirby-loop{--color-base:var(--color-neutral-900);--color-base-background:var(--color-neutral-0);--color-base-background-o:oklch(1 var(--color-neutral-c)var(--color-neutral-h)/.95);--color-accent-light:oklch(calc(var(--color-accent-l)*var(--color-accent-light-factor))var(--color-accent-c)var(--color-accent-h));--color-accent:oklch(var(--color-accent-l)var(--color-accent-c)var(--color-accent-h));--color-accent-dark:oklch(calc(var(--color-accent-l)*var(--color-accent-dark-factor))var(--color-accent-c)var(--color-accent-h));--color-neutral-0:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-100:oklch(var(--color-neutral-l-100)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-200:oklch(var(--color-neutral-l-200)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-300:oklch(var(--color-neutral-l-300)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-400:oklch(var(--color-neutral-l-400)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-500:oklch(var(--color-neutral-l-500)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-600:oklch(var(--color-neutral-l-600)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-700:oklch(var(--color-neutral-l-700)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-800:oklch(var(--color-neutral-l-800)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-900:oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-1000:oklch(var(--color-neutral-l-1000)var(--color-neutral-c)var(--color-neutral-h));--color-success:oklch(.65 .15 150);--color-warning:oklch(.75 .15 80);--color-error:oklch(.65 .18 25);--color-info:oklch(.65 .15 220);--font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol",sans-serif;--line-height:1.4;--font-weight-light:300;--font-weight-normal:400;--font-weight-medium:550;--font-weight-bold:700;--font-size-3:clamp(1.9531rem,1.4262rem + 1.7565vw,3.5339rem);--font-size-4:clamp(1.5625rem,1.2503rem + 1.0408vw,2.4992rem);--font-size-5:clamp(1.25rem,1.0775rem + .575vw,1.7675rem);--font-size-6:clamp(1rem,.9167rem + .2778vw,1.25rem);--font-size-7:clamp(.8rem,.772rem + .0934vw,.884rem);--font-size-8:clamp(.6252rem,.6449rem + -.0165vw,.64rem);--border-radius-s:.125rem;--border-radius:.25rem;--border-radius-rounded:4096px;--space-2xs:clamp(.25rem,.2292rem + .0694vw,.3125rem);--space-xs:clamp(.5rem,.4583rem + .1389vw,.625rem);--space-s:clamp(1rem,.9167rem + .2778vw,1.25rem);--space-m:clamp(1.5rem,1.375rem + .4167vw,1.875rem);--space-l:clamp(2rem,1.8333rem + .5556vw,2.5rem);--space-2xs-xs:clamp(.25rem,.125rem + .4167vw,.625rem);--space-xs-s:clamp(.5rem,.25rem + .8333vw,1.25rem);--space-s-m:clamp(1rem,.7083rem + .9722vw,1.875rem);--space-m-l:clamp(1.5rem,1.1667rem + 1.1111vw,2.5rem);--space-s-l:clamp(1rem,.5rem + 1.6667vw,2.5rem);--shadow-xs:0 .1em .25em #0000001a;--shadow-s:0 0rem 2rem #0003;--shadow-m:0 10px 30px #0003;--shadow-l:0 20px 40px #00000040;--backdrop-overlay:#00000080;--backdrop-blur:blur(4px);--backdrop-panel:blur(10px);--transition-fast:.2s ease;--transition-medium:.3s ease;--transition-slow:.4s ease;--transition-transform:transform .2s ease;--opacity-subtle:.5;--opacity-medium:.7;--opacity-strong:.9;--outline-color:var(--color-accent);--outline-offset:.25rem;--z-loop-marker:9998;--z-loop-panel:9999;--z-loop-dialog:10000;--author-avatar-color:var(--color-neutral-600);--author-avatar-background-color:var(--color-neutral-100);--author-avatar-size:2.5rem;--author-avatar-border-radius:var(--border-radius-rounded);--author-avatar-font-size:var(--font-size-6);--button-background:transparent;--button-color:var(--color-neutral-600);--button-border-radius:var(--border-radius);--button-padding:0 var(--space-xs);--button-gap:var(--space-2xs);--button-font-size:var(--font-size-7);--button-font-weight:var(--font-weight-medium);--button-height:2.25rem;--button-transition:var(--transition-fast);--button-outline-color:var(--outline-color);--button-outline-offset:var(--outline-offset);--button-hover-color:var(--color-neutral-900);--button-hover-background:var(--color-neutral-200);--button-header-background:transparent;--button-header-height:3rem;--button-header-padding:0 var(--space-s);--button-header-hover-background:var(--color-base-background-o);--button-panel-background:transparent;--button-panel-padding:0 calc(var(--space-s)*.4);--button-solid-background:var(--color-neutral-100);--button-solid-hover-color:var(--color-neutral-900);--button-solid-hover-background:var(--color-neutral-200);--button-small-height:1.5rem;--button-small-font-size:var(--font-size-7);--button-icon-background:var(--color-neutral-0);--button-icon-color:var(--color-neutral-900);--button-icon-height:3rem;--button-icon-shadow:var(--shadow-s);--button-icon-border-radius:var(--border-radius-rounded);--button-icon-font-size:var(--font-size-6);--button-icon-hover-background:var(--color-neutral-100);--button-marker-background:var(--color-accent);--button-marker-color:var(--color-accent-dark);--button-marker-font-weight:var(--font-weight-bold);--button-marker-border-radius:var(--border-radius-rounded);--button-marker-highlighted-background:var(--color-accent);--button-marker-highlighted-color:var(--color-accent-dark);--button-filter-background:transparent;--button-filter-color:var(--color-neutral-500);--button-filter-height:1.75rem;--button-filter-font-size:var(--font-size-8);--button-filter-padding:0 var(--space-xs);--button-filter-border-radius:calc(var(--border-radius) - 2px);--button-filter-hover-color:var(--color-neutral-700);--button-filter-hover-background:var(--color-neutral-200);--button-filter-active-background:var(--color-base-background);--button-filter-active-color:var(--color-base);--button-filter-active-font-weight:var(--font-weight-medium);--button-menu-item-background:transparent;--button-menu-item-color:var(--color-neutral-700);--button-menu-item-padding:var(--space-2xs)var(--space-xs);--button-menu-item-border-radius:calc(var(--border-radius) - 2px);--button-menu-item-font-size:var(--font-size-7);--button-menu-item-gap:var(--space-2xs);--button-menu-item-hover-background:var(--color-neutral-100);--button-menu-item-hover-color:var(--color-neutral-900);--button-menu-item-active-background:var(--color-accent-light);--button-menu-item-active-color:var(--color-accent-dark);--button-menu-item-active-font-weight:var(--font-weight-medium);--button-active-background:var(--color-accent);--button-active-color:var(--color-accent-dark);--button-disabled-opacity:var(--opacity-subtle);--button-disabled-hover-color:var(--color-neutral-700);--button-disabled-hover-background:var(--color-neutral-100);--comment-avatar-size:2.5rem;--comment-marker-background:var(--color-neutral-200);--comment-marker-color:var(--color-neutral-800);--comment-line-background:var(--color-neutral-100);--comment-line-width:.1rem;--comment-line-offset:calc(var(--space-s) + var(--comment-avatar-size)/2);--comment-header-font-size:var(--font-size-7);--comment-header-padding:var(--space-s);--comment-header-gap:var(--space-s);--comment-content-padding:var(--space-xs);--comment-content-background:var(--color-neutral-100);--comment-content-background-dark:var(--color-neutral-200);--comment-content-border-radius:var(--border-radius);--comment-author-gap:var(--space-xs);--comment-author-margin-bottom:var(--space-2xs);--comment-timestamp-font-size:var(--font-size-8);--comment-timestamp-color:var(--color-neutral-300);--comment-replies-padding:0 var(--space-s);--comment-replies-gap:var(--space-s);--comment-footer-padding:var(--space-s);--comment-footer-gap:var(--space-s);--comment-buttons-gap:var(--space-xs);--comment-dialog-position:absolute;--comment-dialog-max-width:300px;--comment-dialog-border-radius:var(--border-radius);--comment-dialog-shadow:var(--shadow-s);--comment-dialog-backdrop-background:transparent;--comment-dialog-textarea-font-size:var(--font-size-6);--comment-form-background:var(--color-base-background);--comment-form-color:var(--color-base);--comment-form-border:1px solid var(--color-neutral-200);--comment-form-border-radius:var(--border-radius);--comment-form-textarea-height:15ch;--comment-form-textarea-padding:var(--space-s);--comment-form-textarea-background:var(--color-base-background);--comment-form-textarea-font-family:var(--font-family);--comment-form-textarea-font-size:var(--font-size-7);--comment-form-footer-padding:var(--space-xs);--comment-form-footer-gap:var(--space-xs);--comment-form-hint-font-size:var(--font-size-8);--comment-form-hint-color:var(--color-neutral-300);--comment-form-hint-padding:0 var(--space-xs)var(--space-xs)var(--space-xs);--context-menu-container-bottom:var(--space-s);--context-menu-container-right:var(--space-s);--context-menu-container-z-index:10;--context-menu-trigger-size:2.5rem;--context-menu-trigger-border-radius:var(--border-radius-rounded);--context-menu-background:var(--color-base-background);--context-menu-border-radius:var(--border-radius);--context-menu-shadow:var(--shadow-m);--context-menu-padding:var(--space-xs);--context-menu-min-width:12rem;--context-menu-backdrop-background:transparent;--context-menu-section-gap:var(--space-2xs);--context-menu-title-font-size:var(--font-size-8);--context-menu-title-font-weight:var(--font-weight-medium);--context-menu-title-color:var(--color-neutral-500);--context-menu-title-margin-bottom:var(--space-2xs);--context-menu-title-letter-spacing:.05em;--context-menu-filter-gap:1px;--context-menu-filter-dot-size:.5em;--context-menu-filter-dot-border-radius:50%;--context-menu-filter-dot-margin-right:var(--space-2xs);--context-menu-filter-dot-open-background:var(--color-accent);--context-menu-filter-dot-resolved-background:var(--color-neutral-400);--header-position:fixed;--header-top:var(--space-xs);--header-transform:translateX(-50%);--header-color:var(--color-base);--header-border-radius:var(--border-radius-rounded);--header-z-index:9999;--header-bottom-position:var(--space-xs);--header-count-size:2rem;--header-count-border-radius:var(--border-radius-rounded);--marker-size:2rem;--marker-position:absolute;--marker-z-index:var(--z-loop-marker);--marker-transform:translate(-50%,-50%);--marker-border-radius:var(--border-radius-rounded);--marker-pulse-animation:pulse 1s ease-in-out;--marker-pulse-shadow-start:0 0 0 0 var(--color-accent);--marker-pulse-shadow-transparent:0 0 0 8px transparent;--marker-pulse-shadow-subtle:0 0 0 8px #80808026;--marker-pulse-shadow-final:0 0 0 16px transparent;--panel-width:380px;--panel-mobile-width:85svw;--panel-position:fixed;--panel-right:var(--space-xs);--panel-top:var(--space-xs);--panel-height:calc(100svh - var(--space-xs)*2);--panel-transform-closed:translateX(calc(100% + var(--space-xs)));--panel-transform-open:translateX(0);--panel-color:var(--color-base);--panel-border-radius:var(--border-radius);--panel-border-top-left-radius:0;--panel-transition:var(--transition-transform);--panel-z-index:var(--z-loop-panel);--panel-shadow:var(--shadow-s);--panel-header-transform-closed:translate(-95%);--panel-header-transform-open:translate(calc(-100% + 1px));--panel-header-transform-hover:translate(calc(-100% + 1px));--panel-header-border-radius:var(--border-radius-rounded);--panel-header-gap:var(--space-xs);--panel-threads-background:var(--color-base-background-o);--panel-threads-backdrop:var(--backdrop-panel);--panel-threads-border-radius:var(--border-radius);--panel-threads-border-top-left-radius:0;--panel-threads-padding:0 0 var(--space-s)0;--panel-threads-item-margin:var(--space-s);--panel-threads-scrollbar-width:thin;--panel-no-threads-padding:var(--space-s)var(--space-l);--panel-no-threads-font-size:var(--font-size-6);--panel-no-threads-color:var(--color-neutral-300);--reply-gap:var(--space-s);--reply-content-padding:var(--space-xs);--reply-content-background:var(--color-neutral-100);--reply-content-background-dark:var(--color-neutral-200);--reply-content-border-radius:var(--border-radius);--reply-header-gap:var(--space-xs);--reply-header-margin-bottom:var(--space-2xs);--reply-timestamp-font-size:var(--font-size-8);--reply-timestamp-color:var(--color-neutral-300);--welcome-dialog-background:var(--color-base-background);--welcome-dialog-border:1px solid var(--color-neutral-100);--welcome-dialog-border-radius:var(--border-radius);--welcome-dialog-shadow:var(--shadow-m);--welcome-dialog-max-width:500px;--welcome-dialog-backdrop-background:var(--backdrop-overlay);--welcome-dialog-backdrop-filter:var(--backdrop-blur);--welcome-dialog-form-padding:var(--space-l);--welcome-dialog-title-margin:0 0 var(--space-s)0;--welcome-dialog-title-font-size:var(--font-size-4);--welcome-dialog-title-color:var(--color-base);--welcome-dialog-title-font-weight:var(--font-weight-bold);--welcome-dialog-text-margin:0 0 var(--space-m)0;--welcome-dialog-text-font-size:var(--font-size-6);--welcome-dialog-text-color:var(--color-neutral-600);--welcome-dialog-text-line-height:var(--line-height);--welcome-dialog-name-section-margin:var(--space-l);--welcome-dialog-input-border:1px solid var(--color-neutral-300);--welcome-dialog-input-border-radius:var(--border-radius-s);--welcome-dialog-input-padding:var(--space-xs);--welcome-dialog-input-font-family:var(--font-family);--welcome-dialog-input-font-size:var(--font-size-6);--welcome-dialog-input-color:var(--color-base);--welcome-dialog-input-background:var(--color-base-background);--welcome-dialog-input-outline-color:var(--outline-color);--welcome-dialog-input-outline-offset:var(--outline-offset);--welcome-dialog-footer-gap:var(--space-xs);--icon-size:1em}kirby-loop[data-theme=dark]{--color-neutral-l-0:0;--color-neutral-l-100:.1;--color-neutral-l-200:.2;--color-neutral-l-300:.3;--color-neutral-l-400:.4;--color-neutral-l-500:.5;--color-neutral-l-600:.6;--color-neutral-l-700:.7;--color-neutral-l-800:.9;--color-neutral-l-900:.95;--color-neutral-l-1000:1}kirby-loop{font-family:var(--font-family);line-height:var(--line-height);font-weight:var(--font-weight-normal);font-size:var(--font-size-7);box-sizing:border-box}html.loop-overlay-open a{pointer-events:none}')),document.head.appendChild(r)}}catch(o){console.error("vite-plugin-css-injected-by-js",o)}}();
+!function(){"use strict";try{if("undefined"!=typeof document){var r=document.createElement("style");r.appendChild(document.createTextNode('kirby-loop{--color-neutral-h:900;--color-neutral-c:0;--color-accent-h:900;--color-accent-c:.18;--color-accent-l:.75;--color-accent-dark-factor:.4;--color-accent-light-factor:1.2;--color-neutral-l-0:1;--color-neutral-l-100:.95;--color-neutral-l-200:.9;--color-neutral-l-300:.7;--color-neutral-l-400:.6;--color-neutral-l-600:.4;--color-neutral-l-500:.5;--color-neutral-l-700:.3;--color-neutral-l-800:.2;--color-neutral-l-900:.1;--color-neutral-l-1000:0}kirby-loop[theme=dark]{--color-accent-l:.75;--color-accent-dark-factor:.4;--color-accent-light-factor:1.2;--color-neutral-l-0:0;--color-neutral-l-100:.1;--color-neutral-l-200:.2;--color-neutral-l-300:.3;--color-neutral-l-400:.4;--color-neutral-l-600:.5;--color-neutral-l-500:.6;--color-neutral-l-700:.7;--color-neutral-l-800:.8;--color-neutral-l-900:.95;--color-neutral-l-1000:1}kirby-loop{--color-base:var(--color-neutral-900);--color-base-background:var(--color-neutral-0);--color-base-background-o-5:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.05);--color-base-background-o-10:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.1);--color-base-background-o-20:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.2);--color-base-background-o-50:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.5);--color-base-background-o-75:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.75);--color-base-background-o-95:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.95);--color-accent-light:oklch(calc(var(--color-accent-l)*var(--color-accent-light-factor))var(--color-accent-c)var(--color-accent-h));--color-accent:oklch(var(--color-accent-l)var(--color-accent-c)var(--color-accent-h));--color-accent-dark:oklch(calc(var(--color-accent-l)*var(--color-accent-dark-factor))var(--color-accent-c)var(--color-accent-h));--color-neutral-0:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-100:oklch(var(--color-neutral-l-100)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-200:oklch(var(--color-neutral-l-200)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-300:oklch(var(--color-neutral-l-300)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-400:oklch(var(--color-neutral-l-400)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-500:oklch(var(--color-neutral-l-500)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-600:oklch(var(--color-neutral-l-600)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-700:oklch(var(--color-neutral-l-700)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-800:oklch(var(--color-neutral-l-800)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-900:oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-1000:oklch(var(--color-neutral-l-1000)var(--color-neutral-c)var(--color-neutral-h));--color-success:oklch(.65 .15 150);--color-warning:oklch(.75 .15 80);--color-error:oklch(.65 .18 25);--color-info:oklch(.65 .15 220);--font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol",sans-serif;--line-height:1.4;--font-weight-light:300;--font-weight-normal:400;--font-weight-medium:550;--font-weight-bold:700;--font-size-3:clamp(1.9531rem,1.4262rem + 1.7565vw,3.5339rem);--font-size-4:clamp(1.5625rem,1.2503rem + 1.0408vw,2.4992rem);--font-size-5:clamp(1.25rem,1.0775rem + .575vw,1.7675rem);--font-size-6:clamp(1rem,.9167rem + .2778vw,1.25rem);--font-size-7:clamp(.8rem,.772rem + .0934vw,.884rem);--font-size-8:clamp(.6252rem,.6449rem + -.0165vw,.64rem);--border-radius-s:.125rem;--border-radius:.25rem;--border-radius-rounded:4096px;--space-2xs:clamp(.25rem,.2292rem + .0694vw,.3125rem);--space-xs:clamp(.5rem,.4583rem + .1389vw,.625rem);--space-s:clamp(1rem,.9167rem + .2778vw,1.25rem);--space-m:clamp(1.5rem,1.375rem + .4167vw,1.875rem);--space-l:clamp(2rem,1.8333rem + .5556vw,2.5rem);--space-2xs-xs:clamp(.25rem,.125rem + .4167vw,.625rem);--space-xs-s:clamp(.5rem,.25rem + .8333vw,1.25rem);--space-s-m:clamp(1rem,.7083rem + .9722vw,1.875rem);--space-m-l:clamp(1.5rem,1.1667rem + 1.1111vw,2.5rem);--space-s-l:clamp(1rem,.5rem + 1.6667vw,2.5rem);--shadow-s:0 .1em .25em oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h)/.1);--shadow-m:0 10px 30px oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h)/.2);--shadow-l:0 16px 40px oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h)/.25);--shadow-light-edge:inset 0 1px 1px oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.3);--shadow-dark-edge:inset 0 -1px 1px oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h)/.3);--backdrop-blur:blur(6px);--backdrop-glass:var(--backdrop-blur)saturate(1.4)brightness(1.2);--background-glass:linear-gradient(135deg,transparent,var(--color-base-background-o-95));--background-glass-frosted:linear-gradient(0deg,var(--color-base-background-o-50)0%,var(--color-base-background-o-95)50%);--opacity-subtle:.5;--opacity-medium:.7;--opacity-strong:.9;--outline-color:var(--color-accent);--outline-offset:.25rem;--transition-duration:.2s;--transition-duration-jump:.4s;--transition-easing-jump:cubic-bezier(.44,1.2,.64,1);--transition-easing:cubic-bezier(0,0,.2,1);--z-loop-marker:9998;--z-loop-panel:9999;--z-loop-dialog:10000;--author-avatar-color:var(--color-neutral-600);--author-avatar-background-color:var(--color-neutral-100);--author-avatar-size:2.5rem;--author-avatar-border-radius:var(--border-radius-rounded);--author-avatar-font-size:var(--font-size-6);--button-background:transparent;--button-color:var(--color-neutral-600);--button-border-radius:var(--border-radius);--button-padding:0 var(--space-xs);--button-gap:var(--space-2xs);--button-font-size:var(--font-size-7);--button-font-weight:var(--font-weight-medium);--button-height:2.25rem;--button-transition:var(--transition-duration)var(--transition-easing);--button-outline-color:var(--outline-color);--button-outline-offset:var(--outline-offset);--button-hover-color:var(--color-neutral-900);--button-hover-background:var(--color-neutral-200);--button-header-background:transparent;--button-header-height:3rem;--button-header-padding:0 var(--space-s);--button-header-hover-background:var(--color-base-background-o-95);--button-header-blend-mode:multiply;--button-panel-background:transparent;--button-panel-padding:0 calc(var(--space-s)*.4);--button-solid-background:var(--color-neutral-100);--button-solid-hover-color:var(--color-neutral-900);--button-solid-hover-background:var(--color-neutral-200);--button-small-height:1.5rem;--button-small-font-size:var(--font-size-7);--button-icon-background:var(--color-neutral-0);--button-icon-color:var(--color-neutral-900);--button-icon-height:3rem;--button-icon-shadow:var(--shadow-s);--button-icon-border-radius:var(--border-radius-rounded);--button-icon-font-size:var(--font-size-6);--button-icon-hover-background:var(--color-neutral-100);--button-marker-background:var(--color-accent);--button-marker-color:var(--color-accent-dark);--button-marker-font-weight:var(--font-weight-bold);--button-marker-border-radius:var(--border-radius-rounded);--button-marker-highlighted-background:var(--color-accent);--button-marker-highlighted-color:var(--color-accent-dark);--button-filter-background:transparent;--button-filter-color:var(--color-neutral-500);--button-filter-height:1.75rem;--button-filter-font-size:var(--font-size-8);--button-filter-padding:0 var(--space-xs);--button-filter-border-radius:calc(var(--border-radius) - 2px);--button-filter-hover-color:var(--color-neutral-700);--button-filter-hover-background:var(--color-neutral-200);--button-filter-active-background:var(--color-base-background);--button-filter-active-color:var(--color-base);--button-filter-active-font-weight:var(--font-weight-medium);--button-menu-item-background:transparent;--button-menu-item-color:var(--color-neutral-700);--button-menu-item-padding:var(--space-2xs)var(--space-xs);--button-menu-item-border-radius:calc(var(--border-radius) - 2px);--button-menu-item-font-size:var(--font-size-7);--button-menu-item-gap:var(--space-2xs);--button-menu-item-hover-background:var(--color-neutral-100);--button-menu-item-hover-color:var(--color-neutral-900);--button-menu-item-active-background:var(--color-accent-light);--button-menu-item-active-color:var(--color-accent-dark);--button-menu-item-active-font-weight:var(--font-weight-medium);--button-active-background:var(--color-accent);--button-active-color:var(--color-accent-dark);--button-disabled-opacity:var(--opacity-subtle);--button-disabled-hover-color:var(--color-neutral-700);--button-disabled-hover-background:var(--color-neutral-100);--comment-avatar-size:2.5rem;--comment-marker-background:var(--color-neutral-200);--comment-marker-color:var(--color-neutral-800);--comment-line-background:var(--color-neutral-100);--comment-line-width:.1rem;--comment-line-offset:calc(var(--space-s) + var(--comment-avatar-size)/2);--comment-header-font-size:var(--font-size-7);--comment-header-padding:var(--space-s);--comment-header-gap:var(--space-s);--comment-content-padding:var(--space-xs);--comment-content-background:var(--color-neutral-100);--comment-content-background-dark:var(--color-neutral-200);--comment-content-border-radius:var(--border-radius);--comment-author-gap:var(--space-xs);--comment-author-margin-bottom:var(--space-2xs);--comment-timestamp-font-size:var(--font-size-8);--comment-timestamp-color:var(--color-neutral-300);--comment-replies-padding:0 var(--space-s);--comment-replies-gap:var(--space-s);--comment-footer-padding:var(--space-s);--comment-footer-gap:var(--space-s);--comment-buttons-gap:var(--space-xs);--comment-dialog-position:absolute;--comment-dialog-max-width:300px;--comment-dialog-border-radius:var(--border-radius);--comment-dialog-shadow:var(--shadow-s);--comment-dialog-backdrop-background:transparent;--comment-dialog-textarea-font-size:var(--font-size-6);--comment-form-background:var(--color-base-background);--comment-form-color:var(--color-base);--comment-form-border:1px solid var(--color-neutral-200);--comment-form-border-radius:var(--border-radius);--comment-form-textarea-height:15ch;--comment-form-textarea-padding:var(--space-s);--comment-form-textarea-background:var(--color-base-background);--comment-form-textarea-font-family:var(--font-family);--comment-form-textarea-font-size:var(--font-size-7);--comment-form-footer-padding:var(--space-xs);--comment-form-footer-gap:var(--space-xs);--comment-form-hint-font-size:var(--font-size-8);--comment-form-hint-color:var(--color-neutral-300);--comment-form-hint-padding:0 var(--space-xs)var(--space-xs)var(--space-xs);--context-menu-container-bottom:var(--space-s);--context-menu-container-right:var(--space-s);--context-menu-container-z-index:10;--context-menu-trigger-size:2.5rem;--context-menu-trigger-border-radius:var(--border-radius-rounded);--context-menu-background:var(--color-base-background);--context-menu-border-radius:var(--border-radius);--context-menu-shadow:var(--shadow-m);--context-menu-padding:var(--space-xs);--context-menu-min-width:12rem;--context-menu-backdrop-background:transparent;--context-menu-section-gap:var(--space-2xs);--context-menu-title-font-size:var(--font-size-8);--context-menu-title-font-weight:var(--font-weight-medium);--context-menu-title-color:var(--color-neutral-500);--context-menu-title-margin-bottom:var(--space-2xs);--context-menu-title-letter-spacing:.05em;--context-menu-filter-gap:1px;--context-menu-filter-dot-size:.5em;--context-menu-filter-dot-border-radius:50%;--context-menu-filter-dot-margin-right:var(--space-2xs);--context-menu-filter-dot-open-background:var(--color-accent);--context-menu-filter-dot-resolved-background:var(--color-neutral-400);--header-position:fixed;--header-top:var(--space-xs);--header-transform:translateX(-50%);--header-color:var(--color-base);--header-border-radius:var(--border-radius-rounded);--header-z-index:9999;--header-bottom-position:var(--space-xs);--header-backdrop-filter:var(--backdrop-glass);--header-background:var(--background-glass);--header-count-size:2rem;--header-count-border-radius:var(--border-radius-rounded);--header-count-backdrop-filter:var(--backdrop-glass);--header-count-background:var(--background-glass);--marker-size:2rem;--marker-position:absolute;--marker-z-index:var(--z-loop-marker);--marker-transform:translate(-50%,-50%);--marker-border-radius:var(--border-radius-rounded);--marker-pulse-animation:pulse 1s ease-in-out;--marker-pulse-shadow-start:0 0 0 0 var(--color-accent);--marker-pulse-shadow-transparent:0 0 0 8px transparent;--marker-pulse-shadow-subtle:0 0 0 8px #80808026;--marker-pulse-shadow-final:0 0 0 16px transparent;--panel-width:380px;--panel-mobile-width:85svw;--panel-position:fixed;--panel-right:var(--space-xs);--panel-top:var(--space-xs);--panel-height:calc(100svh - var(--space-xs)*2);--panel-transform-closed:translateX(calc(100% + var(--space-xs)));--panel-transform-open:translateX(0);--panel-color:var(--color-base);--panel-border-radius:var(--border-radius);--panel-border-top-left-radius:0;--panel-transition:var(--transition-duration-jump)var(--transition-easing-jump);--panel-z-index:var(--z-loop-panel);--panel-shadow:var(--shadow-m);--panel-header-transform-closed:translate(-95%);--panel-header-transform-open:translate(calc(-100% + 1px));--panel-header-transform-hover:translate(calc(-100% + 1px));--panel-header-border-radius:var(--border-radius-rounded);--panel-header-gap:var(--space-xs);--panel-header-backdrop-filter:var(--backdrop-glass);--panel-header-background:var(--background-glass);--panel-threads-background:var(--color-base-background-o-95);--panel-threads-backdrop:var(--backdrop-blur);--panel-threads-border-radius:var(--border-radius);--panel-threads-border-top-left-radius:0;--panel-threads-padding:0 0 var(--space-s)0;--panel-threads-item-margin:var(--space-s);--panel-threads-scrollbar-width:thin;--panel-no-threads-padding:var(--space-s)var(--space-l);--panel-no-threads-font-size:var(--font-size-6);--panel-no-threads-color:var(--color-neutral-300);--reply-gap:var(--space-s);--reply-content-padding:var(--space-xs);--reply-content-background:var(--color-neutral-100);--reply-content-background-dark:var(--color-neutral-200);--reply-content-border-radius:var(--border-radius);--reply-header-gap:var(--space-xs);--reply-header-margin-bottom:var(--space-2xs);--reply-timestamp-font-size:var(--font-size-8);--reply-timestamp-color:var(--color-neutral-300);--welcome-dialog-background:var(--background-glass-frosted);--welcome-dialog-backdrop-filter:var(--backdrop-glass);--welcome-dialog-border:0px;--welcome-dialog-border-radius:var(--border-radius);--welcome-dialog-shadow:var(--shadow-l),var(--shadow-light-edge),var(--shadow-dark-edge);--welcome-dialog-max-width:500px;--welcome-dialog-backdrop-background:var(--color-base-background-o-10);--welcome-dialog-backdrop-backdrop-filter:none;--welcome-dialog-form-padding:var(--space-l);--welcome-dialog-title-margin:0 0 var(--space-s)0;--welcome-dialog-title-font-size:var(--font-size-4);--welcome-dialog-title-color:var(--color-base);--welcome-dialog-title-font-weight:var(--font-weight-bold);--welcome-dialog-text-margin:0 0 var(--space-m)0;--welcome-dialog-text-font-size:var(--font-size-6);--welcome-dialog-text-color:var(--color-neutral-600);--welcome-dialog-text-line-height:var(--line-height);--welcome-dialog-name-section-margin:var(--space-l);--welcome-dialog-input-border:1px solid var(--color-neutral-300);--welcome-dialog-input-border-radius:var(--border-radius-s);--welcome-dialog-input-padding:var(--space-xs);--welcome-dialog-input-font-family:var(--font-family);--welcome-dialog-input-font-size:var(--font-size-6);--welcome-dialog-input-color:var(--color-base);--welcome-dialog-input-background:var(--color-base-background);--welcome-dialog-input-outline-color:var(--outline-color);--welcome-dialog-input-outline-offset:var(--outline-offset);--welcome-dialog-footer-gap:var(--space-xs);--icon-size:1em}kirby-loop[data-theme=dark]{--color-neutral-l-0:0;--color-neutral-l-100:.1;--color-neutral-l-200:.2;--color-neutral-l-300:.3;--color-neutral-l-400:.4;--color-neutral-l-500:.5;--color-neutral-l-600:.6;--color-neutral-l-700:.7;--color-neutral-l-800:.9;--color-neutral-l-900:.95;--color-neutral-l-1000:1}kirby-loop{font-family:var(--font-family);line-height:var(--line-height);font-weight:var(--font-weight-normal);font-size:var(--font-size-7);box-sizing:border-box}html.loop-overlay-open a{pointer-events:none}')),document.head.appendChild(r)}}catch(o){console.error("vite-plugin-css-injected-by-js",o)}}();
 var __defProp = Object.defineProperty;
 var __typeError = (msg) => {
   throw TypeError(msg);
@@ -3378,82 +3378,6 @@ function create_custom_element(Component, props_definition, slots, exports, use_
   Class;
   return Class;
 }
-const store = proxy({ comments: [] });
-const apiPrefix = "loop";
-const KirbyLoop = document.querySelector("kirby-loop");
-const csrfToken = (KirbyLoop == null ? void 0 : KirbyLoop.getAttribute("csrf-token")) || "";
-const apiBase = (KirbyLoop == null ? void 0 : KirbyLoop.getAttribute("apibase")) || "/";
-const headers = {
-  "Content-Type": "application/json",
-  "X-CSRF-Token": csrfToken || ""
-};
-const getComments = async (pageId) => {
-  const url = `${apiBase}/${apiPrefix}/comments/${pageId}`;
-  const response = await fetch(url, { headers });
-  const data = await response.json();
-  store.comments = data.comments;
-};
-const addComment = async (comment2) => {
-  const url = `${apiBase}/${apiPrefix}/comment/new`;
-  const response = await fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(comment2)
-  });
-  const data = await response.json();
-  store.comments = [data.comment, ...store.comments];
-};
-const resolveComment = async (comment2) => {
-  const url = `${apiBase}/${apiPrefix}/comment/resolve`;
-  const response = await fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify({ id: comment2.id })
-  });
-  const data = await response.json();
-  if (data.success) {
-    const commentIndex = store.comments.findIndex((c) => c.id === comment2.id);
-    if (commentIndex !== -1) {
-      store.comments[commentIndex].status = "RESOLVED";
-    }
-  }
-  return data.success;
-};
-const unresolveComment = async (comment2) => {
-  const url = `${apiBase}/${apiPrefix}/comment/unresolve`;
-  const response = await fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify({ id: comment2.id })
-  });
-  const data = await response.json();
-  if (data.success) {
-    const commentIndex = store.comments.findIndex((c) => c.id === comment2.id);
-    if (commentIndex !== -1) {
-      store.comments[commentIndex].status = "OPEN";
-    }
-  }
-  return data.success;
-};
-const setGuestName = async (name) => {
-  const response = await fetch(`${apiBase}/${apiPrefix}/guest/name`, {
-    method: "POST",
-    headers,
-    body: JSON.stringify({ name })
-  });
-  return await response.json();
-};
-const addReply = async (reply) => {
-  const url = `${apiBase}/${apiPrefix}/comment/reply`;
-  const response = await fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(reply)
-  });
-  const data = await response.json();
-  const parent = store.comments.find((c) => c.id === data.reply.parentId);
-  if (parent) parent.replies = [...parent.replies, data.reply];
-};
 const panel = proxy({
   open: false,
   currentCommentId: 0,
@@ -3494,26 +3418,26 @@ const setTranslations = (newTranslations) => {
 };
 enable_legacy_mode_flag();
 var root$f = /* @__PURE__ */ ns_template(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-1q9atlb"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="1.5"></path><path d="M15 12H12M12 12H9M12 12V9M12 12V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>`);
-const $$css$g = {
+const $$css$f = {
   hash: "svelte-1q9atlb",
   code: "svg.svelte-1q9atlb{width:var(--size,var(--icon-size));height:var(--size,var(--icon-size))}"
 };
 function IconComment($$anchor) {
-  append_styles($$anchor, $$css$g);
+  append_styles($$anchor, $$css$f);
   var svg = root$f();
   append($$anchor, svg);
 }
 create_custom_element(IconComment, {}, [], [], true);
-var root_1$2 = /* @__PURE__ */ template(`<span class="svelte-3rwd6b"><!></span>`);
+var root_1$2 = /* @__PURE__ */ template(`<span class="svelte-cyjll8"><!></span>`);
 var root$e = /* @__PURE__ */ template(`<button><!> <!></button>`);
-const $$css$f = {
-  hash: "svelte-3rwd6b",
-  code: "button.svelte-3rwd6b{appearance:none;background-color:var(--button-background);color:var(--button-color);padding:var(--button-padding);font-family:var(--font-family);letter-spacing:.01em;border-radius:var(--button-border-radius);gap:var(--button-gap);cursor:pointer;font-size:var(--button-font-size);font-weight:var(--button-font-weight);transition:var(--button-transition);white-space:nowrap;height:var(--button-height);outline-color:var(--button-outline-color);border:0;flex:none;justify-content:center;align-items:center;line-height:1;display:inline-flex}button.svelte-3rwd6b:focus-visible{outline-offset:var(--button-outline-offset)}button.svelte-3rwd6b:hover,button.svelte-3rwd6b:focus-visible{color:var(--button-hover-color);background-color:var(--button-hover-background)}button.svelte-3rwd6b span:where(.svelte-3rwd6b){text-overflow:ellipsis;min-width:0;display:block;overflow-x:clip}button.button--header.svelte-3rwd6b{background-color:var(--button-header-background);height:var(--button-header-height);padding:var(--button-header-padding);border:0;border-radius:0}button.button--header.svelte-3rwd6b:hover,button.button--header.svelte-3rwd6b:focus-visible{background-color:var(--button-header-hover-background)}button.button--panel.svelte-3rwd6b{background-color:var(--button-panel-background);height:auto;padding:var(--button-panel-padding);border:0;border-radius:0}button.button--panel.svelte-3rwd6b span:where(.svelte-3rwd6b){overflow:visible}button.button--solid.svelte-3rwd6b{background-color:var(--button-solid-background)}button.button--solid.svelte-3rwd6b:hover,button.button--solid.svelte-3rwd6b:focus-visible{color:var(--button-solid-hover-color);background-color:var(--button-solid-hover-background)}button.button--small.svelte-3rwd6b{height:var(--button-small-height);font-size:var(--button-small-font-size)}button.button--icon.svelte-3rwd6b{background-color:var(--button-icon-background);color:var(--button-icon-color);height:var(--button-icon-height);box-shadow:var(--button-icon-shadow);aspect-ratio:1;font-size:var(--button-icon-font-size);border-radius:var(--button-icon-border-radius);border:0;padding:0}button.button--icon.svelte-3rwd6b:hover,button.button--icon.svelte-3rwd6b:focus-visible{background-color:var(--button-icon-hover-background);color:var(--button-icon-color)}button.button--marker.svelte-3rwd6b{background-color:var(--button-marker-background);color:var(--button-marker-color);height:var(--marker-size);width:var(--marker-size);font-weight:var(--button-marker-font-weight);border-radius:var(--button-marker-border-radius);border:0;padding:0}button.button--marker.svelte-3rwd6b :where(.svelte-3rwd6b){pointer-events:none}button.button--marker.button--marker-highlighted.svelte-3rwd6b{background-color:var(--button-marker-highlighted-background);color:var(--button-marker-highlighted-color)}button.button--marker-open.svelte-3rwd6b{background-color:var(--color-accent);color:var(--color-accent-dark)}button.button--filter.svelte-3rwd6b{background-color:var(--button-filter-background);color:var(--button-filter-color);height:var(--button-filter-height);font-size:var(--button-filter-font-size);padding:var(--button-filter-padding);border-radius:var(--button-filter-border-radius);flex:1}button.button--filter.svelte-3rwd6b:hover,button.button--filter.svelte-3rwd6b:focus-visible{color:var(--button-filter-hover-color);background-color:var(--button-filter-hover-background)}button.button--filter.button--filter-active.svelte-3rwd6b{background-color:var(--button-filter-active-background);color:var(--button-filter-active-color);font-weight:var(--button-filter-active-font-weight)}button.button--filter.button--filter-active.svelte-3rwd6b:hover,button.button--filter.button--filter-active.svelte-3rwd6b:focus-visible{background-color:var(--button-filter-active-background);color:var(--button-filter-active-color)}button.button--menu-item.svelte-3rwd6b{background-color:var(--button-menu-item-background);color:var(--button-menu-item-color);width:100%;padding:var(--button-menu-item-padding);border-radius:var(--button-menu-item-border-radius);font-size:var(--button-menu-item-font-size);justify-content:flex-start;gap:var(--button-menu-item-gap)}button.button--menu-item.svelte-3rwd6b:hover,button.button--menu-item.svelte-3rwd6b:focus-visible{background-color:var(--button-menu-item-hover-background);color:var(--button-menu-item-hover-color)}button.button--menu-item.button--menu-item-active.svelte-3rwd6b{background-color:var(--button-menu-item-active-background);color:var(--button-menu-item-active-color);font-weight:var(--button-menu-item-active-font-weight)}button.button--menu-item.button--menu-item-active.svelte-3rwd6b:hover,button.button--menu-item.button--menu-item-active.svelte-3rwd6b:focus-visible{background-color:var(--button-menu-item-active-background);color:var(--button-menu-item-active-color)}button.is-active.svelte-3rwd6b{background-color:var(--button-active-background);color:var(--button-active-color)}button.is-active.svelte-3rwd6b:hover{color:var(--button-active-color);background-color:var(--button-active-background)}button.svelte-3rwd6b:disabled{opacity:var(--button-disabled-opacity);cursor:not-allowed}button.svelte-3rwd6b:disabled:hover{color:var(--button-disabled-hover-color);background-color:var(--button-disabled-hover-background)}"
+const $$css$e = {
+  hash: "svelte-cyjll8",
+  code: "button.svelte-cyjll8{appearance:none;background-color:var(--button-background);color:var(--button-color);padding:var(--button-padding);font-family:var(--font-family);letter-spacing:.01em;border-radius:var(--button-border-radius);gap:var(--button-gap);cursor:pointer;font-size:var(--button-font-size);font-weight:var(--button-font-weight);transition:var(--button-transition);white-space:nowrap;height:var(--button-height);outline-color:var(--button-outline-color);border:0;flex:none;justify-content:center;align-items:center;line-height:1;display:inline-flex}button.svelte-cyjll8:focus-visible{outline-offset:var(--button-outline-offset)}button.svelte-cyjll8:hover,button.svelte-cyjll8:focus-visible{color:var(--button-hover-color);background-color:var(--button-hover-background)}button.svelte-cyjll8 span:where(.svelte-cyjll8){text-overflow:ellipsis;min-width:0;display:block;overflow-x:clip}button.button--header.svelte-cyjll8{background-color:var(--button-header-background);height:var(--button-header-height);padding:var(--button-header-padding);mix-blend-mode:var(--button-header-blend-mode);border:0;border-radius:0}button.button--header.svelte-cyjll8:hover,button.button--header.svelte-cyjll8:focus-visible{background-color:var(--button-header-hover-background)}button.button--panel.svelte-cyjll8{background-color:var(--button-panel-background);height:auto;padding:var(--button-panel-padding);border:0;border-radius:0}button.button--panel.svelte-cyjll8 span:where(.svelte-cyjll8){overflow:visible}button.button--solid.svelte-cyjll8{background-color:var(--button-solid-background)}button.button--solid.svelte-cyjll8:hover,button.button--solid.svelte-cyjll8:focus-visible{color:var(--button-solid-hover-color);background-color:var(--button-solid-hover-background)}button.button--small.svelte-cyjll8{height:var(--button-small-height);font-size:var(--button-small-font-size)}button.button--icon.svelte-cyjll8{background-color:var(--button-icon-background);color:var(--button-icon-color);height:var(--button-icon-height);box-shadow:var(--button-icon-shadow);aspect-ratio:1;font-size:var(--button-icon-font-size);border-radius:var(--button-icon-border-radius);border:0;padding:0}button.button--icon.svelte-cyjll8:hover,button.button--icon.svelte-cyjll8:focus-visible{background-color:var(--button-icon-hover-background);color:var(--button-icon-color)}button.button--marker.svelte-cyjll8{background-color:var(--button-marker-background);color:var(--button-marker-color);height:var(--marker-size);width:var(--marker-size);font-weight:var(--button-marker-font-weight);border-radius:var(--button-marker-border-radius);border:0;padding:0}button.button--marker.svelte-cyjll8 :where(.svelte-cyjll8){pointer-events:none}button.button--marker.button--marker-highlighted.svelte-cyjll8{background-color:var(--button-marker-highlighted-background);color:var(--button-marker-highlighted-color)}button.button--marker-open.svelte-cyjll8{background-color:var(--color-accent);color:var(--color-accent-dark)}button.button--filter.svelte-cyjll8{background-color:var(--button-filter-background);color:var(--button-filter-color);height:var(--button-filter-height);font-size:var(--button-filter-font-size);padding:var(--button-filter-padding);border-radius:var(--button-filter-border-radius);flex:1}button.button--filter.svelte-cyjll8:hover,button.button--filter.svelte-cyjll8:focus-visible{color:var(--button-filter-hover-color);background-color:var(--button-filter-hover-background)}button.button--filter.button--filter-active.svelte-cyjll8{background-color:var(--button-filter-active-background);color:var(--button-filter-active-color);font-weight:var(--button-filter-active-font-weight)}button.button--filter.button--filter-active.svelte-cyjll8:hover,button.button--filter.button--filter-active.svelte-cyjll8:focus-visible{background-color:var(--button-filter-active-background);color:var(--button-filter-active-color)}button.button--menu-item.svelte-cyjll8{background-color:var(--button-menu-item-background);color:var(--button-menu-item-color);width:100%;padding:var(--button-menu-item-padding);border-radius:var(--button-menu-item-border-radius);font-size:var(--button-menu-item-font-size);justify-content:flex-start;gap:var(--button-menu-item-gap)}button.button--menu-item.svelte-cyjll8:hover,button.button--menu-item.svelte-cyjll8:focus-visible{background-color:var(--button-menu-item-hover-background);color:var(--button-menu-item-hover-color)}button.button--menu-item.button--menu-item-active.svelte-cyjll8{background-color:var(--button-menu-item-active-background);color:var(--button-menu-item-active-color);font-weight:var(--button-menu-item-active-font-weight)}button.button--menu-item.button--menu-item-active.svelte-cyjll8:hover,button.button--menu-item.button--menu-item-active.svelte-cyjll8:focus-visible{background-color:var(--button-menu-item-active-background);color:var(--button-menu-item-active-color)}button.is-active.svelte-cyjll8{background-color:var(--button-active-background);color:var(--button-active-color)}button.is-active.svelte-cyjll8:hover{color:var(--button-active-color);background-color:var(--button-active-background)}button.svelte-cyjll8:disabled{opacity:var(--button-disabled-opacity);cursor:not-allowed}button.svelte-cyjll8:disabled:hover{color:var(--button-disabled-hover-color);background-color:var(--button-disabled-hover-background)}"
 };
 function Button($$anchor, $$props) {
   const $$slots = sanitize_slots($$props);
   push($$props, true);
-  append_styles($$anchor, $$css$f);
+  append_styles($$anchor, $$css$e);
   const onclick = prop($$props, "onclick", 7), onmouseenter = prop($$props, "onmouseenter", 7), onmouseout = prop($$props, "onmouseout", 7), onblur = prop($$props, "onblur", 7), active = prop($$props, "active", 7, false), type = prop($$props, "type", 7, "button"), style = prop($$props, "style", 7, ""), disabled = prop($$props, "disabled", 7, false), ariaLabel = prop($$props, "ariaLabel", 7, "");
   var button = root$e();
   button.__click = function(...$$args) {
@@ -3543,7 +3467,7 @@ function Button($$anchor, $$props) {
   reset$1(button);
   template_effect(
     ($0) => {
-      classes = set_class(button, 1, `button ${style() ?? ""}`, "svelte-3rwd6b", classes, $0);
+      classes = set_class(button, 1, `button ${style() ?? ""}`, "svelte-cyjll8", classes, $0);
       set_attribute(button, "type", type());
       set_attribute(button, "aria-label", ariaLabel());
       button.disabled = disabled();
@@ -3644,27 +3568,27 @@ create_custom_element(
   true
 );
 var root$d = /* @__PURE__ */ ns_template(`<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-1q9atlb"><path d="M15.359 16.9999L12.8975 14.5385L12.1459 15.2902C11.3764 16.0597 10.9916 16.4444 10.5781 16.3536C10.1645 16.2628 9.97641 15.7522 9.60019 14.731L8.34544 11.3253C7.59492 9.28816 7.21966 8.2696 7.74463 7.74463C8.2696 7.21966 9.28816 7.59492 11.3253 8.34544L14.731 9.60019C15.7522 9.97641 16.2628 10.1645 16.3536 10.5781C16.4444 10.9916 16.0597 11.3764 15.2902 12.1459L14.5385 12.8975L16.9999 15.359C17.2548 15.6138 17.3822 15.7413 17.4411 15.8834C17.5196 16.073 17.5196 16.2859 17.4411 16.4755C17.3822 16.6176 17.2548 16.7451 16.9999 16.9999C16.7451 17.2548 16.6176 17.3822 16.4755 17.4411C16.2859 17.5196 16.073 17.5196 15.8834 17.4411C15.7413 17.3822 15.6138 17.2548 15.359 16.9999Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2.5 12.5C2.5 7.78595 2.5 5.42893 3.96447 3.96447C5.42893 2.5 7.78595 2.5 12.5 2.5C17.214 2.5 19.5711 2.5 21.0355 3.96447C22.5 5.42893 22.5 7.78595 22.5 12.5C22.5 17.214 22.5 19.5711 21.0355 21.0355C19.5711 22.5 17.214 22.5 12.5 22.5C7.78595 22.5 5.42893 22.5 3.96447 21.0355C2.5 19.5711 2.5 17.214 2.5 12.5Z" stroke="currentColor" stroke-width="1.5"></path></svg>`);
-const $$css$e = {
+const $$css$d = {
   hash: "svelte-1q9atlb",
   code: "svg.svelte-1q9atlb{width:var(--size,var(--icon-size));height:var(--size,var(--icon-size))}"
 };
 function IconBrowse($$anchor) {
-  append_styles($$anchor, $$css$e);
+  append_styles($$anchor, $$css$d);
   var svg = root$d();
   append($$anchor, svg);
 }
 create_custom_element(IconBrowse, {}, [], [], true);
 var root_2$2 = /* @__PURE__ */ template(`<svelte-css-wrapper style="display: contents"><!></svelte-css-wrapper>`, 1);
 var root_4$2 = /* @__PURE__ */ template(`<svelte-css-wrapper style="display: contents"><!></svelte-css-wrapper>`, 1);
-var root_5$2 = /* @__PURE__ */ template(`<span class="count glass-effect-small svelte-1dpv2ml"> </span>`);
-var root$c = /* @__PURE__ */ template(`<header><div class="toggle svelte-1dpv2ml"><!> <!></div> <!></header>`);
-const $$css$d = {
-  hash: "svelte-1dpv2ml",
-  code: ".toggle.svelte-1dpv2ml{display:flex}header.svelte-1dpv2ml{position:var(--header-position);top:var(--header-top);max-width:100%;transform:var(--header-transform);color:var(--header-color);border-radius:var(--header-border-radius);z-index:var(--header-z-index);justify-content:space-between;align-items:stretch;display:flex;left:50%}header.bottom.svelte-1dpv2ml{top:auto;bottom:var(--header-bottom-position)}.count.svelte-1dpv2ml{width:var(--header-count-size);height:var(--header-count-size);border-radius:var(--header-count-border-radius);justify-content:center;align-items:center;display:flex}"
+var root_5$2 = /* @__PURE__ */ template(`<span class="count svelte-13e3mw1"> </span>`);
+var root$c = /* @__PURE__ */ template(`<header><div class="toggle svelte-13e3mw1"><!> <!></div> <!></header>`);
+const $$css$c = {
+  hash: "svelte-13e3mw1",
+  code: ".toggle.svelte-13e3mw1{display:flex}header.svelte-13e3mw1{position:var(--header-position);top:var(--header-top);max-width:100%;transform:var(--header-transform);color:var(--header-color);border-radius:var(--header-border-radius);z-index:var(--header-z-index);-webkit-backdrop-filter:var(--header-backdrop-filter);backdrop-filter:var(--header-backdrop-filter);box-shadow:var(--shadow-l),var(--shadow-light-edge),var(--shadow-dark-edge);background:var(--header-background);justify-content:space-between;align-items:stretch;display:flex;left:50%;overflow:hidden}header.bottom.svelte-13e3mw1{top:auto;bottom:var(--header-bottom-position)}.count.svelte-13e3mw1{width:var(--header-count-size);height:var(--header-count-size);border-radius:var(--header-count-border-radius);-webkit-backdrop-filter:var(--header-count-backdrop-filter);backdrop-filter:var(--header-count-backdrop-filter);box-shadow:var(--shadow-s),var(--shadow-light-edge),var(--shadow-dark-edge);background:var(--header-count-background);justify-content:center;align-items:center;display:flex}"
 };
 function Header($$anchor, $$props) {
   push($$props, true);
-  append_styles($$anchor, $$css$d);
+  append_styles($$anchor, $$css$c);
   const position = prop($$props, "position", 7), commentsCount = prop($$props, "commentsCount", 7);
   var header = root$c();
   let classes;
@@ -3745,7 +3669,7 @@ function Header($$anchor, $$props) {
     $$slots: { default: true }
   });
   reset$1(header);
-  template_effect(($0) => classes = set_class(header, 1, "glass-effect svelte-1dpv2ml", null, classes, $0), [
+  template_effect(($0) => classes = set_class(header, 1, "svelte-13e3mw1", null, classes, $0), [
     () => ({ bottom: position() === "bottom" })
   ]);
   append($$anchor, header);
@@ -3862,13 +3786,13 @@ const getDocumentHeight = () => {
   );
 };
 var root_1$1 = /* @__PURE__ */ template(`<div><!></div>`);
-const $$css$c = {
+const $$css$b = {
   hash: "svelte-t6ozb1",
   code: ".marker.svelte-t6ozb1{position:var(--marker-position);z-index:var(--marker-z-index);transform:var(--marker-transform);border-radius:var(--marker-border-radius)}.marker--pulse.svelte-t6ozb1{animation:var(--marker-pulse-animation)}@keyframes svelte-t6ozb1-pulse{0%{box-shadow:var(--marker-pulse-shadow-start),0 0 0 0 #8080804d,0 0 0 0 #80808033}30%{box-shadow:var(--marker-pulse-shadow-transparent),0 0 0 0 #8080804d,0 0 0 0 #80808033}60%{box-shadow:0 0 0 12px transparent,var(--marker-pulse-shadow-subtle),0 0 0 0 #80808033}to{box-shadow:var(--marker-pulse-shadow-final),0 0 0 12px transparent,0 0 0 8px transparent}}"
 };
 function Marker($$anchor, $$props) {
   push($$props, true);
-  append_styles($$anchor, $$css$c);
+  append_styles($$anchor, $$css$b);
   const comment$1 = prop($$props, "comment", 7);
   let shouldPulse = state(false);
   user_effect(() => {
@@ -3999,6 +3923,82 @@ function Marker($$anchor, $$props) {
   });
 }
 create_custom_element(Marker, { comment: {} }, [], [], true);
+const store = proxy({ comments: [] });
+const apiPrefix = "loop";
+const KirbyLoop = document.querySelector("kirby-loop");
+const csrfToken = (KirbyLoop == null ? void 0 : KirbyLoop.getAttribute("csrf-token")) || "";
+const apiBase = (KirbyLoop == null ? void 0 : KirbyLoop.getAttribute("apibase")) || "/";
+const headers = {
+  "Content-Type": "application/json",
+  "X-CSRF-Token": csrfToken || ""
+};
+const getComments = async (pageId) => {
+  const url = `${apiBase}/${apiPrefix}/comments/${pageId}`;
+  const response = await fetch(url, { headers });
+  const data = await response.json();
+  store.comments = data.comments;
+};
+const addComment = async (comment2) => {
+  const url = `${apiBase}/${apiPrefix}/comment/new`;
+  const response = await fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(comment2)
+  });
+  const data = await response.json();
+  store.comments = [data.comment, ...store.comments];
+};
+const resolveComment = async (comment2) => {
+  const url = `${apiBase}/${apiPrefix}/comment/resolve`;
+  const response = await fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify({ id: comment2.id })
+  });
+  const data = await response.json();
+  if (data.success) {
+    const commentIndex = store.comments.findIndex((c) => c.id === comment2.id);
+    if (commentIndex !== -1) {
+      store.comments[commentIndex].status = "RESOLVED";
+    }
+  }
+  return data.success;
+};
+const unresolveComment = async (comment2) => {
+  const url = `${apiBase}/${apiPrefix}/comment/unresolve`;
+  const response = await fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify({ id: comment2.id })
+  });
+  const data = await response.json();
+  if (data.success) {
+    const commentIndex = store.comments.findIndex((c) => c.id === comment2.id);
+    if (commentIndex !== -1) {
+      store.comments[commentIndex].status = "OPEN";
+    }
+  }
+  return data.success;
+};
+const setGuestName = async (name) => {
+  const response = await fetch(`${apiBase}/${apiPrefix}/guest/name`, {
+    method: "POST",
+    headers,
+    body: JSON.stringify({ name })
+  });
+  return await response.json();
+};
+const addReply = async (reply) => {
+  const url = `${apiBase}/${apiPrefix}/comment/reply`;
+  const response = await fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(reply)
+  });
+  const data = await response.json();
+  const parent = store.comments.find((c) => c.id === data.reply.parentId);
+  if (parent) parent.replies = [...parent.replies, data.reply];
+};
 const formData = proxy({ text: "", parentId: null });
 const reset = () => {
   formData.text = "";
@@ -4015,13 +4015,13 @@ function handleKeydown(e) {
   }
 }
 var root$b = /* @__PURE__ */ template(`<form method="POST" class="svelte-w3h34c"><div class="input"><textarea name="comment" required class="svelte-w3h34c"></textarea></div> <div class="keyboard-hint svelte-w3h34c"> </div> <footer class="svelte-w3h34c"><!> <!></footer></form>`);
-const $$css$b = {
+const $$css$a = {
   hash: "svelte-w3h34c",
   code: "form.svelte-w3h34c{cursor:auto;background-color:var(--comment-form-background);color:var(--comment-form-color);border-radius:var(--comment-form-border-radius);border:var(--comment-form-border);padding:0;overflow:hidden}textarea.svelte-w3h34c{width:100%;height:var(--comment-form-textarea-height);resize:none;padding:var(--comment-form-textarea-padding);box-sizing:border-box;background-color:var(--comment-form-textarea-background);font-family:var(--comment-form-textarea-font-family);font-size:var(--comment-form-textarea-font-size);color:currentColor;border:0;margin:0}textarea.svelte-w3h34c:focus-visible,textarea.svelte-w3h34c:focus{outline:0}footer.svelte-w3h34c{padding:var(--comment-form-footer-padding);gap:var(--comment-form-footer-gap);display:flex}footer.svelte-w3h34c button{flex:1}.keyboard-hint.svelte-w3h34c{font-size:var(--comment-form-hint-font-size);color:var(--comment-form-hint-color);padding:var(--comment-form-hint-padding);white-space:nowrap;align-self:center;margin-left:auto}"
 };
 function CommentForm($$anchor, $$props) {
   push($$props, true);
-  append_styles($$anchor, $$css$b);
+  append_styles($$anchor, $$css$a);
   const handleSubmit = prop($$props, "handleSubmit", 7), cancel = prop($$props, "cancel", 7), parentId = prop($$props, "parentId", 7, null);
   formData.parentId = parentId() ? Number(parentId()) : null;
   var form_1 = root$b();
@@ -4106,13 +4106,13 @@ function CommentForm($$anchor, $$props) {
 delegate(["keydown"]);
 create_custom_element(CommentForm, { handleSubmit: {}, cancel: {}, parentId: {} }, [], [], true);
 var root$a = /* @__PURE__ */ template(`<div class="author svelte-1xlsy1x"> </div>`);
-const $$css$a = {
+const $$css$9 = {
   hash: "svelte-1xlsy1x",
   code: ".author.svelte-1xlsy1x{font-size:var(--author-avatar-font-size);text-transform:uppercase;color:var(--author-avatar-color);background-color:var(--author-avatar-background-color);aspect-ratio:1;flex:0 0 var(--author-avatar-size);border-radius:var(--author-avatar-border-radius);justify-content:center;align-items:center;display:flex}"
 };
 function Author($$anchor, $$props) {
   push($$props, true);
-  append_styles($$anchor, $$css$a);
+  append_styles($$anchor, $$css$9);
   const initials = prop($$props, "initials", 7);
   var div = root$a();
   var text2 = child(div, true);
@@ -4131,13 +4131,13 @@ function Author($$anchor, $$props) {
 }
 create_custom_element(Author, { initials: {} }, [], [], true);
 var root$9 = /* @__PURE__ */ template(`<div class="reply svelte-1i0bwsu"><!> <article class="reply__content svelte-1i0bwsu"><header class="svelte-1i0bwsu"><strong> </strong> <time class="svelte-1i0bwsu"> </time></header> <div class="reply__text svelte-1i0bwsu"> </div></article></div>`);
-const $$css$9 = {
+const $$css$8 = {
   hash: "svelte-1i0bwsu",
   code: ".reply.svelte-1i0bwsu{gap:var(--reply-gap);flex-direction:row;align-items:start;display:flex}.reply__content.svelte-1i0bwsu{padding:var(--reply-content-padding);background-color:var(--reply-content-background);border-radius:var(--reply-content-border-radius)}.reply__content.svelte-1i0bwsu header:where(.svelte-1i0bwsu){gap:var(--reply-header-gap);margin-bottom:var(--reply-header-margin-bottom);justify-content:flex-start;align-items:flex-start;display:flex}.reply__content.svelte-1i0bwsu header:where(.svelte-1i0bwsu) time:where(.svelte-1i0bwsu){font-size:var(--reply-timestamp-font-size);color:var(--reply-timestamp-color)}@media (prefers-color-scheme:dark){.reply__content.svelte-1i0bwsu{background-color:var(--reply-content-background-dark)}}.reply__text.svelte-1i0bwsu{white-space:pre-line}"
 };
 function Reply($$anchor, $$props) {
   push($$props, false);
-  append_styles($$anchor, $$css$9);
+  append_styles($$anchor, $$css$8);
   let reply = prop($$props, "reply", 12);
   function formatDate(timestamp) {
     const date = new Date(timestamp * 1e3);
@@ -4196,14 +4196,14 @@ var root_5$1 = /* @__PURE__ */ template(`<li><!></li>`);
 var root_4$1 = /* @__PURE__ */ template(`<ul class="comment__replies svelte-m6br8e"></ul>`);
 var root_7 = /* @__PURE__ */ template(`<div class="buttons svelte-m6br8e"><!> <!></div>`);
 var root$8 = /* @__PURE__ */ template(`<details><summary class="comment__header svelte-m6br8e"><!> <div class="comment__content svelte-m6br8e"><header class="svelte-m6br8e"><strong> </strong> <time class="svelte-m6br8e"> </time></header> <div class="comment__text svelte-m6br8e"> </div></div> <!></summary> <!> <footer class="svelte-m6br8e"><!></footer></details>`);
-const $$css$8 = {
+const $$css$7 = {
   hash: "svelte-m6br8e",
   code: '.comment.svelte-m6br8e{--loop-marker-background:var(--comment-marker-background);--loop-marker-color:var(--comment-marker-color);--marker-size:var(--comment-avatar-size);position:relative}.comment.svelte-m6br8e>:where(.svelte-m6br8e){z-index:1;position:relative}.comment.svelte-m6br8e:after{content:"";left:var(--comment-line-offset);width:var(--comment-line-width);background-color:var(--comment-line-background);z-index:0;height:calc(100% - 4rem);position:absolute;top:1.5rem}.comment.svelte-m6br8e:not([open]):after{height:calc(100% - 2.75rem)}.comment__header.svelte-m6br8e{font-size:var(--comment-header-font-size);padding:var(--comment-header-padding);align-items:flex-start;gap:var(--comment-header-gap);cursor:pointer;display:flex}.comment__header.svelte-m6br8e .comment__replies-count{bottom:0;left:var(--space-s);min-width:var(--comment-avatar-size);position:absolute}.comment__header.svelte-m6br8e header:where(.svelte-m6br8e){gap:var(--comment-author-gap);margin-bottom:var(--comment-author-margin-bottom);justify-content:flex-start;align-items:flex-start;display:flex}.comment__header.svelte-m6br8e header:where(.svelte-m6br8e) time:where(.svelte-m6br8e){font-size:var(--comment-timestamp-font-size);color:var(--comment-timestamp-color)}.comment__header.svelte-m6br8e .comment__content:where(.svelte-m6br8e){padding:var(--comment-content-padding);background-color:var(--comment-content-background);border-radius:var(--comment-content-border-radius);flex:1}@media (prefers-color-scheme:dark){.comment__header.svelte-m6br8e .comment__content:where(.svelte-m6br8e){background-color:var(--comment-content-background-dark)}}.comment__header.svelte-m6br8e .comment__text:where(.svelte-m6br8e){white-space:pre-line}.comment__replies.svelte-m6br8e{padding:var(--comment-replies-padding);gap:var(--comment-replies-gap);flex-direction:column;margin:0;list-style:none;display:flex}footer.svelte-m6br8e{gap:var(--comment-footer-gap);padding:var(--comment-footer-padding);flex-direction:column;display:flex}footer.svelte-m6br8e .buttons:where(.svelte-m6br8e){gap:var(--comment-buttons-gap);align-items:flex-end;display:flex}.is-hidden.svelte-m6br8e{display:none}'
 };
 function Comment$1($$anchor, $$props) {
   var _a2;
   push($$props, true);
-  append_styles($$anchor, $$css$8);
+  append_styles($$anchor, $$css$7);
   const comment2 = prop($$props, "comment", 7), scrollIntoView = prop($$props, "scrollIntoView", 7), handleSubmit = prop($$props, "handleSubmit", 7), cancel = prop($$props, "cancel", 7);
   function formatDate(timestamp) {
     const date = new Date(timestamp * 1e3);
@@ -4433,34 +4433,34 @@ create_custom_element(
   true
 );
 var root$7 = /* @__PURE__ */ ns_template(`<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-1q9atlb"><path d="M2.5 12.5C2.5 7.78595 2.5 5.42893 3.96447 3.96447C5.42893 2.5 7.78595 2.5 12.5 2.5C17.214 2.5 19.5711 2.5 21.0355 3.96447C22.5 5.42893 22.5 7.78595 22.5 12.5C22.5 17.214 22.5 19.5711 21.0355 21.0355C19.5711 22.5 17.214 22.5 12.5 22.5C7.78595 22.5 5.42893 22.5 3.96447 21.0355C2.5 19.5711 2.5 17.214 2.5 12.5Z" stroke="currentColor" stroke-width="1.5"></path><path d="M9 9.5L12 12.5L9 15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M13 9.5L16 12.5L13 15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`);
-const $$css$7 = {
+const $$css$6 = {
   hash: "svelte-1q9atlb",
   code: "svg.svelte-1q9atlb{width:var(--size,var(--icon-size));height:var(--size,var(--icon-size))}"
 };
 function IconSidebarClose($$anchor) {
-  append_styles($$anchor, $$css$7);
+  append_styles($$anchor, $$css$6);
   var svg = root$7();
   append($$anchor, svg);
 }
 create_custom_element(IconSidebarClose, {}, [], [], true);
 var root$6 = /* @__PURE__ */ ns_template(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-1q9atlb"><path d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z" stroke="currentColor" stroke-width="1.5"></path><path d="M15.5 9L12.5 12L15.5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11.5 9L8.5 12L11.5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`);
-const $$css$6 = {
+const $$css$5 = {
   hash: "svelte-1q9atlb",
   code: "svg.svelte-1q9atlb{width:var(--size,var(--icon-size));height:var(--size,var(--icon-size))}"
 };
 function IconSidebarOpen($$anchor) {
-  append_styles($$anchor, $$css$6);
+  append_styles($$anchor, $$css$5);
   var svg = root$6();
   append($$anchor, svg);
 }
 create_custom_element(IconSidebarOpen, {}, [], [], true);
 var root$5 = /* @__PURE__ */ ns_template(`<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-1q9atlb"><path d="M5.44067 14.4885C6.54524 14.4885 7.44067 13.5931 7.44067 12.4885C7.44067 11.384 6.54524 10.4885 5.44067 10.4885C4.3361 10.4885 3.44067 11.384 3.44067 12.4885C3.44067 13.5931 4.3361 14.4885 5.44067 14.4885Z" stroke="currentColor" stroke-width="1.5"></path><path d="M12.4407 14.4885C13.5452 14.4885 14.4407 13.5931 14.4407 12.4885C14.4407 11.384 13.5452 10.4885 12.4407 10.4885C11.3361 10.4885 10.4407 11.384 10.4407 12.4885C10.4407 13.5931 11.3361 14.4885 12.4407 14.4885Z" stroke="currentColor" stroke-width="1.5"></path><path d="M19.4407 14.4885C20.5452 14.4885 21.4407 13.5931 21.4407 12.4885C21.4407 11.384 20.5452 10.4885 19.4407 10.4885C18.3361 10.4885 17.4407 11.384 17.4407 12.4885C17.4407 13.5931 18.3361 14.4885 19.4407 14.4885Z" stroke="currentColor" stroke-width="1.5"></path></svg>`);
-const $$css$5 = {
+const $$css$4 = {
   hash: "svelte-1q9atlb",
   code: "svg.svelte-1q9atlb{width:var(--size,var(--icon-size));height:var(--size,var(--icon-size))}"
 };
 function IconDots($$anchor) {
-  append_styles($$anchor, $$css$5);
+  append_styles($$anchor, $$css$4);
   var svg = root$5();
   append($$anchor, svg);
 }
@@ -4469,13 +4469,13 @@ var $$_import_panel = reactive_import(() => panel);
 var root_3$1 = /* @__PURE__ */ template(`<span class="filter-dot filter-dot--open svelte-15wfo7b" slot="icon"></span>`);
 var root_5 = /* @__PURE__ */ template(`<span class="filter-dot filter-dot--resolved svelte-15wfo7b" slot="icon"></span>`);
 var root$4 = /* @__PURE__ */ template(`<div class="context-menu-container svelte-15wfo7b"><div class="context-menu-trigger svelte-15wfo7b"><!></div> <div class="context-menu svelte-15wfo7b" popover="auto" role="menu" aria-labelledby="context-menu-trigger"><div class="menu-section svelte-15wfo7b"><div class="menu-section-title svelte-15wfo7b"> </div> <div class="filter-options svelte-15wfo7b"><!> <!></div></div></div></div>`);
-const $$css$4 = {
+const $$css$3 = {
   hash: "svelte-15wfo7b",
   code: ".context-menu-container.svelte-15wfo7b{bottom:var(--context-menu-container-bottom);right:var(--context-menu-container-right);z-index:var(--context-menu-container-z-index);position:absolute}.context-menu-trigger.svelte-15wfo7b{width:var(--context-menu-trigger-size);height:var(--context-menu-trigger-size);border-radius:var(--context-menu-trigger-border-radius);justify-content:center;align-items:center;display:flex}.context-menu.svelte-15wfo7b{background:var(--context-menu-background);border-radius:var(--context-menu-border-radius);box-shadow:var(--context-menu-shadow);padding:var(--context-menu-padding);min-width:var(--context-menu-min-width);border:0;margin:0;position:fixed}.context-menu.svelte-15wfo7b::backdrop{background:var(--context-menu-backdrop-background)}.menu-section.svelte-15wfo7b{gap:var(--context-menu-section-gap);flex-direction:column;display:flex}.menu-section-title.svelte-15wfo7b{font-size:var(--context-menu-title-font-size);font-weight:var(--context-menu-title-font-weight);color:var(--context-menu-title-color);margin-bottom:var(--context-menu-title-margin-bottom);text-transform:uppercase;letter-spacing:var(--context-menu-title-letter-spacing);padding:0}.filter-options.svelte-15wfo7b{gap:var(--context-menu-filter-gap);flex-direction:column;display:flex}.filter-dot.svelte-15wfo7b{width:var(--context-menu-filter-dot-size);height:var(--context-menu-filter-dot-size);border-radius:var(--context-menu-filter-dot-border-radius);margin-right:var(--context-menu-filter-dot-margin-right);display:inline-block}.filter-dot--open.svelte-15wfo7b{background:var(--context-menu-filter-dot-open-background)}.filter-dot--resolved.svelte-15wfo7b{background:var(--context-menu-filter-dot-resolved-background)}"
 };
 function ContextMenu($$anchor, $$props) {
   push($$props, false);
-  append_styles($$anchor, $$css$4);
+  append_styles($$anchor, $$css$3);
   let contextMenu = mutable_state();
   let triggerButton = mutable_state();
   const toggleMenu = () => {
@@ -4595,17 +4595,17 @@ function ContextMenu($$anchor, $$props) {
 create_custom_element(ContextMenu, {}, [], [], true);
 var root_2$1 = /* @__PURE__ */ template(`<svelte-css-wrapper style="display: contents"><!></svelte-css-wrapper>`, 1);
 var root_3 = /* @__PURE__ */ template(`<svelte-css-wrapper style="display: contents"><!></svelte-css-wrapper>`, 1);
-var root_4 = /* @__PURE__ */ template(`<li class="no-threads svelte-ux7uta"><p> </p></li>`);
-var root_6 = /* @__PURE__ */ template(`<li class="no-threads svelte-ux7uta"><p> </p></li>`);
-var root_8 = /* @__PURE__ */ template(`<li class="svelte-ux7uta"><!></li>`);
-var root$3 = /* @__PURE__ */ template(`<div><header class="glass-effect svelte-ux7uta"><!></header> <ul class="threads svelte-ux7uta" data-lenis-prevent=""><!></ul> <!></div>`);
-const $$css$3 = {
-  hash: "svelte-ux7uta",
-  code: ".panel.svelte-ux7uta{position:var(--panel-position);right:var(--panel-right);top:var(--panel-top);transform:var(--panel-transform-closed);width:var(--panel-width);height:var(--panel-height);color:var(--panel-color);border-radius:var(--panel-border-radius);border-top-left-radius:var(--panel-border-top-left-radius);transition:var(--panel-transition);z-index:var(--panel-z-index);cursor:auto;flex-direction:column;justify-content:flex-start;align-items:flex-start;display:flex}@media screen and (max-width:600px){.panel.svelte-ux7uta{width:var(--panel-mobile-width)}}.panel.open.svelte-ux7uta{transform:var(--panel-transform-open);box-shadow:var(--panel-shadow)}.panel.open.svelte-ux7uta header:where(.svelte-ux7uta){transform:var(--panel-header-transform-open)}.panel.svelte-ux7uta header:where(.svelte-ux7uta){transform:var(--panel-header-transform-closed);border-top-left-radius:var(--panel-header-border-radius);border-bottom-left-radius:var(--panel-header-border-radius);gap:var(--panel-header-gap);border-top-right-radius:0;border-bottom-right-radius:0;flex-direction:column;display:flex;position:absolute}.panel.svelte-ux7uta header:where(.svelte-ux7uta):hover,.panel.svelte-ux7uta header:where(.svelte-ux7uta):focus-visible{transform:var(--panel-header-transform-hover)}.threads.svelte-ux7uta{overscroll-behavior:contain;padding:var(--panel-threads-padding);box-sizing:border-box;background-color:var(--panel-threads-background);width:100%;-webkit-backdrop-filter:var(--panel-threads-backdrop);backdrop-filter:var(--panel-threads-backdrop);z-index:2;border-radius:var(--panel-threads-border-radius);border-top-left-radius:var(--panel-threads-border-top-left-radius);scrollbar-width:var(--panel-threads-scrollbar-width);scrollbar-gutter:stable;flex-direction:column;flex:100%;margin:0;list-style:none;display:flex;overflow-y:auto}.threads.svelte-ux7uta li:where(.svelte-ux7uta)+li:where(.svelte-ux7uta){margin-top:var(--panel-threads-item-margin)}.threads.svelte-ux7uta .no-threads:where(.svelte-ux7uta){text-align:center;padding:var(--panel-no-threads-padding);font-size:var(--panel-no-threads-font-size);color:var(--panel-no-threads-color);margin-block:auto}"
+var root_4 = /* @__PURE__ */ template(`<li class="no-threads svelte-odttbw"><p> </p></li>`);
+var root_6 = /* @__PURE__ */ template(`<li class="no-threads svelte-odttbw"><p> </p></li>`);
+var root_8 = /* @__PURE__ */ template(`<li class="svelte-odttbw"><!></li>`);
+var root$3 = /* @__PURE__ */ template(`<div><header class="svelte-odttbw"><!></header> <ul class="threads svelte-odttbw" data-lenis-prevent=""><!></ul> <!></div>`);
+const $$css$2 = {
+  hash: "svelte-odttbw",
+  code: ".panel.svelte-odttbw{position:var(--panel-position);right:var(--panel-right);top:var(--panel-top);transform:var(--panel-transform-closed);width:var(--panel-width);height:var(--panel-height);color:var(--panel-color);border-radius:var(--panel-border-radius);border-top-left-radius:var(--panel-border-top-left-radius);transition:var(--panel-transition);z-index:var(--panel-z-index);cursor:auto;flex-direction:column;justify-content:flex-start;align-items:flex-start;display:flex}@media screen and (max-width:600px){.panel.svelte-odttbw{width:var(--panel-mobile-width)}}.panel.open.svelte-odttbw{transform:var(--panel-transform-open);box-shadow:var(--panel-shadow)}.panel.open.svelte-odttbw header:where(.svelte-odttbw){transform:var(--panel-header-transform-open)}.panel.svelte-odttbw header:where(.svelte-odttbw){transform:var(--panel-header-transform-closed);border-top-left-radius:var(--panel-header-border-radius);border-bottom-left-radius:var(--panel-header-border-radius);gap:var(--panel-header-gap);-webkit-backdrop-filter:var(--panel-header-backdrop-filter);backdrop-filter:var(--panel-header-backdrop-filter);background:var(--panel-header-background);box-shadow:var(--shadow-l),var(--shadow-light-edge),var(--shadow-dark-edge);transition:transform var(--transition-duration)var(--transition-easing);border-top-right-radius:0;border-bottom-right-radius:0;flex-direction:column;display:flex;position:absolute;overflow:hidden}.panel.svelte-odttbw header:where(.svelte-odttbw):hover,.panel.svelte-odttbw header:where(.svelte-odttbw):focus-visible{transform:var(--panel-header-transform-hover)}.threads.svelte-odttbw{overscroll-behavior:contain;padding:var(--panel-threads-padding);box-sizing:border-box;background-color:var(--panel-threads-background);width:100%;-webkit-backdrop-filter:var(--panel-threads-backdrop);backdrop-filter:var(--panel-threads-backdrop);z-index:2;border-radius:var(--panel-threads-border-radius);border-top-left-radius:var(--panel-threads-border-top-left-radius);scrollbar-width:var(--panel-threads-scrollbar-width);scrollbar-gutter:stable;flex-direction:column;flex:100%;margin:0;list-style:none;display:flex;overflow-y:auto}.threads.svelte-odttbw li:where(.svelte-odttbw)+li:where(.svelte-odttbw){margin-top:var(--panel-threads-item-margin)}.threads.svelte-odttbw .no-threads:where(.svelte-odttbw){text-align:center;padding:var(--panel-no-threads-padding);font-size:var(--panel-no-threads-font-size);color:var(--panel-no-threads-color);margin-block:auto}"
 };
 function Panel($$anchor, $$props) {
   push($$props, true);
-  append_styles($$anchor, $$css$3);
+  append_styles($$anchor, $$css$2);
   const scrollIntoView = prop($$props, "scrollIntoView", 7), handleSubmit = prop($$props, "handleSubmit", 7), cancel = prop($$props, "cancel", 7);
   const filteredComments = /* @__PURE__ */ derived(() => panel.showResolvedOnly ? store.comments.filter((comment2) => comment2.status === "RESOLVED") : store.comments.filter((comment2) => comment2.status === "OPEN"));
   var div = root$3();
@@ -4720,7 +4720,7 @@ function Panel($$anchor, $$props) {
   var node_7 = sibling(ul, 2);
   ContextMenu(node_7, {});
   reset$1(div);
-  template_effect(($0) => classes = set_class(div, 1, "panel svelte-ux7uta", null, classes, $0), [() => ({ open: panel.open })]);
+  template_effect(($0) => classes = set_class(div, 1, "panel svelte-odttbw", null, classes, $0), [() => ({ open: panel.open })]);
   append($$anchor, div);
   return pop({
     get scrollIntoView() {
@@ -5079,13 +5079,13 @@ const getDialogPosition = (marker, dialogElement) => {
   return { left, top };
 };
 var root$2 = /* @__PURE__ */ template(`<dialog><!></dialog>`);
-const $$css$2 = {
+const $$css$1 = {
   hash: "svelte-iihm64",
   code: "dialog.svelte-iihm64{--loop-textarea-font-size:var(--comment-dialog-textarea-font-size);position:var(--comment-dialog-position);top:var(--top);left:var(--left);max-width:var(--comment-dialog-max-width);border-radius:var(--comment-dialog-border-radius);visibility:hidden;width:100%;max-height:none;box-shadow:var(--comment-dialog-shadow);border:0;margin:0;padding:0;overflow:hidden}dialog.is-visible.svelte-iihm64{visibility:visible}dialog.svelte-iihm64::backdrop{background-color:var(--comment-dialog-backdrop-background)}"
 };
 function CommentDialog($$anchor, $$props) {
   push($$props, true);
-  append_styles($$anchor, $$css$2);
+  append_styles($$anchor, $$css$1);
   const handleSubmit = prop($$props, "handleSubmit", 7), showModal = prop($$props, "showModal", 7), newMarker = prop($$props, "newMarker", 7), cancel = prop($$props, "cancel", 7);
   let dialogElement;
   let dialogPosition = state(proxy({ left: 0, top: 0 }));
@@ -5168,16 +5168,16 @@ create_custom_element(
   [],
   true
 );
-var root_1 = /* @__PURE__ */ template(`<h2 class="svelte-1xvy51f"> </h2> <p class="welcome-text svelte-1xvy51f"> </p>`, 1);
-var root_2 = /* @__PURE__ */ template(`<div><div class="input"><input type="text" required class="svelte-1xvy51f"></div></div>`);
-var root$1 = /* @__PURE__ */ template(`<dialog class="svelte-1xvy51f"><form class="svelte-1xvy51f"><!> <!> <footer class="svelte-1xvy51f"><!> <!></footer></form></dialog>`);
-const $$css$1 = {
-  hash: "svelte-1xvy51f",
-  code: "dialog.svelte-1xvy51f{background-color:var(--welcome-dialog-background);border:var(--welcome-dialog-border);border-radius:var(--welcome-dialog-border-radius);box-shadow:var(--welcome-dialog-shadow);width:100%;max-width:var(--welcome-dialog-max-width);padding:0}dialog.svelte-1xvy51f::backdrop{background:var(--welcome-dialog-backdrop-background);-webkit-backdrop-filter:var(--welcome-dialog-backdrop-filter);backdrop-filter:var(--welcome-dialog-backdrop-filter)}form.svelte-1xvy51f{padding:var(--welcome-dialog-form-padding)}h2.svelte-1xvy51f{margin:var(--welcome-dialog-title-margin);font-size:var(--welcome-dialog-title-font-size);color:var(--welcome-dialog-title-color);font-weight:var(--welcome-dialog-title-font-weight)}.welcome-text.svelte-1xvy51f{margin:var(--welcome-dialog-text-margin);font-size:var(--welcome-dialog-text-font-size);color:var(--welcome-dialog-text-color);line-height:var(--welcome-dialog-text-line-height)}.name-section.svelte-1xvy51f{margin-bottom:var(--welcome-dialog-name-section-margin)}.name-section.no-welcome.svelte-1xvy51f{border-top:none;padding-top:0}input.svelte-1xvy51f{border:var(--welcome-dialog-input-border);border-radius:var(--welcome-dialog-input-border-radius);width:100%;padding:var(--welcome-dialog-input-padding);box-sizing:border-box;font-family:var(--welcome-dialog-input-font-family);font-size:var(--welcome-dialog-input-font-size);color:var(--welcome-dialog-input-color);background:var(--welcome-dialog-input-background)}input.svelte-1xvy51f:focus-visible{outline-color:var(--welcome-dialog-input-outline-color);outline-offset:var(--welcome-dialog-input-outline-offset)}footer.svelte-1xvy51f{gap:var(--welcome-dialog-footer-gap);display:flex}footer.svelte-1xvy51f button{flex:1}"
+var root_1 = /* @__PURE__ */ template(`<h2 class="svelte-1y3js7r"> </h2> <p class="welcome-text svelte-1y3js7r"> </p>`, 1);
+var root_2 = /* @__PURE__ */ template(`<div><div class="input"><input type="text" required class="svelte-1y3js7r"></div></div>`);
+var root$1 = /* @__PURE__ */ template(`<dialog class="svelte-1y3js7r"><form class="svelte-1y3js7r"><!> <!> <footer class="svelte-1y3js7r"><!> <!></footer></form></dialog>`);
+const $$css = {
+  hash: "svelte-1y3js7r",
+  code: "dialog.svelte-1y3js7r{-webkit-backdrop-filter:var(--welcome-dialog-backdrop-filter);backdrop-filter:var(--welcome-dialog-backdrop-filter);border:var(--welcome-dialog-border);border-radius:var(--welcome-dialog-border-radius);box-shadow:var(--welcome-dialog-shadow);width:100%;max-width:var(--welcome-dialog-max-width);background:var(--welcome-dialog-background);padding:0}dialog.svelte-1y3js7r::backdrop{background:var(--welcome-dialog-backdrop-background);-webkit-backdrop-filter:var(--welcome-dialog-backdrop-backdrop-filter);backdrop-filter:var(--welcome-dialog-backdrop-backdrop-filter)}form.svelte-1y3js7r{padding:var(--welcome-dialog-form-padding)}h2.svelte-1y3js7r{margin:var(--welcome-dialog-title-margin);font-size:var(--welcome-dialog-title-font-size);color:var(--welcome-dialog-title-color);font-weight:var(--welcome-dialog-title-font-weight)}.welcome-text.svelte-1y3js7r{margin:var(--welcome-dialog-text-margin);font-size:var(--welcome-dialog-text-font-size);color:var(--welcome-dialog-text-color);line-height:var(--welcome-dialog-text-line-height)}.name-section.svelte-1y3js7r{margin-bottom:var(--welcome-dialog-name-section-margin)}.name-section.no-welcome.svelte-1y3js7r{border-top:none;padding-top:0}input.svelte-1y3js7r{border:var(--welcome-dialog-input-border);border-radius:var(--welcome-dialog-input-border-radius);width:100%;padding:var(--welcome-dialog-input-padding);box-sizing:border-box;font-family:var(--welcome-dialog-input-font-family);font-size:var(--welcome-dialog-input-font-size);color:var(--welcome-dialog-input-color);background:var(--welcome-dialog-input-background)}input.svelte-1y3js7r:focus-visible{outline-color:var(--welcome-dialog-input-outline-color);outline-offset:var(--welcome-dialog-input-outline-offset)}footer.svelte-1y3js7r{gap:var(--welcome-dialog-footer-gap);display:flex}footer.svelte-1y3js7r button{flex:1}"
 };
 function WelcomeDialog($$anchor, $$props) {
   push($$props, true);
-  append_styles($$anchor, $$css$1);
+  append_styles($$anchor, $$css);
   const headline = prop($$props, "headline", 7), text$1 = prop($$props, "text", 7), authenticated = prop($$props, "authenticated", 7), welcomeEnabled = prop($$props, "welcomeEnabled", 7, true), onDismiss = prop($$props, "onDismiss", 7);
   let dialog;
   let name = state("");
@@ -5246,7 +5246,7 @@ function WelcomeDialog($$anchor, $$props) {
       reset$1(div);
       template_effect(
         ($0, $1) => {
-          classes = set_class(div, 1, "name-section svelte-1xvy51f", null, classes, $0);
+          classes = set_class(div, 1, "name-section svelte-1y3js7r", null, classes, $0);
           set_attribute(input, "placeholder", $1);
         },
         [
@@ -5369,13 +5369,8 @@ create_custom_element(
   true
 );
 var root = /* @__PURE__ */ template(`<!> <!> <!> <!> <!>`, 1);
-const $$css = {
-  hash: "svelte-1qwevar",
-  code: '.glass-effect{-webkit-backdrop-filter:blur(16px)saturate(1.8);backdrop-filter:blur(16px)saturate(1.8);background:linear-gradient(135deg,#ffffff1f 0%,#ffffff0d 50%,#ffffff14 100%);transition:all .3s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden;box-shadow:0 8px 32px #0000001f,0 2px 8px #00000014,inset 0 1px #ffffff26,inset 0 -1px #0000000d}.glass-effect:hover{-webkit-backdrop-filter:blur(20px)saturate(2);backdrop-filter:blur(20px)saturate(2);background:linear-gradient(135deg,#ffffff2e 0%,#ffffff14 50%,#ffffff1f 100%);box-shadow:0 12px 40px #00000026,0 4px 12px #0000001a,inset 0 1px #fff3,inset 0 -1px #0000000d}.glass-effect::before{content:"";pointer-events:none;border-radius:inherit;background:linear-gradient(90deg,#0000,#ffffff14,#0000) 0 0/200% 100%;animation:8s ease-in-out infinite svelte-1qwevar-glassShimmer;position:absolute;inset:0}.glass-effect-small{-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);background:linear-gradient(135deg,#ffffff26 0%,#ffffff0d 100%);transition:all .2s;box-shadow:0 4px 16px #0000001a,inset 0 1px #fff3}.glass-effect-small:hover{background:linear-gradient(135deg,#fff3 0%,#ffffff14 100%);transform:scale(1.05)}@keyframes svelte-1qwevar-glassShimmer{0%{background-position:-200% 0}to{background-position:200% 0}}'
-};
 function App($$anchor, $$props) {
   push($$props, true);
-  append_styles($$anchor, $$css);
   const position = prop($$props, "position", 7), language = prop($$props, "language", 7), apibase = prop($$props, "apibase", 7), pageId = prop($$props, "pageId", 7), authenticated = prop($$props, "authenticated", 7), welcomeEnabled = prop($$props, "welcome-enabled", 7), welcomeHeadline = prop($$props, "welcome-headline", 7), welcomeText = prop($$props, "welcome-text", 7), translations2 = prop($$props, "translations", 7);
   let showModal = state(false);
   let welcomeDialog;

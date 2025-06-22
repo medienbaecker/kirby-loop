@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { store } from "../store/api.svelte";
   import { panel, overlay } from "../store/ui.svelte";
   import { t } from "../store/translations.svelte";
   import IconComment from "./Icon/IconComment.svelte";
@@ -15,7 +14,7 @@
   } = $props();
 </script>
 
-<header class="glass-effect" class:bottom={position === "bottom"}>
+<header class:bottom={position === "bottom"}>
   <div class="toggle">
     <Button
       onclick={() => {
@@ -39,7 +38,7 @@
     </Button>
   </div>
   <Button onclick={() => (panel.open = !panel.open)} style="button--panel">
-    <span class="count glass-effect-small">{commentsCount}</span>
+    <span class="count">{commentsCount}</span>
   </Button>
 </header>
 
@@ -60,6 +59,11 @@
     justify-content: space-between;
     border-radius: var(--header-border-radius);
     z-index: var(--header-z-index);
+    overflow: hidden;
+    backdrop-filter: var(--header-backdrop-filter);
+    box-shadow: var(--shadow-l), var(--shadow-light-edge),
+      var(--shadow-dark-edge);
+    background: var(--header-background);
 
     &.bottom {
       top: auto;
@@ -74,5 +78,9 @@
     align-items: center;
     justify-content: center;
     border-radius: var(--header-count-border-radius);
+    backdrop-filter: var(--header-count-backdrop-filter);
+    box-shadow: var(--shadow-s), var(--shadow-light-edge),
+      var(--shadow-dark-edge);
+    background: var(--header-count-background);
   }
 </style>

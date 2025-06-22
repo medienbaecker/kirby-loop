@@ -84,6 +84,7 @@
       padding: var(--button-header-padding);
       border-radius: 0;
       border: 0;
+      mix-blend-mode: var(--button-header-blend-mode);
 
       &:hover,
       &:focus-visible {

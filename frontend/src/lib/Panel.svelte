@@ -18,7 +18,7 @@
 </script>
 
 <div class="panel" class:open={panel.open}>
-  <header class="glass-effect">
+  <header>
     <Button onclick={() => (panel.open = !panel.open)} style="button--header">
       {#if panel.open}
         <IconSidebarClose --size="1.5em" slot="icon" />
@@ -92,6 +92,12 @@
       display: flex;
       flex-direction: column;
       gap: var(--panel-header-gap);
+      backdrop-filter: var(--panel-header-backdrop-filter);
+      background: var(--panel-header-background);
+      overflow: hidden;
+      box-shadow: var(--shadow-l), var(--shadow-light-edge),
+        var(--shadow-dark-edge);
+      transition: transform var(--transition-duration) var(--transition-easing);
       &:hover,
       &:focus-visible {
         transform: var(--panel-header-transform-hover);

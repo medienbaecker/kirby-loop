@@ -109,6 +109,6 @@ class Options
      */
     public static function theme(): string
     {
-        return option('moinframe.loop.theme', 'dark');
+        return option('moinframe.loop.theme', 'default');
     }
 }

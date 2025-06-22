@@ -99,16 +99,17 @@
 
 <style>
   dialog {
-    background-color: var(--welcome-dialog-background);
+    backdrop-filter: var(--welcome-dialog-backdrop-filter);
     border: var(--welcome-dialog-border);
     border-radius: var(--welcome-dialog-border-radius);
     box-shadow: var(--welcome-dialog-shadow);
     width: 100%;
     max-width: var(--welcome-dialog-max-width);
     padding: 0;
+    background: var(--welcome-dialog-background);
     &::backdrop {
       background: var(--welcome-dialog-backdrop-background);
-      backdrop-filter: var(--welcome-dialog-backdrop-filter);
+      backdrop-filter: var(--welcome-dialog-backdrop-backdrop-filter);
     }
   }
 
