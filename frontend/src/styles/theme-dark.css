@@ -17,10 +17,15 @@ kirby-loop[theme="dark"] {
 
   /* Shadow tokens */
   --shadow-s: 0 0.1em 0.25em oklch(var(--color-neutral-l-100) var(--color-neutral-c) var(--color-neutral-h) / 0.1);
-  --shadow-m: 0 10px 30px oklch(var(--color-neutral-l-100) var(--color-neutral-c) var(--color-neutral-h) / 0.2);
-  --shadow-l: 0 16px 40px oklch(var(--color-neutral-l-100) var(--color-neutral-c) var(--color-neutral-h) / 0.25);
-  --shadow-light-edge: inset 0 1px 1px oklch(var(--color-neutral-l-1000) var(--color-neutral-c) var(--color-neutral-h) / 0.3);
-  --shadow-dark-edge: inset 0 -1px 1px oklch(var(--color-neutral-l-100) var(--color-neutral-c) var(--color-neutral-h) / 0.3);
+  --shadow-m: 0 2px 8px oklch(var(--color-neutral-l-100) var(--color-neutral-c) var(--color-neutral-h) / 0.08),
+    0 8px 16px oklch(var(--color-neutral-l-100) var(--color-neutral-c) var(--color-neutral-h) / 0.12),
+    0 16px 24px oklch(var(--color-neutral-l-100) var(--color-neutral-c) var(--color-neutral-h) / 0.08);
+  --shadow-l: 0 4px 16px oklch(var(--color-neutral-l-100) var(--color-neutral-c) var(--color-neutral-h) / 0.08),
+    0 12px 32px oklch(var(--color-neutral-l-100) var(--color-neutral-c) var(--color-neutral-h) / 0.12),
+    0 24px 48px oklch(var(--color-neutral-l-100) var(--color-neutral-c) var(--color-neutral-h) / 0.16),
+    0 48px 80px oklch(var(--color-neutral-l-100) var(--color-neutral-c) var(--color-neutral-h) / 0.08);
+  --shadow-light-edge: inset 1px 1px 1px oklch(var(--color-neutral-l-1000) var(--color-neutral-c) var(--color-neutral-h) / 0.3);
+  --shadow-dark-edge: inset -1px -1px 1px oklch(var(--color-neutral-l-100) var(--color-neutral-c) var(--color-neutral-h) / 0.3);
 
   /* Background tokens */
   --background-glass: linear-gradient(135deg, transparent, var(--color-base-background-o-50));
