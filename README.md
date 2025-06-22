@@ -8,6 +8,7 @@ A powerful visual feedback plugin for Kirby CMS that allows users to add comment
 - 🌍 **Multi-language support**: Full support for Kirby's multi-language sites with automatic language detection
 - 💬 **Threaded comments**: Reply to comments for contextual discussions
 - 🔒 **Authentication**: Choose whether to restrict access to authenticated users only or allow guest commenting
+- 🎨 **Theming**: Built-in light/dark themes with full customization support
 - ⚙️ **Auto-injection**: Automatically inject into all pages or manually control placement
 - 🗄️ **Local storage**: All data stored locally in SQLite - no external dependencies
 
@@ -40,7 +41,8 @@ Detailed documentation is available in the `docs/` folder:
 - **[Installation Guide](https://moinfra.me/docs/kirby-loop/01-installation)** - Complete installation instructions
 - **[Configuration Guide](https://moinfra.me/docs/kirby-loop/02-configuration)** - All configuration options and advanced settings
 - **[Multi-Language Support](https://moinfra.me/docs/kirby-loop/03-multi-language)** - Setup and customization for multi-language sites
-- **[API Reference](https://moinfra.me/docs/kirby-loop/04-api)** - API documentation
+- **[API Reference](https://moinfra.me/docs/kirby-loop/05-api)** - API documentation
+- **[Theming Guide](https://moinfra.me/docs/kirby-loop/04-theming)** - Theme customization and creating custom themes
 
 ## Basic Configuration
 
@@ -67,6 +69,9 @@ return [
 
     // Force UI language (default: null - auto-detect)
     'moinframe.loop.language' => 'de',
+
+    // Set theme: 'default', 'dark', or custom theme name
+    'moinframe.loop.theme' => 'dark',
 ];
 ```
 

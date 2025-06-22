@@ -165,6 +165,28 @@ Force a specific UI language regardless of the current page language.
 - Single-language sites with non-English content but English-speaking editors
 - Multi-language sites where editors prefer consistent UI language
 
+### Theme
+
+**Option**: `moinframe.loop.theme`
+**Type**: `string`
+**Default**: `'default'`
+**Values**: `'default'` | `'dark'` | custom theme name
+
+Sets the visual theme for the loop interface.
+
+```php
+// Use dark theme
+'moinframe.loop.theme' => 'dark',
+
+// Use custom theme
+'moinframe.loop.theme' => 'custom',
+```
+
+**Available themes:**
+- `'default'` - Light theme with clean, bright interface
+- `'dark'` - Dark theme for low-light environments
+- Custom theme names - See [Theming Guide](https://moinfra.me/docs/kirby-loop/04-theming) for creating custom themes
+
 ### Welcome Dialog
 
 The welcome dialog introduces new users to loop functionality.
