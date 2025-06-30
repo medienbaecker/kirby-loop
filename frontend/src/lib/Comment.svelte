@@ -149,6 +149,12 @@
     align-items: flex-start;
     gap: var(--comment-header-gap);
     cursor: pointer;
+    border-radius: var(--comment-header-border-radius);
+
+    &:focus-visible {
+      outline: 2px solid var(--comment-header-outline-color);
+      outline-offset: var(--comment-header-outline-offset);
+    }
 
     :global(.comment__replies-count) {
       position: absolute;

@@ -213,6 +213,9 @@ kirby-loop {
   --comment-header-font-size: var(--font-size-7);
   --comment-header-padding: var(--space-s);
   --comment-header-gap: var(--space-s);
+  --comment-header-outline-color: var(--outline-color);
+  --comment-header-outline-offset: -2px;
+  --comment-header-border-radius: var(--border-radius);
 
   --comment-content-padding: var(--space-xs);
   --comment-content-background: var(--color-neutral-100);
