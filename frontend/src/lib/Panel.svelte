@@ -5,8 +5,6 @@
   import Comment from "./Comment.svelte";
   const { scrollIntoView, handleSubmit, cancel } = $props();
   import Button from "./Button.svelte";
-  import IconSidebarClose from "./Icon/IconSidebarClose.svelte";
-  import IconSidebarOpen from "./Icon/IconSidebarOpen.svelte";
   import ContextMenu from "./ContextMenu.svelte";
   import IconChat from "./Icon/IconChat.svelte";
 

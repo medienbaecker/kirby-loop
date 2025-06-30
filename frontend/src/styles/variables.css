@@ -312,12 +312,6 @@ kirby-loop {
   --marker-transform: translate(-50%, -50%);
   --marker-border-radius: var(--border-radius-rounded);
 
-  --marker-pulse-animation: pulse 1s ease-in-out;
-  --marker-pulse-shadow-start: 0 0 0 0 var(--color-accent);
-  --marker-pulse-shadow-transparent: 0 0 0 8px transparent;
-  --marker-pulse-shadow-subtle: 0 0 0 8px rgba(128, 128, 128, 0.15);
-  --marker-pulse-shadow-final: 0 0 0 16px transparent;
-
   /* Panel */
   --panel-width: 380px;
   --panel-mobile-width: 85svw;

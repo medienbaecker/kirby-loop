@@ -11,13 +11,7 @@
 
   // Listen for marker pulse triggers from the panel
   $effect(() => {
-    if (panel.pulseMarkerId === comment.id) {
-      shouldPulse = true;
-      // Reset pulse state after animation completes
-      setTimeout(() => {
-        shouldPulse = false;
-      }, 1000);
-    }
+    shouldPulse = panel.pulseMarkerId === comment.id;
   });
 
   let markerElement: HTMLElement | null = $state(null);
@@ -153,31 +147,31 @@
   }
 
   .marker--pulse {
-    animation: var(--marker-pulse-animation);
+    animation: kirby-loop-pulse 1.5s ease-in-out infinite;
   }
 
-  @keyframes pulse {
+  @keyframes kirby-loop-pulse {
     0% {
       box-shadow:
-        var(--marker-pulse-shadow-start),
+        0 0 0 0 var(--color-accent),
         0 0 0 0 rgba(128, 128, 128, 0.3),
         0 0 0 0 rgba(128, 128, 128, 0.2);
     }
     30% {
       box-shadow:
-        var(--marker-pulse-shadow-transparent),
+        0 0 0 8px transparent,
         0 0 0 0 rgba(128, 128, 128, 0.3),
         0 0 0 0 rgba(128, 128, 128, 0.2);
     }
     60% {
       box-shadow:
+        0 0 0 8px rgba(128, 128, 128, 0.15),
         0 0 0 12px transparent,
-        var(--marker-pulse-shadow-subtle),
         0 0 0 0 rgba(128, 128, 128, 0.2);
     }
     100% {
       box-shadow:
-        var(--marker-pulse-shadow-final),
+        0 0 0 16px transparent,
         0 0 0 12px transparent,
         0 0 0 8px transparent;
     }
