@@ -18,7 +18,11 @@
 
 <div class="panel" class:open={panel.open}>
   <header>
-    <Button onclick={() => (panel.open = !panel.open)} style="button--header">
+    <Button
+      onclick={() => (panel.open = !panel.open)}
+      style="button--header"
+      ariaLabel={t("ui.panel.open", "Open comments")}
+    >
       <IconChat slot="icon" />
     </Button>
   </header>

@@ -35,7 +35,7 @@
   class:comment--current={panel.currentCommentId === comment.id}
   bind:open={detailsOpen}
 >
-  <summary class="comment__header">
+  <summary class="comment__header" aria-label="{t('ui.comment.summary.aria.label', 'Comment by')} {comment.author}: {comment.comment}">
     <Button
       style="button--marker button--marker-{comment.status} {panel.currentCommentId ===
       comment.id
@@ -44,6 +44,7 @@
       onclick={() => scrollIntoView(comment.id)}
       onmouseenter={() => (panel.pulseMarkerId = comment.id)}
       onmouseout={() => (panel.pulseMarkerId = 0)}
+      ariaLabel={`${t("ui.comment.maker.aria.label", "Jump to marker")} ${comment.id}`}
     >
       {comment.id}
     </Button>
@@ -60,6 +61,7 @@
     {#if !detailsOpen}
       <Button
         style="button--solid button--small comment__replies-count"
+        ariaLabel={`${t("ui.comment.replies.aria.label", "Show replies")} ${comment.id}`}
         onclick={() => {
           detailsOpen = !detailsOpen;
         }}

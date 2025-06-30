@@ -4250,6 +4250,7 @@ function Comment$1($$anchor, $$props) {
   var node = child(summary);
   const expression = /* @__PURE__ */ derived(() => comment2().status);
   const expression_1 = /* @__PURE__ */ derived(() => panel.currentCommentId === comment2().id ? "button--marker-highlighted" : "");
+  const expression_2 = /* @__PURE__ */ derived(() => `${t("ui.comment.maker.aria.label", "Jump to marker")} ${comment2().id}`);
   Button(node, {
     get style() {
       return `button--marker button--marker-${get(expression) ?? ""} ${get(expression_1) ?? ""}`;
@@ -4257,6 +4258,9 @@ function Comment$1($$anchor, $$props) {
     onclick: () => scrollIntoView()(comment2().id),
     onmouseenter: () => panel.pulseMarkerId = comment2().id,
     onmouseout: () => panel.pulseMarkerId = 0,
+    get ariaLabel() {
+      return get(expression_2);
+    },
     children: ($$anchor2, $$slotProps) => {
       next();
       var text$1 = text();
@@ -4281,8 +4285,12 @@ function Comment$1($$anchor, $$props) {
   var node_1 = sibling(div, 2);
   {
     var consequent = ($$anchor2) => {
+      const expression_3 = /* @__PURE__ */ derived(() => `${t("ui.comment.replies.aria.label", "Show replies")} ${comment2().id}`);
       Button($$anchor2, {
         style: "button--solid button--small comment__replies-count",
+        get ariaLabel() {
+          return get(expression_3);
+        },
         onclick: () => {
           set(detailsOpen, !get(detailsOpen));
         },
@@ -4407,18 +4415,20 @@ function Comment$1($$anchor, $$props) {
   reset$1(footer);
   reset$1(details);
   template_effect(
-    ($0, $1, $2) => {
+    ($0, $1, $2, $3) => {
       set_attribute(details, "id", `comment-${comment2().id ?? ""}`);
       classes = set_class(details, 1, `comment comment--${comment2().status ?? ""}`, "svelte-cyfq6q", classes, $0);
+      set_attribute(summary, "aria-label", `${$1 ?? ""} ${comment2().author ?? ""}: ${comment2().comment ?? ""}`);
       set_text(text_1, comment2().author);
-      set_attribute(time, "datetime", $1);
-      set_text(text_2, $2);
+      set_attribute(time, "datetime", $2);
+      set_text(text_2, $3);
       set_text(text_3, comment2().comment);
     },
     [
       () => ({
         "comment--current": panel.currentCommentId === comment2().id
       }),
+      () => t("ui.comment.summary.aria.label", "Comment by"),
       () => formatDate(comment2().timestamp),
       () => formatDate(comment2().timestamp)
     ]
@@ -4664,9 +4674,13 @@ function Panel($$anchor, $$props) {
   let classes;
   var header = child(div);
   var node = child(header);
+  const expression = /* @__PURE__ */ derived(() => t("ui.panel.open", "Open comments"));
   Button(node, {
     onclick: () => panel.open = !panel.open,
     style: "button--header",
+    get ariaLabel() {
+      return get(expression);
+    },
     $$slots: {
       icon: ($$anchor2, $$slotProps) => {
         IconChat($$anchor2);
