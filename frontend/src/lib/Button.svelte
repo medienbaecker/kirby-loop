@@ -87,6 +87,11 @@
       border: 0;
       mix-blend-mode: var(--button-header-blend-mode);
 
+      &:first-child {
+        border-top-left-radius: var(--border-radius-rounded);
+        border-bottom-left-radius: var(--border-radius-rounded);
+      }
+
       &:hover,
       &:focus-visible {
         background-color: var(--button-header-hover-background);
@@ -97,7 +102,7 @@
       background-color: var(--button-panel-background);
       height: auto;
       padding: var(--button-panel-padding);
-      border-radius: 0;
+      border-radius: var(--border-radius-rounded);
       border: 0;
       span {
         overflow: visible;
@@ -220,7 +225,8 @@
     &.is-active {
       background-color: var(--button-active-background);
       color: var(--button-active-color);
-      &:hover {
+      &:hover,
+      &:focus-visible {
         color: var(--button-active-color);
         background-color: var(--button-active-background);
       }

@@ -59,7 +59,6 @@
     justify-content: space-between;
     border-radius: var(--header-border-radius);
     z-index: var(--header-z-index);
-    overflow: hidden;
     backdrop-filter: var(--header-backdrop-filter);
     box-shadow: var(--shadow-l), var(--shadow-light-edge),
       var(--shadow-dark-edge);
