@@ -79,6 +79,7 @@
     }
 
     &.button--header {
+      --icon-size: 1.25rem;
       background-color: var(--button-header-background);
       height: var(--button-header-height);
       padding: var(--button-header-padding);
@@ -130,7 +131,7 @@
       &:hover,
       &:focus-visible {
         background-color: var(--button-icon-hover-background);
-        color: var(--button-icon-color);
+        color: var(--button-icon-hover-color);
       }
     }
 

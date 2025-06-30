@@ -8,6 +8,7 @@
   import IconSidebarClose from "./Icon/IconSidebarClose.svelte";
   import IconSidebarOpen from "./Icon/IconSidebarOpen.svelte";
   import ContextMenu from "./ContextMenu.svelte";
+  import IconChat from "./Icon/IconChat.svelte";
 
   // Filter comments based on resolved status
   const filteredComments = $derived(
@@ -20,11 +21,7 @@
 <div class="panel" class:open={panel.open}>
   <header>
     <Button onclick={() => (panel.open = !panel.open)} style="button--header">
-      {#if panel.open}
-        <IconSidebarClose --size="1.5em" slot="icon" />
-      {:else}
-        <IconSidebarOpen --size="1.5em" slot="icon" />
-      {/if}
+      <IconChat slot="icon" />
     </Button>
   </header>
 

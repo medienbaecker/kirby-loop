@@ -3,6 +3,7 @@
   import { t } from "../store/translations.svelte";
   import Button from "./Button.svelte";
   import IconDots from "./Icon/IconDots.svelte";
+  import IconSettings from "./Icon/IconSettings.svelte";
 
   let contextMenu: HTMLElement;
   let triggerButton: HTMLElement;
@@ -50,7 +51,7 @@
       ariaLabel={t("ui.panel.menu.open", "Open menu")}
       style="button--icon"
     >
-      <IconDots slot="icon" />
+      <IconSettings slot="icon" />
     </Button>
   </div>
 
