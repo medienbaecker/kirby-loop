@@ -8,6 +8,7 @@
   import Reply from "./Reply.svelte";
   import { formatDate } from "../composables/formatDate";
   import { formatDateISO } from "../composables/formatDateISO";
+  import { decodeHTMLEntities } from "../composables/decodeHTMLEntities";
   const {
     comment,
     scrollIntoView,
@@ -37,7 +38,7 @@
     aria-label="{t(
       'ui.comment.summary.aria.label',
       'Comment by',
-    )} {comment.author}: {comment.comment}"
+    )} {comment.author}: {decodeHTMLEntities(comment.comment)}"
   >
     <Button
       style="button--marker button--marker-{comment.status} {panel.currentCommentId ===
@@ -61,7 +62,7 @@
           {formatDate(comment.timestamp)}
         </time>
       </header>
-      <div class="comment__text">{comment.comment}</div>
+      <div class="comment__text">{decodeHTMLEntities(comment.comment)}</div>
     </div>
 
     {#if !detailsOpen}

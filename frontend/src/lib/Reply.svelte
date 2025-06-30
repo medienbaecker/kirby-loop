@@ -4,6 +4,7 @@
   import { t } from "../store/translations.svelte";
   import { formatDate } from "../composables/formatDate";
   import { formatDateISO } from "../composables/formatDateISO";
+  import { decodeHTMLEntities } from "../composables/decodeHTMLEntities";
   export let reply: Reply;
 </script>
 
@@ -13,7 +14,7 @@
   aria-label="{t(
     'ui.reply.aria.label',
     'Reply by',
-  )} {reply.author}: {reply.comment}"
+  )} {reply.author}: {decodeHTMLEntities(reply.comment)}"
 >
   <Author initials={reply.author.substring(0, 1)} />
   <div class="reply__content">
@@ -26,7 +27,7 @@
         {formatDate(reply.timestamp)}
       </time>
     </header>
-    <div class="reply__text">{reply.comment}</div>
+    <div class="reply__text">{decodeHTMLEntities(reply.comment)}</div>
   </div>
 </article>
 

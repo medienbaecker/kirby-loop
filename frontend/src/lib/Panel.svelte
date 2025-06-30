@@ -98,6 +98,7 @@
     max-width: none;
     margin: 0;
     padding: 0;
+    background: none;
     height: var(--panel-height);
     border: 0;
     color: var(--panel-color);
