@@ -23,7 +23,7 @@
     </Button>
   </header>
 
-  <ul class="threads" data-lenis-prevent>
+  <ul class="threads" data-lenis-prevent inert={!panel.open}>
     {#if filteredComments.length === 0}
       <li class="no-threads">
         <p>
@@ -89,7 +89,6 @@
       gap: var(--panel-header-gap);
       backdrop-filter: var(--panel-header-backdrop-filter);
       background: var(--panel-header-background);
-      overflow: hidden;
       box-shadow: var(--shadow-l), var(--shadow-light-edge),
         var(--shadow-dark-edge);
       transition: transform var(--transition-duration) var(--transition-easing);
