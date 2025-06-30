@@ -9,6 +9,10 @@
     style = "",
     disabled = false,
     ariaLabel = "",
+    id = "",
+    ariaHaspopup = "",
+    ariaExpanded = "",
+    ariaControls = "",
   }: {
     onclick?: () => void;
     onmouseenter?: () => void;
@@ -19,6 +23,10 @@
     style?: string;
     disabled?: boolean;
     ariaLabel?: string;
+    id?: string;
+    ariaHaspopup?: string;
+    ariaExpanded?: string;
+    ariaControls?: string;
   } = $props();
 </script>
 
@@ -28,6 +36,10 @@
   {type}
   class:is-active={active}
   aria-label={ariaLabel}
+  {id}
+  aria-haspopup={ariaHaspopup === "menu" ? "menu" : null}
+  aria-expanded={ariaExpanded === "true" ? true : ariaExpanded === "false" ? false : null}
+  aria-controls={ariaControls || null}
   {disabled}
   {onmouseenter}
   {onmouseout}

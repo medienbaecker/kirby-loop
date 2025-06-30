@@ -37,7 +37,11 @@
       {t("ui.header.comment.mode", "Comment")}
     </Button>
   </div>
-  <Button onclick={() => (panel.open = !panel.open)} style="button--panel">
+  <Button
+    onclick={() => (panel.open = !panel.open)}
+    style="button--panel"
+    ariaLabel={`${commentsCount} ${t("ui.header.aria.count", "unresolved comments")}`}
+  >
     <span class="count">{commentsCount}</span>
   </Button>
 </header>

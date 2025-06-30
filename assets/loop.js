@@ -3417,7 +3417,7 @@ const setTranslations = (newTranslations) => {
   set(translations, proxy(newTranslations));
 };
 enable_legacy_mode_flag();
-var root$f = /* @__PURE__ */ ns_template(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-1q9atlb"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="1.5"></path><path d="M15 12H12M12 12H9M12 12V9M12 12V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>`);
+var root$f = /* @__PURE__ */ ns_template(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="svelte-1q9atlb"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="1.5"></path><path d="M15 12H12M12 12H9M12 12V9M12 12V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>`);
 const $$css$f = {
   hash: "svelte-1q9atlb",
   code: "svg.svelte-1q9atlb{width:var(--size,var(--icon-size));height:var(--size,var(--icon-size))}"
@@ -3438,7 +3438,7 @@ function Button($$anchor, $$props) {
   const $$slots = sanitize_slots($$props);
   push($$props, true);
   append_styles($$anchor, $$css$e);
-  const onclick = prop($$props, "onclick", 7), onmouseenter = prop($$props, "onmouseenter", 7), onmouseout = prop($$props, "onmouseout", 7), onblur = prop($$props, "onblur", 7), active = prop($$props, "active", 7, false), type = prop($$props, "type", 7, "button"), style = prop($$props, "style", 7, ""), disabled = prop($$props, "disabled", 7, false), ariaLabel = prop($$props, "ariaLabel", 7, "");
+  const onclick = prop($$props, "onclick", 7), onmouseenter = prop($$props, "onmouseenter", 7), onmouseout = prop($$props, "onmouseout", 7), onblur = prop($$props, "onblur", 7), active = prop($$props, "active", 7, false), type = prop($$props, "type", 7, "button"), style = prop($$props, "style", 7, ""), disabled = prop($$props, "disabled", 7, false), ariaLabel = prop($$props, "ariaLabel", 7, ""), id = prop($$props, "id", 7, ""), ariaHaspopup = prop($$props, "ariaHaspopup", 7, ""), ariaExpanded = prop($$props, "ariaExpanded", 7, ""), ariaControls = prop($$props, "ariaControls", 7, "");
   var button = root$e();
   button.__click = function(...$$args) {
     var _a2;
@@ -3470,6 +3470,10 @@ function Button($$anchor, $$props) {
       classes = set_class(button, 1, `button ${style() ?? ""}`, "svelte-1qoozz7", classes, $0);
       set_attribute(button, "type", type());
       set_attribute(button, "aria-label", ariaLabel());
+      set_attribute(button, "id", id());
+      set_attribute(button, "aria-haspopup", ariaHaspopup() === "menu" ? "menu" : null);
+      set_attribute(button, "aria-expanded", ariaExpanded() === "true" ? true : ariaExpanded() === "false" ? false : null);
+      set_attribute(button, "aria-controls", ariaControls() || null);
       button.disabled = disabled();
     },
     [() => ({ "is-active": active() })]
@@ -3546,6 +3550,34 @@ function Button($$anchor, $$props) {
     set ariaLabel($$value = "") {
       ariaLabel($$value);
       flushSync();
+    },
+    get id() {
+      return id();
+    },
+    set id($$value = "") {
+      id($$value);
+      flushSync();
+    },
+    get ariaHaspopup() {
+      return ariaHaspopup();
+    },
+    set ariaHaspopup($$value = "") {
+      ariaHaspopup($$value);
+      flushSync();
+    },
+    get ariaExpanded() {
+      return ariaExpanded();
+    },
+    set ariaExpanded($$value = "") {
+      ariaExpanded($$value);
+      flushSync();
+    },
+    get ariaControls() {
+      return ariaControls();
+    },
+    set ariaControls($$value = "") {
+      ariaControls($$value);
+      flushSync();
     }
   });
 }
@@ -3561,13 +3593,17 @@ create_custom_element(
     type: {},
     style: {},
     disabled: {},
-    ariaLabel: {}
+    ariaLabel: {},
+    id: {},
+    ariaHaspopup: {},
+    ariaExpanded: {},
+    ariaControls: {}
   },
   ["icon", "default"],
   [],
   true
 );
-var root$d = /* @__PURE__ */ ns_template(`<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-1q9atlb"><path d="M15.359 16.9999L12.8975 14.5385L12.1459 15.2902C11.3764 16.0597 10.9916 16.4444 10.5781 16.3536C10.1645 16.2628 9.97641 15.7522 9.60019 14.731L8.34544 11.3253C7.59492 9.28816 7.21966 8.2696 7.74463 7.74463C8.2696 7.21966 9.28816 7.59492 11.3253 8.34544L14.731 9.60019C15.7522 9.97641 16.2628 10.1645 16.3536 10.5781C16.4444 10.9916 16.0597 11.3764 15.2902 12.1459L14.5385 12.8975L16.9999 15.359C17.2548 15.6138 17.3822 15.7413 17.4411 15.8834C17.5196 16.073 17.5196 16.2859 17.4411 16.4755C17.3822 16.6176 17.2548 16.7451 16.9999 16.9999C16.7451 17.2548 16.6176 17.3822 16.4755 17.4411C16.2859 17.5196 16.073 17.5196 15.8834 17.4411C15.7413 17.3822 15.6138 17.2548 15.359 16.9999Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2.5 12.5C2.5 7.78595 2.5 5.42893 3.96447 3.96447C5.42893 2.5 7.78595 2.5 12.5 2.5C17.214 2.5 19.5711 2.5 21.0355 3.96447C22.5 5.42893 22.5 7.78595 22.5 12.5C22.5 17.214 22.5 19.5711 21.0355 21.0355C19.5711 22.5 17.214 22.5 12.5 22.5C7.78595 22.5 5.42893 22.5 3.96447 21.0355C2.5 19.5711 2.5 17.214 2.5 12.5Z" stroke="currentColor" stroke-width="1.5"></path></svg>`);
+var root$d = /* @__PURE__ */ ns_template(`<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="svelte-1q9atlb"><path d="M15.359 16.9999L12.8975 14.5385L12.1459 15.2902C11.3764 16.0597 10.9916 16.4444 10.5781 16.3536C10.1645 16.2628 9.97641 15.7522 9.60019 14.731L8.34544 11.3253C7.59492 9.28816 7.21966 8.2696 7.74463 7.74463C8.2696 7.21966 9.28816 7.59492 11.3253 8.34544L14.731 9.60019C15.7522 9.97641 16.2628 10.1645 16.3536 10.5781C16.4444 10.9916 16.0597 11.3764 15.2902 12.1459L14.5385 12.8975L16.9999 15.359C17.2548 15.6138 17.3822 15.7413 17.4411 15.8834C17.5196 16.073 17.5196 16.2859 17.4411 16.4755C17.3822 16.6176 17.2548 16.7451 16.9999 16.9999C16.7451 17.2548 16.6176 17.3822 16.4755 17.4411C16.2859 17.5196 16.073 17.5196 15.8834 17.4411C15.7413 17.3822 15.6138 17.2548 15.359 16.9999Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2.5 12.5C2.5 7.78595 2.5 5.42893 3.96447 3.96447C5.42893 2.5 7.78595 2.5 12.5 2.5C17.214 2.5 19.5711 2.5 21.0355 3.96447C22.5 5.42893 22.5 7.78595 22.5 12.5C22.5 17.214 22.5 19.5711 21.0355 21.0355C19.5711 22.5 17.214 22.5 12.5 22.5C7.78595 22.5 5.42893 22.5 3.96447 21.0355C2.5 19.5711 2.5 17.214 2.5 12.5Z" stroke="currentColor" stroke-width="1.5"></path></svg>`);
 const $$css$d = {
   hash: "svelte-1q9atlb",
   code: "svg.svelte-1q9atlb{width:var(--size,var(--icon-size));height:var(--size,var(--icon-size))}"
@@ -3656,9 +3692,13 @@ function Header($$anchor, $$props) {
   });
   reset$1(div);
   var node_4 = sibling(div, 2);
+  const expression_1 = /* @__PURE__ */ derived(() => `${commentsCount()} ${t("ui.header.aria.count", "unresolved comments")}`);
   Button(node_4, {
     onclick: () => panel.open = !panel.open,
     style: "button--panel",
+    get ariaLabel() {
+      return get(expression_1);
+    },
     children: ($$anchor2, $$slotProps) => {
       var span = root_5$2();
       var text_2 = child(span, true);
@@ -4428,7 +4468,7 @@ create_custom_element(
   [],
   true
 );
-var root$7 = /* @__PURE__ */ ns_template(`<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-1q9atlb"><path d="M5.44067 14.4885C6.54524 14.4885 7.44067 13.5931 7.44067 12.4885C7.44067 11.384 6.54524 10.4885 5.44067 10.4885C4.3361 10.4885 3.44067 11.384 3.44067 12.4885C3.44067 13.5931 4.3361 14.4885 5.44067 14.4885Z" stroke="currentColor" stroke-width="1.5"></path><path d="M12.4407 14.4885C13.5452 14.4885 14.4407 13.5931 14.4407 12.4885C14.4407 11.384 13.5452 10.4885 12.4407 10.4885C11.3361 10.4885 10.4407 11.384 10.4407 12.4885C10.4407 13.5931 11.3361 14.4885 12.4407 14.4885Z" stroke="currentColor" stroke-width="1.5"></path><path d="M19.4407 14.4885C20.5452 14.4885 21.4407 13.5931 21.4407 12.4885C21.4407 11.384 20.5452 10.4885 19.4407 10.4885C18.3361 10.4885 17.4407 11.384 17.4407 12.4885C17.4407 13.5931 18.3361 14.4885 19.4407 14.4885Z" stroke="currentColor" stroke-width="1.5"></path></svg>`);
+var root$7 = /* @__PURE__ */ ns_template(`<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="svelte-1q9atlb"><path d="M5.44067 14.4885C6.54524 14.4885 7.44067 13.5931 7.44067 12.4885C7.44067 11.384 6.54524 10.4885 5.44067 10.4885C4.3361 10.4885 3.44067 11.384 3.44067 12.4885C3.44067 13.5931 4.3361 14.4885 5.44067 14.4885Z" stroke="currentColor" stroke-width="1.5"></path><path d="M12.4407 14.4885C13.5452 14.4885 14.4407 13.5931 14.4407 12.4885C14.4407 11.384 13.5452 10.4885 12.4407 10.4885C11.3361 10.4885 10.4407 11.384 10.4407 12.4885C10.4407 13.5931 11.3361 14.4885 12.4407 14.4885Z" stroke="currentColor" stroke-width="1.5"></path><path d="M19.4407 14.4885C20.5452 14.4885 21.4407 13.5931 21.4407 12.4885C21.4407 11.384 20.5452 10.4885 19.4407 10.4885C18.3361 10.4885 17.4407 11.384 17.4407 12.4885C17.4407 13.5931 18.3361 14.4885 19.4407 14.4885Z" stroke="currentColor" stroke-width="1.5"></path></svg>`);
 const $$css$6 = {
   hash: "svelte-1q9atlb",
   code: "svg.svelte-1q9atlb{width:var(--size,var(--icon-size));height:var(--size,var(--icon-size))}"
@@ -4439,7 +4479,7 @@ function IconDots($$anchor) {
   append($$anchor, svg);
 }
 create_custom_element(IconDots, {}, [], [], true);
-var root$6 = /* @__PURE__ */ ns_template(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-1q9atlb"><path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="currentColor" stroke-width="1.5"></path><path d="M13.7654 2.15224C13.3978 2 12.9319 2 12 2C11.0681 2 10.6022 2 10.2346 2.15224C9.74457 2.35523 9.35522 2.74458 9.15223 3.23463C9.05957 3.45834 9.0233 3.7185 9.00911 4.09799C8.98826 4.65568 8.70226 5.17189 8.21894 5.45093C7.73564 5.72996 7.14559 5.71954 6.65219 5.45876C6.31645 5.2813 6.07301 5.18262 5.83294 5.15102C5.30704 5.08178 4.77518 5.22429 4.35436 5.5472C4.03874 5.78938 3.80577 6.1929 3.33983 6.99993C2.87389 7.80697 2.64092 8.21048 2.58899 8.60491C2.51976 9.1308 2.66227 9.66266 2.98518 10.0835C3.13256 10.2756 3.3397 10.437 3.66119 10.639C4.1338 10.936 4.43789 11.4419 4.43786 12C4.43783 12.5581 4.13375 13.0639 3.66118 13.3608C3.33965 13.5629 3.13248 13.7244 2.98508 13.9165C2.66217 14.3373 2.51966 14.8691 2.5889 15.395C2.64082 15.7894 2.87379 16.193 3.33973 17C3.80568 17.807 4.03865 18.2106 4.35426 18.4527C4.77508 18.7756 5.30694 18.9181 5.83284 18.8489C6.07289 18.8173 6.31632 18.7186 6.65204 18.5412C7.14547 18.2804 7.73556 18.27 8.2189 18.549C8.70224 18.8281 8.98826 19.3443 9.00911 19.9021C9.02331 20.2815 9.05957 20.5417 9.15223 20.7654C9.35522 21.2554 9.74457 21.6448 10.2346 21.8478C10.6022 22 11.0681 22 12 22C12.9319 22 13.3978 22 13.7654 21.8478C14.2554 21.6448 14.6448 21.2554 14.8477 20.7654C14.9404 20.5417 14.9767 20.2815 14.9909 19.902C15.0117 19.3443 15.2977 18.8281 15.781 18.549C16.2643 18.2699 16.8544 18.2804 17.3479 18.5412C17.6836 18.7186 17.927 18.8172 18.167 18.8488C18.6929 18.9181 19.2248 18.7756 19.6456 18.4527C19.9612 18.2105 20.1942 17.807 20.6601 16.9999C21.1261 16.1929 21.3591 15.7894 21.411 15.395C21.4802 14.8691 21.3377 14.3372 21.0148 13.9164C20.8674 13.7243 20.6602 13.5628 20.3387 13.3608C19.8662 13.0639 19.5621 12.558 19.5621 11.9999C19.5621 11.4418 19.8662 10.9361 20.3387 10.6392C20.6603 10.4371 20.8675 10.2757 21.0149 10.0835C21.3378 9.66273 21.4803 9.13087 21.4111 8.60497C21.3592 8.21055 21.1262 7.80703 20.6602 7C20.1943 6.19297 19.9613 5.78945 19.6457 5.54727C19.2249 5.22436 18.693 5.08185 18.1671 5.15109C17.9271 5.18269 17.6837 5.28136 17.3479 5.4588C16.8545 5.71959 16.2644 5.73002 15.7811 5.45096C15.2977 5.17191 15.0117 4.65566 14.9909 4.09794C14.9767 3.71848 14.9404 3.45833 14.8477 3.23463C14.6448 2.74458 14.2554 2.35523 13.7654 2.15224Z" stroke="currentColor" stroke-width="1.5"></path></svg>`);
+var root$6 = /* @__PURE__ */ ns_template(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="svelte-1q9atlb"><path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="currentColor" stroke-width="1.5"></path><path d="M13.7654 2.15224C13.3978 2 12.9319 2 12 2C11.0681 2 10.6022 2 10.2346 2.15224C9.74457 2.35523 9.35522 2.74458 9.15223 3.23463C9.05957 3.45834 9.0233 3.7185 9.00911 4.09799C8.98826 4.65568 8.70226 5.17189 8.21894 5.45093C7.73564 5.72996 7.14559 5.71954 6.65219 5.45876C6.31645 5.2813 6.07301 5.18262 5.83294 5.15102C5.30704 5.08178 4.77518 5.22429 4.35436 5.5472C4.03874 5.78938 3.80577 6.1929 3.33983 6.99993C2.87389 7.80697 2.64092 8.21048 2.58899 8.60491C2.51976 9.1308 2.66227 9.66266 2.98518 10.0835C3.13256 10.2756 3.3397 10.437 3.66119 10.639C4.1338 10.936 4.43789 11.4419 4.43786 12C4.43783 12.5581 4.13375 13.0639 3.66118 13.3608C3.33965 13.5629 3.13248 13.7244 2.98508 13.9165C2.66217 14.3373 2.51966 14.8691 2.5889 15.395C2.64082 15.7894 2.87379 16.193 3.33973 17C3.80568 17.807 4.03865 18.2106 4.35426 18.4527C4.77508 18.7756 5.30694 18.9181 5.83284 18.8489C6.07289 18.8173 6.31632 18.7186 6.65204 18.5412C7.14547 18.2804 7.73556 18.27 8.2189 18.549C8.70224 18.8281 8.98826 19.3443 9.00911 19.9021C9.02331 20.2815 9.05957 20.5417 9.15223 20.7654C9.35522 21.2554 9.74457 21.6448 10.2346 21.8478C10.6022 22 11.0681 22 12 22C12.9319 22 13.3978 22 13.7654 21.8478C14.2554 21.6448 14.6448 21.2554 14.8477 20.7654C14.9404 20.5417 14.9767 20.2815 14.9909 19.902C15.0117 19.3443 15.2977 18.8281 15.781 18.549C16.2643 18.2699 16.8544 18.2804 17.3479 18.5412C17.6836 18.7186 17.927 18.8172 18.167 18.8488C18.6929 18.9181 19.2248 18.7756 19.6456 18.4527C19.9612 18.2105 20.1942 17.807 20.6601 16.9999C21.1261 16.1929 21.3591 15.7894 21.411 15.395C21.4802 14.8691 21.3377 14.3372 21.0148 13.9164C20.8674 13.7243 20.6602 13.5628 20.3387 13.3608C19.8662 13.0639 19.5621 12.558 19.5621 11.9999C19.5621 11.4418 19.8662 10.9361 20.3387 10.6392C20.6603 10.4371 20.8675 10.2757 21.0149 10.0835C21.3378 9.66273 21.4803 9.13087 21.4111 8.60497C21.3592 8.21055 21.1262 7.80703 20.6602 7C20.1943 6.19297 19.9613 5.78945 19.6457 5.54727C19.2249 5.22436 18.693 5.08185 18.1671 5.15109C17.9271 5.18269 17.6837 5.28136 17.3479 5.4588C16.8545 5.71959 16.2644 5.73002 15.7811 5.45096C15.2977 5.17191 15.0117 4.65566 14.9909 4.09794C14.9767 3.71848 14.9404 3.45833 14.8477 3.23463C14.6448 2.74458 14.2554 2.35523 13.7654 2.15224Z" stroke="currentColor" stroke-width="1.5"></path></svg>`);
 const $$css$5 = {
   hash: "svelte-1q9atlb",
   code: "svg.svelte-1q9atlb{width:var(--size,var(--icon-size));height:var(--size,var(--icon-size))}"
@@ -4451,9 +4491,9 @@ function IconSettings($$anchor) {
 }
 create_custom_element(IconSettings, {}, [], [], true);
 var $$_import_panel = reactive_import(() => panel);
-var root_3 = /* @__PURE__ */ template(`<span class="filter-dot filter-dot--open svelte-15wfo7b" slot="icon"></span>`);
-var root_5 = /* @__PURE__ */ template(`<span class="filter-dot filter-dot--resolved svelte-15wfo7b" slot="icon"></span>`);
-var root$5 = /* @__PURE__ */ template(`<div class="context-menu-container svelte-15wfo7b"><div class="context-menu-trigger svelte-15wfo7b"><!></div> <div class="context-menu svelte-15wfo7b" popover="auto" role="menu" aria-labelledby="context-menu-trigger"><div class="menu-section svelte-15wfo7b"><div class="menu-section-title svelte-15wfo7b"> </div> <div class="filter-options svelte-15wfo7b"><!> <!></div></div></div></div>`);
+var root_3 = /* @__PURE__ */ template(`<span class="filter-dot filter-dot--open svelte-15wfo7b" slot="icon" aria-hidden="true"></span>`);
+var root_5 = /* @__PURE__ */ template(`<span class="filter-dot filter-dot--resolved svelte-15wfo7b" slot="icon" aria-hidden="true"></span>`);
+var root$5 = /* @__PURE__ */ template(`<div class="context-menu-container svelte-15wfo7b"><div class="context-menu-trigger svelte-15wfo7b"><!></div> <div class="context-menu svelte-15wfo7b" popover="auto" role="menu" aria-labelledby="context-menu-trigger" id="context-menu"><div class="menu-section svelte-15wfo7b"><div class="menu-section-title svelte-15wfo7b"> </div> <div class="filter-options svelte-15wfo7b"><!> <!></div></div></div></div>`);
 const $$css$4 = {
   hash: "svelte-15wfo7b",
   code: ".context-menu-container.svelte-15wfo7b{bottom:var(--context-menu-container-bottom);right:var(--context-menu-container-right);z-index:var(--context-menu-container-z-index);position:absolute}.context-menu-trigger.svelte-15wfo7b{width:var(--context-menu-trigger-size);height:var(--context-menu-trigger-size);border-radius:var(--context-menu-trigger-border-radius);justify-content:center;align-items:center;display:flex}.context-menu.svelte-15wfo7b{background:var(--context-menu-background);border-radius:var(--context-menu-border-radius);box-shadow:var(--context-menu-shadow);padding:var(--context-menu-padding);min-width:var(--context-menu-min-width);border:0;margin:0;position:fixed}.context-menu.svelte-15wfo7b::backdrop{background:var(--context-menu-backdrop-background)}.menu-section.svelte-15wfo7b{gap:var(--context-menu-section-gap);flex-direction:column;display:flex}.menu-section-title.svelte-15wfo7b{font-size:var(--context-menu-title-font-size);font-weight:var(--context-menu-title-font-weight);color:var(--context-menu-title-color);margin-bottom:var(--context-menu-title-margin-bottom);text-transform:uppercase;letter-spacing:var(--context-menu-title-letter-spacing);padding:0}.filter-options.svelte-15wfo7b{gap:var(--context-menu-filter-gap);flex-direction:column;display:flex}.filter-dot.svelte-15wfo7b{width:var(--context-menu-filter-dot-size);height:var(--context-menu-filter-dot-size);border-radius:var(--context-menu-filter-dot-border-radius);margin-right:var(--context-menu-filter-dot-margin-right);display:inline-block}.filter-dot--open.svelte-15wfo7b{background:var(--context-menu-filter-dot-open-background)}.filter-dot--resolved.svelte-15wfo7b{background:var(--context-menu-filter-dot-resolved-background)}"
@@ -4494,12 +4534,22 @@ function ContextMenu($$anchor, $$props) {
   var div_1 = child(div);
   var node = child(div_1);
   const expression = /* @__PURE__ */ derived_safe_equal(() => t("ui.panel.menu.open", "Open menu"));
+  const expression_1 = /* @__PURE__ */ derived_safe_equal(() => {
+    var _a2;
+    return ((_a2 = get(contextMenu)) == null ? void 0 : _a2.matches(":popover-open")) ? "true" : "false";
+  });
   Button(node, {
     onclick: toggleMenu,
     get ariaLabel() {
       return get(expression);
     },
     style: "button--icon",
+    id: "context-menu-trigger",
+    ariaHaspopup: "menu",
+    get ariaExpanded() {
+      return get(expression_1);
+    },
+    ariaControls: "context-menu",
     $$slots: {
       icon: ($$anchor2, $$slotProps) => {
         IconSettings($$anchor2);
@@ -4515,12 +4565,16 @@ function ContextMenu($$anchor, $$props) {
   reset$1(div_4);
   var div_5 = sibling(div_4, 2);
   var node_1 = child(div_5);
-  const expression_1 = /* @__PURE__ */ derived_safe_equal(() => !$$_import_panel().showResolvedOnly ? "button--menu-item-active" : "");
+  const expression_2 = /* @__PURE__ */ derived_safe_equal(() => !$$_import_panel().showResolvedOnly ? "button--menu-item-active" : "");
+  const expression_3 = /* @__PURE__ */ derived_safe_equal(() => !$$_import_panel().showResolvedOnly ? t("ui.panel.filter.open.active", "Show open comments (currently selected)") : t("ui.panel.filter.open.inactive", "Show open comments"));
   Button(node_1, {
     get style() {
-      return `button--menu-item ${get(expression_1) ?? ""}`;
+      return `button--menu-item ${get(expression_2) ?? ""}`;
     },
     onclick: () => setFilter(false),
+    get ariaLabel() {
+      return get(expression_3);
+    },
     children: ($$anchor2, $$slotProps) => {
       next();
       var text_1 = text();
@@ -4536,12 +4590,16 @@ function ContextMenu($$anchor, $$props) {
     }
   });
   var node_2 = sibling(node_1, 2);
-  const expression_2 = /* @__PURE__ */ derived_safe_equal(() => $$_import_panel().showResolvedOnly ? "button--menu-item-active" : "");
+  const expression_4 = /* @__PURE__ */ derived_safe_equal(() => $$_import_panel().showResolvedOnly ? "button--menu-item-active" : "");
+  const expression_5 = /* @__PURE__ */ derived_safe_equal(() => $$_import_panel().showResolvedOnly ? t("ui.panel.filter.resolved.active", "Show resolved comments (currently selected)") : t("ui.panel.filter.resolved.inactive", "Show resolved comments"));
   Button(node_2, {
     get style() {
-      return `button--menu-item ${get(expression_2) ?? ""}`;
+      return `button--menu-item ${get(expression_4) ?? ""}`;
     },
     onclick: () => setFilter(true),
+    get ariaLabel() {
+      return get(expression_5);
+    },
     children: ($$anchor2, $$slotProps) => {
       next();
       var text_2 = text();
@@ -4578,7 +4636,7 @@ function ContextMenu($$anchor, $$props) {
   pop();
 }
 create_custom_element(ContextMenu, {}, [], [], true);
-var root$4 = /* @__PURE__ */ ns_template(`<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-1q9atlb"><path d="M12.5 22.5C18.0228 22.5 22.5 18.0228 22.5 12.5C22.5 6.97715 18.0228 2.5 12.5 2.5C6.97715 2.5 2.5 6.97715 2.5 12.5C2.5 14.0997 2.87562 15.6116 3.54346 16.9525C3.72094 17.3088 3.78001 17.7161 3.67712 18.1006L3.08151 20.3267C2.82295 21.293 3.70701 22.177 4.67335 21.9185L6.89939 21.3229C7.28393 21.22 7.69121 21.2791 8.04753 21.4565C9.38837 22.1244 10.9003 22.5 12.5 22.5Z" stroke="currentColor" stroke-width="1.5"></path><path d="M8.5 11H16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><path d="M8.5 14.5H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>`);
+var root$4 = /* @__PURE__ */ ns_template(`<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="svelte-1q9atlb"><path d="M12.5 22.5C18.0228 22.5 22.5 18.0228 22.5 12.5C22.5 6.97715 18.0228 2.5 12.5 2.5C6.97715 2.5 2.5 6.97715 2.5 12.5C2.5 14.0997 2.87562 15.6116 3.54346 16.9525C3.72094 17.3088 3.78001 17.7161 3.67712 18.1006L3.08151 20.3267C2.82295 21.293 3.70701 22.177 4.67335 21.9185L6.89939 21.3229C7.28393 21.22 7.69121 21.2791 8.04753 21.4565C9.38837 22.1244 10.9003 22.5 12.5 22.5Z" stroke="currentColor" stroke-width="1.5"></path><path d="M8.5 11H16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><path d="M8.5 14.5H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>`);
 const $$css$3 = {
   hash: "svelte-1q9atlb",
   code: "svg.svelte-1q9atlb{width:var(--size,var(--icon-size));height:var(--size,var(--icon-size))}"
@@ -4589,13 +4647,13 @@ function IconChat($$anchor) {
   append($$anchor, svg);
 }
 create_custom_element(IconChat, {}, [], [], true);
-var root_2$1 = /* @__PURE__ */ template(`<li class="no-threads svelte-odttbw"><p> </p></li>`);
-var root_4 = /* @__PURE__ */ template(`<li class="no-threads svelte-odttbw"><p> </p></li>`);
-var root_6 = /* @__PURE__ */ template(`<li class="svelte-odttbw"><!></li>`);
-var root$3 = /* @__PURE__ */ template(`<div><header class="svelte-odttbw"><!></header> <ul class="threads svelte-odttbw" data-lenis-prevent=""><!></ul> <!></div>`);
+var root_2$1 = /* @__PURE__ */ template(`<li class="no-threads svelte-e8bu4j"><p> </p></li>`);
+var root_4 = /* @__PURE__ */ template(`<li class="no-threads svelte-e8bu4j"><p> </p></li>`);
+var root_6 = /* @__PURE__ */ template(`<li class="svelte-e8bu4j"><!></li>`);
+var root$3 = /* @__PURE__ */ template(`<div><header class="svelte-e8bu4j"><!></header> <ul class="threads svelte-e8bu4j" data-lenis-prevent=""><!></ul> <!></div>`);
 const $$css$2 = {
-  hash: "svelte-odttbw",
-  code: ".panel.svelte-odttbw{position:var(--panel-position);right:var(--panel-right);top:var(--panel-top);transform:var(--panel-transform-closed);width:var(--panel-width);height:var(--panel-height);color:var(--panel-color);border-radius:var(--panel-border-radius);border-top-left-radius:var(--panel-border-top-left-radius);transition:var(--panel-transition);z-index:var(--panel-z-index);cursor:auto;flex-direction:column;justify-content:flex-start;align-items:flex-start;display:flex}@media screen and (max-width:600px){.panel.svelte-odttbw{width:var(--panel-mobile-width)}}.panel.open.svelte-odttbw{transform:var(--panel-transform-open);box-shadow:var(--panel-shadow)}.panel.open.svelte-odttbw header:where(.svelte-odttbw){transform:var(--panel-header-transform-open)}.panel.svelte-odttbw header:where(.svelte-odttbw){transform:var(--panel-header-transform-closed);border-top-left-radius:var(--panel-header-border-radius);border-bottom-left-radius:var(--panel-header-border-radius);gap:var(--panel-header-gap);-webkit-backdrop-filter:var(--panel-header-backdrop-filter);backdrop-filter:var(--panel-header-backdrop-filter);background:var(--panel-header-background);box-shadow:var(--shadow-l),var(--shadow-light-edge),var(--shadow-dark-edge);transition:transform var(--transition-duration)var(--transition-easing);border-top-right-radius:0;border-bottom-right-radius:0;flex-direction:column;display:flex;position:absolute;overflow:hidden}.panel.svelte-odttbw header:where(.svelte-odttbw):hover,.panel.svelte-odttbw header:where(.svelte-odttbw):focus-visible{transform:var(--panel-header-transform-hover)}.threads.svelte-odttbw{overscroll-behavior:contain;padding:var(--panel-threads-padding);box-sizing:border-box;background-color:var(--panel-threads-background);width:100%;-webkit-backdrop-filter:var(--panel-threads-backdrop);backdrop-filter:var(--panel-threads-backdrop);z-index:2;border-radius:var(--panel-threads-border-radius);border-top-left-radius:var(--panel-threads-border-top-left-radius);scrollbar-width:var(--panel-threads-scrollbar-width);scrollbar-gutter:stable;flex-direction:column;flex:100%;margin:0;list-style:none;display:flex;overflow-y:auto}.threads.svelte-odttbw li:where(.svelte-odttbw)+li:where(.svelte-odttbw){margin-top:var(--panel-threads-item-margin)}.threads.svelte-odttbw .no-threads:where(.svelte-odttbw){text-align:center;padding:var(--panel-no-threads-padding);font-size:var(--panel-no-threads-font-size);color:var(--panel-no-threads-color);margin-block:auto}"
+  hash: "svelte-e8bu4j",
+  code: ".panel.svelte-e8bu4j{position:var(--panel-position);right:var(--panel-right);top:var(--panel-top);transform:var(--panel-transform-closed);width:var(--panel-width);height:var(--panel-height);color:var(--panel-color);border-radius:var(--panel-border-radius);border-top-left-radius:var(--panel-border-top-left-radius);transition:var(--panel-transition);z-index:var(--panel-z-index);cursor:auto;flex-direction:column;justify-content:flex-start;align-items:flex-start;display:flex}@media screen and (max-width:600px){.panel.svelte-e8bu4j{width:var(--panel-mobile-width)}}.panel.open.svelte-e8bu4j{transform:var(--panel-transform-open);box-shadow:var(--panel-shadow)}.panel.open.svelte-e8bu4j header:where(.svelte-e8bu4j){transform:var(--panel-header-transform-open)}.panel.svelte-e8bu4j header:where(.svelte-e8bu4j){transform:var(--panel-header-transform-closed);border-top-left-radius:var(--panel-header-border-radius);border-bottom-left-radius:var(--panel-header-border-radius);gap:var(--panel-header-gap);-webkit-backdrop-filter:var(--panel-header-backdrop-filter);backdrop-filter:var(--panel-header-backdrop-filter);background:var(--panel-header-background);box-shadow:var(--shadow-l),var(--shadow-light-edge),var(--shadow-dark-edge);transition:transform var(--transition-duration)var(--transition-easing);border-top-right-radius:0;border-bottom-right-radius:0;flex-direction:column;display:flex;position:absolute}.panel.svelte-e8bu4j header:where(.svelte-e8bu4j):hover,.panel.svelte-e8bu4j header:where(.svelte-e8bu4j):focus-visible{transform:var(--panel-header-transform-hover)}.threads.svelte-e8bu4j{overscroll-behavior:contain;padding:var(--panel-threads-padding);box-sizing:border-box;background-color:var(--panel-threads-background);width:100%;-webkit-backdrop-filter:var(--panel-threads-backdrop);backdrop-filter:var(--panel-threads-backdrop);z-index:2;border-radius:var(--panel-threads-border-radius);border-top-left-radius:var(--panel-threads-border-top-left-radius);scrollbar-width:var(--panel-threads-scrollbar-width);scrollbar-gutter:stable;flex-direction:column;flex:100%;margin:0;list-style:none;display:flex;overflow-y:auto}.threads.svelte-e8bu4j li:where(.svelte-e8bu4j)+li:where(.svelte-e8bu4j){margin-top:var(--panel-threads-item-margin)}.threads.svelte-e8bu4j .no-threads:where(.svelte-e8bu4j){text-align:center;padding:var(--panel-no-threads-padding);font-size:var(--panel-no-threads-font-size);color:var(--panel-no-threads-color);margin-block:auto}"
 };
 function Panel($$anchor, $$props) {
   push($$props, true);
@@ -4687,7 +4745,13 @@ function Panel($$anchor, $$props) {
   var node_4 = sibling(ul, 2);
   ContextMenu(node_4, {});
   reset$1(div);
-  template_effect(($0) => classes = set_class(div, 1, "panel svelte-odttbw", null, classes, $0), [() => ({ open: panel.open })]);
+  template_effect(
+    ($0) => {
+      classes = set_class(div, 1, "panel svelte-e8bu4j", null, classes, $0);
+      ul.inert = !panel.open;
+    },
+    [() => ({ open: panel.open })]
+  );
   append($$anchor, div);
   return pop({
     get scrollIntoView() {

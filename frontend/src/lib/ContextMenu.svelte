@@ -50,6 +50,10 @@
       onclick={toggleMenu}
       ariaLabel={t("ui.panel.menu.open", "Open menu")}
       style="button--icon"
+      id="context-menu-trigger"
+      ariaHaspopup="menu"
+      ariaExpanded={contextMenu?.matches(":popover-open") ? "true" : "false"}
+      ariaControls="context-menu"
     >
       <IconSettings slot="icon" />
     </Button>
@@ -61,6 +65,7 @@
     popover="auto"
     role="menu"
     aria-labelledby="context-menu-trigger"
+    id="context-menu"
   >
     <div class="menu-section">
       <div class="menu-section-title">
@@ -72,8 +77,18 @@
             ? 'button--menu-item-active'
             : ''}"
           onclick={() => setFilter(false)}
+          ariaLabel={!panel.showResolvedOnly
+            ? t(
+                "ui.panel.filter.open.active",
+                "Show open comments (currently selected)",
+              )
+            : t("ui.panel.filter.open.inactive", "Show open comments")}
         >
-          <span class="filter-dot filter-dot--open" slot="icon"></span>
+          <span
+            class="filter-dot filter-dot--open"
+            slot="icon"
+            aria-hidden="true"
+          ></span>
           {t("ui.panel.filter.open", "Open")}
         </Button>
         <Button
@@ -81,8 +96,18 @@
             ? 'button--menu-item-active'
             : ''}"
           onclick={() => setFilter(true)}
+          ariaLabel={panel.showResolvedOnly
+            ? t(
+                "ui.panel.filter.resolved.active",
+                "Show resolved comments (currently selected)",
+              )
+            : t("ui.panel.filter.resolved.inactive", "Show resolved comments")}
         >
-          <span class="filter-dot filter-dot--resolved" slot="icon"></span>
+          <span
+            class="filter-dot filter-dot--resolved"
+            slot="icon"
+            aria-hidden="true"
+          ></span>
           {t("ui.panel.filter.resolved", "Resolved")}
         </Button>
       </div>
