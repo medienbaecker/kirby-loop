@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.0.0-beta.4](///compare/v1.0.0-beta.3...v1.0.0-beta.4) (2025-06-30)
+
+### Features
+
+* add aria labels to improve voice over 63fc81d
+* improve reply voiceover 93e294e
+
+### Bug Fixes
+
+* cleanup icons f956a34
+* date display 9a4ad00
+* header button focus styles 26ebb19
+* hide reply button on solved 545a094
+* improve context menu voiceover a6c514a
+* outline on comment header a9c2d37
+* pulse marker 8ec0bd5
+* skip focus if panel closed ee23bde
+* switch icons, little style fixes 958f0d1
+* use dialog element for panel f3dff13
+
 ## [1.0.0-beta.3](///compare/v1.0.0-beta.2...v1.0.0-beta.3) (2025-06-22)
 
 ### Features
