@@ -96,7 +96,16 @@ Kirby::plugin('moinframe/loop', [
             'moinframe.loop.ui.panel.filter.resolved.inactive' => 'Show resolved comments',
             'moinframe.loop.ui.panel.menu.open' => 'Open menu',
             'moinframe.loop.ui.panel.menu.filter.title' => 'Show Comments',
-            'moinframe.loop.ui.panel.no.resolved' => 'No resolved comments yet.'
+            'moinframe.loop.ui.panel.no.resolved' => 'No resolved comments yet.',
+            
+            // Time formatting
+            'moinframe.loop.ui.time.just_now' => 'just now',
+            'moinframe.loop.ui.time.minute_ago' => 'a minute ago',
+            'moinframe.loop.ui.time.minutes_ago' => '{count} minutes ago',
+            'moinframe.loop.ui.time.hour_ago' => 'an hour ago',
+            'moinframe.loop.ui.time.hours_ago' => '{count} hours ago',
+            'moinframe.loop.ui.time.yesterday' => 'yesterday',
+            'moinframe.loop.ui.time.days_ago' => '{count} days ago'
         ],
         'de' => [
             // General errors
@@ -186,7 +195,16 @@ Kirby::plugin('moinframe/loop', [
             'moinframe.loop.ui.panel.filter.resolved.inactive' => 'Erledigte Kommentare anzeigen',
             'moinframe.loop.ui.panel.menu.open' => 'Menü öffnen',
             'moinframe.loop.ui.panel.menu.filter.title' => 'Kommentare anzeigen',
-            'moinframe.loop.ui.panel.no.resolved' => 'Noch keine erledigten Kommentare.'
+            'moinframe.loop.ui.panel.no.resolved' => 'Noch keine erledigten Kommentare.',
+            
+            // Time formatting
+            'moinframe.loop.ui.time.just_now' => 'gerade eben',
+            'moinframe.loop.ui.time.minute_ago' => 'vor einer Minute',
+            'moinframe.loop.ui.time.minutes_ago' => 'vor {count} Minuten',
+            'moinframe.loop.ui.time.hour_ago' => 'vor einer Stunde',
+            'moinframe.loop.ui.time.hours_ago' => 'vor {count} Stunden',
+            'moinframe.loop.ui.time.yesterday' => 'gestern',
+            'moinframe.loop.ui.time.days_ago' => 'vor {count} Tagen'
         ]
     ],
     'hooks' => [

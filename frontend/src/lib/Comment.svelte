@@ -6,6 +6,8 @@
   import Button from "./Button.svelte";
   import CommentForm from "./CommentForm.svelte";
   import Reply from "./Reply.svelte";
+  import { formatDate } from "../composables/formatDate";
+  import { formatDateISO } from "../composables/formatDateISO";
   const {
     comment,
     scrollIntoView,
@@ -17,11 +19,6 @@
     handleSubmit: (e: SubmitEvent) => void;
     cancel: () => void;
   } = $props();
-
-  function formatDate(timestamp: number) {
-    const date = new Date(timestamp * 1000);
-    return date.toLocaleString();
-  }
 
   let openReplyForm = $state(false);
   let detailsOpen = $state(
@@ -35,7 +32,13 @@
   class:comment--current={panel.currentCommentId === comment.id}
   bind:open={detailsOpen}
 >
-  <summary class="comment__header" aria-label="{t('ui.comment.summary.aria.label', 'Comment by')} {comment.author}: {comment.comment}">
+  <summary
+    class="comment__header"
+    aria-label="{t(
+      'ui.comment.summary.aria.label',
+      'Comment by',
+    )} {comment.author}: {comment.comment}"
+  >
     <Button
       style="button--marker button--marker-{comment.status} {panel.currentCommentId ===
       comment.id
@@ -51,7 +54,10 @@
     <div class="comment__content">
       <header>
         <strong>{comment.author}</strong>
-        <time datetime={formatDate(comment.timestamp)}>
+        <time
+          datetime={formatDateISO(comment.timestamp)}
+          title={formatDate(comment.timestamp, false)}
+        >
           {formatDate(comment.timestamp)}
         </time>
       </header>
@@ -168,7 +174,7 @@
     header {
       display: flex;
       gap: var(--comment-author-gap);
-      align-items: flex-start;
+      align-items: center;
       justify-content: flex-start;
       margin-bottom: var(--comment-author-margin-bottom);
       time {

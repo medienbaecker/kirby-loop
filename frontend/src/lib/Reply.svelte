@@ -2,24 +2,27 @@
   import type { Reply } from "../types";
   import Author from "./Author.svelte";
   import { t } from "../store/translations.svelte";
+  import { formatDate } from "../composables/formatDate";
+  import { formatDateISO } from "../composables/formatDateISO";
   export let reply: Reply;
-
-  function formatDate(timestamp: number) {
-    const date = new Date(timestamp * 1000);
-    return date.toLocaleString();
-  }
 </script>
 
 <article
   class="reply"
   data-id={reply.id}
-  aria-label="{t('ui.reply.aria.label', 'Reply by')} {reply.author}: {reply.comment}"
+  aria-label="{t(
+    'ui.reply.aria.label',
+    'Reply by',
+  )} {reply.author}: {reply.comment}"
 >
   <Author initials={reply.author.substring(0, 1)} />
   <div class="reply__content">
     <header>
       <strong>{reply.author}</strong>
-      <time datetime={formatDate(reply.timestamp)}>
+      <time
+        datetime={formatDateISO(reply.timestamp)}
+        title={formatDate(reply.timestamp, false)}
+      >
         {formatDate(reply.timestamp)}
       </time>
     </header>
@@ -43,7 +46,7 @@
     header {
       display: flex;
       gap: var(--reply-header-gap);
-      align-items: flex-start;
+      align-items: center;
       justify-content: flex-start;
       margin-bottom: var(--reply-header-margin-bottom);
       time {

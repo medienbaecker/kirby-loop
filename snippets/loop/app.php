@@ -44,7 +44,16 @@ function getTranslations(): array
         'ui.panel.filter.resolved.inactive' => t('moinframe.loop.ui.panel.filter.resolved.inactive', 'Show resolved comments', $customLang),
         'ui.panel.menu.open' => t('moinframe.loop.ui.panel.menu.open', 'Open menu', $customLang),
         'ui.panel.menu.filter.title' => t('moinframe.loop.ui.panel.menu.filter.title', 'Show Comments', $customLang),
-        'ui.panel.no.resolved' => t('moinframe.loop.ui.panel.no.resolved', 'No resolved comments yet.', $customLang)
+        'ui.panel.no.resolved' => t('moinframe.loop.ui.panel.no.resolved', 'No resolved comments yet.', $customLang),
+        
+        // Time formatting
+        'ui.time.just_now' => t('moinframe.loop.ui.time.just_now', 'just now', $customLang),
+        'ui.time.minute_ago' => t('moinframe.loop.ui.time.minute_ago', 'a minute ago', $customLang),
+        'ui.time.minutes_ago' => t('moinframe.loop.ui.time.minutes_ago', '{count} minutes ago', $customLang),
+        'ui.time.hour_ago' => t('moinframe.loop.ui.time.hour_ago', 'an hour ago', $customLang),
+        'ui.time.hours_ago' => t('moinframe.loop.ui.time.hours_ago', '{count} hours ago', $customLang),
+        'ui.time.yesterday' => t('moinframe.loop.ui.time.yesterday', 'yesterday', $customLang),
+        'ui.time.days_ago' => t('moinframe.loop.ui.time.days_ago', '{count} days ago', $customLang)
     ];
 }
 

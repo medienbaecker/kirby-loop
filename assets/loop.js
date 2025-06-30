@@ -3413,6 +3413,13 @@ let translations = state(proxy({}));
 const t = (key, fallback) => {
   return get(translations)[key] || fallback || key;
 };
+const tt = (key, fallback, replacements) => {
+  let text2 = get(translations)[key] || fallback || key;
+  for (const [placeholder, value] of Object.entries(replacements)) {
+    text2 = text2.replace(`{${placeholder}}`, value);
+  }
+  return text2;
+};
 const setTranslations = (newTranslations) => {
   set(translations, proxy(newTranslations));
 };
@@ -4162,19 +4169,44 @@ function Author($$anchor, $$props) {
   });
 }
 create_custom_element(Author, { initials: {} }, [], [], true);
-var root$9 = /* @__PURE__ */ template(`<article class="reply svelte-1i0bwsu"><!> <div class="reply__content svelte-1i0bwsu"><header class="svelte-1i0bwsu"><strong> </strong> <time class="svelte-1i0bwsu"> </time></header> <div class="reply__text svelte-1i0bwsu"> </div></div></article>`);
+function formatDate(timestamp, humanize = true) {
+  const date = new Date(timestamp * 1e3);
+  const now = /* @__PURE__ */ new Date();
+  const diffInMs = now.getTime() - date.getTime();
+  const diffInMinutes = Math.floor(diffInMs / (1e3 * 60));
+  const diffInHours = Math.floor(diffInMs / (1e3 * 60 * 60));
+  const diffInDays = Math.floor(diffInMs / (1e3 * 60 * 60 * 24));
+  if (humanize && diffInDays <= 3) {
+    if (diffInMinutes < 1) {
+      return t("ui.time.just_now", "just now");
+    } else if (diffInMinutes === 1) {
+      return t("ui.time.minute_ago", "a minute ago");
+    } else if (diffInMinutes < 60) {
+      return tt("ui.time.minutes_ago", "{count} minutes ago", { count: diffInMinutes.toString() });
+    } else if (diffInHours === 1) {
+      return t("ui.time.hour_ago", "an hour ago");
+    } else if (diffInHours < 24) {
+      return tt("ui.time.hours_ago", "{count} hours ago", { count: diffInHours.toString() });
+    } else if (diffInDays === 1) {
+      return t("ui.time.yesterday", "yesterday");
+    } else {
+      return tt("ui.time.days_ago", "{count} days ago", { count: diffInDays.toString() });
+    }
+  }
+  return date.toLocaleString(void 0, { dateStyle: "short", timeStyle: "short" });
+}
+function formatDateISO(timestamp) {
+  return new Date(timestamp * 1e3).toISOString();
+}
+var root$9 = /* @__PURE__ */ template(`<article class="reply svelte-1nsulj7"><!> <div class="reply__content svelte-1nsulj7"><header class="svelte-1nsulj7"><strong> </strong> <time class="svelte-1nsulj7"> </time></header> <div class="reply__text svelte-1nsulj7"> </div></div></article>`);
 const $$css$8 = {
-  hash: "svelte-1i0bwsu",
-  code: ".reply.svelte-1i0bwsu{gap:var(--reply-gap);flex-direction:row;align-items:start;display:flex}.reply__content.svelte-1i0bwsu{padding:var(--reply-content-padding);background-color:var(--reply-content-background);border-radius:var(--reply-content-border-radius)}.reply__content.svelte-1i0bwsu header:where(.svelte-1i0bwsu){gap:var(--reply-header-gap);margin-bottom:var(--reply-header-margin-bottom);justify-content:flex-start;align-items:flex-start;display:flex}.reply__content.svelte-1i0bwsu header:where(.svelte-1i0bwsu) time:where(.svelte-1i0bwsu){font-size:var(--reply-timestamp-font-size);color:var(--reply-timestamp-color)}@media (prefers-color-scheme:dark){.reply__content.svelte-1i0bwsu{background-color:var(--reply-content-background-dark)}}.reply__text.svelte-1i0bwsu{white-space:pre-line}"
+  hash: "svelte-1nsulj7",
+  code: ".reply.svelte-1nsulj7{gap:var(--reply-gap);flex-direction:row;align-items:start;display:flex}.reply__content.svelte-1nsulj7{padding:var(--reply-content-padding);background-color:var(--reply-content-background);border-radius:var(--reply-content-border-radius)}.reply__content.svelte-1nsulj7 header:where(.svelte-1nsulj7){gap:var(--reply-header-gap);margin-bottom:var(--reply-header-margin-bottom);justify-content:flex-start;align-items:center;display:flex}.reply__content.svelte-1nsulj7 header:where(.svelte-1nsulj7) time:where(.svelte-1nsulj7){font-size:var(--reply-timestamp-font-size);color:var(--reply-timestamp-color)}@media (prefers-color-scheme:dark){.reply__content.svelte-1nsulj7{background-color:var(--reply-content-background-dark)}}.reply__text.svelte-1nsulj7{white-space:pre-line}"
 };
 function Reply($$anchor, $$props) {
   push($$props, false);
   append_styles($$anchor, $$css$8);
   let reply = prop($$props, "reply", 12);
-  function formatDate(timestamp) {
-    const date = new Date(timestamp * 1e3);
-    return date.toLocaleString();
-  }
   init();
   var article = root$9();
   var node = child(article);
@@ -4199,17 +4231,19 @@ function Reply($$anchor, $$props) {
   reset$1(div);
   reset$1(article);
   template_effect(
-    ($0, $1, $2) => {
+    ($0, $1, $2, $3) => {
       set_attribute(article, "data-id", reply().id);
       set_attribute(article, "aria-label", `${$0 ?? ""} ${reply().author ?? ""}: ${reply().comment ?? ""}`);
       set_text(text2, reply().author);
       set_attribute(time, "datetime", $1);
-      set_text(text_1, $2);
+      set_attribute(time, "title", $2);
+      set_text(text_1, $3);
       set_text(text_2, reply().comment);
     },
     [
       () => t("ui.reply.aria.label", "Reply by"),
-      () => formatDate(reply().timestamp),
+      () => formatDateISO(reply().timestamp),
+      () => formatDate(reply().timestamp, false),
       () => formatDate(reply().timestamp)
     ],
     derived_safe_equal
@@ -4227,23 +4261,19 @@ function Reply($$anchor, $$props) {
 }
 create_custom_element(Reply, { reply: {} }, [], [], true);
 var root_5$1 = /* @__PURE__ */ template(`<li><!></li>`);
-var root_4$1 = /* @__PURE__ */ template(`<ul class="comment__replies svelte-cyfq6q"></ul>`);
+var root_4$1 = /* @__PURE__ */ template(`<ul class="comment__replies svelte-6fqqrp"></ul>`);
 var root_8 = /* @__PURE__ */ template(`<!> <!>`, 1);
-var root_7 = /* @__PURE__ */ template(`<div class="buttons svelte-cyfq6q"><!></div>`);
-var root$8 = /* @__PURE__ */ template(`<details><summary class="comment__header svelte-cyfq6q"><!> <div class="comment__content svelte-cyfq6q"><header class="svelte-cyfq6q"><strong> </strong> <time class="svelte-cyfq6q"> </time></header> <div class="comment__text svelte-cyfq6q"> </div></div> <!></summary> <!> <footer class="svelte-cyfq6q"><!></footer></details>`);
+var root_7 = /* @__PURE__ */ template(`<div class="buttons svelte-6fqqrp"><!></div>`);
+var root$8 = /* @__PURE__ */ template(`<details><summary class="comment__header svelte-6fqqrp"><!> <div class="comment__content svelte-6fqqrp"><header class="svelte-6fqqrp"><strong> </strong> <time class="svelte-6fqqrp"> </time></header> <div class="comment__text svelte-6fqqrp"> </div></div> <!></summary> <!> <footer class="svelte-6fqqrp"><!></footer></details>`);
 const $$css$7 = {
-  hash: "svelte-cyfq6q",
-  code: '.comment.svelte-cyfq6q{--loop-marker-background:var(--comment-marker-background);--loop-marker-color:var(--comment-marker-color);--marker-size:var(--comment-avatar-size);position:relative}.comment.svelte-cyfq6q>:where(.svelte-cyfq6q){z-index:1;position:relative}.comment.svelte-cyfq6q:after{content:"";left:var(--comment-line-offset);width:var(--comment-line-width);background-color:var(--comment-line-background);z-index:0;height:calc(100% - 4rem);position:absolute;top:1.5rem}.comment.svelte-cyfq6q:not([open]):after{height:calc(100% - 2.75rem)}.comment__header.svelte-cyfq6q{font-size:var(--comment-header-font-size);padding:var(--comment-header-padding);align-items:flex-start;gap:var(--comment-header-gap);cursor:pointer;border-radius:var(--comment-header-border-radius);display:flex}.comment__header.svelte-cyfq6q:focus-visible{outline:2px solid var(--comment-header-outline-color);outline-offset:var(--comment-header-outline-offset)}.comment__header.svelte-cyfq6q .comment__replies-count{bottom:0;left:var(--space-s);min-width:var(--comment-avatar-size);position:absolute}.comment__header.svelte-cyfq6q header:where(.svelte-cyfq6q){gap:var(--comment-author-gap);margin-bottom:var(--comment-author-margin-bottom);justify-content:flex-start;align-items:flex-start;display:flex}.comment__header.svelte-cyfq6q header:where(.svelte-cyfq6q) time:where(.svelte-cyfq6q){font-size:var(--comment-timestamp-font-size);color:var(--comment-timestamp-color)}.comment__header.svelte-cyfq6q .comment__content:where(.svelte-cyfq6q){padding:var(--comment-content-padding);background-color:var(--comment-content-background);border-radius:var(--comment-content-border-radius);flex:1}@media (prefers-color-scheme:dark){.comment__header.svelte-cyfq6q .comment__content:where(.svelte-cyfq6q){background-color:var(--comment-content-background-dark)}}.comment__header.svelte-cyfq6q .comment__text:where(.svelte-cyfq6q){white-space:pre-line}.comment__replies.svelte-cyfq6q{padding:var(--comment-replies-padding);gap:var(--comment-replies-gap);flex-direction:column;margin:0;list-style:none;display:flex}footer.svelte-cyfq6q{gap:var(--comment-footer-gap);padding:var(--comment-footer-padding);flex-direction:column;display:flex}footer.svelte-cyfq6q .buttons:where(.svelte-cyfq6q){gap:var(--comment-buttons-gap);align-items:flex-end;display:flex}.is-hidden.svelte-cyfq6q{display:none}'
+  hash: "svelte-6fqqrp",
+  code: '.comment.svelte-6fqqrp{--loop-marker-background:var(--comment-marker-background);--loop-marker-color:var(--comment-marker-color);--marker-size:var(--comment-avatar-size);position:relative}.comment.svelte-6fqqrp>:where(.svelte-6fqqrp){z-index:1;position:relative}.comment.svelte-6fqqrp:after{content:"";left:var(--comment-line-offset);width:var(--comment-line-width);background-color:var(--comment-line-background);z-index:0;height:calc(100% - 4rem);position:absolute;top:1.5rem}.comment.svelte-6fqqrp:not([open]):after{height:calc(100% - 2.75rem)}.comment__header.svelte-6fqqrp{font-size:var(--comment-header-font-size);padding:var(--comment-header-padding);align-items:flex-start;gap:var(--comment-header-gap);cursor:pointer;border-radius:var(--comment-header-border-radius);display:flex}.comment__header.svelte-6fqqrp:focus-visible{outline:2px solid var(--comment-header-outline-color);outline-offset:var(--comment-header-outline-offset)}.comment__header.svelte-6fqqrp .comment__replies-count{bottom:0;left:var(--space-s);min-width:var(--comment-avatar-size);position:absolute}.comment__header.svelte-6fqqrp header:where(.svelte-6fqqrp){gap:var(--comment-author-gap);margin-bottom:var(--comment-author-margin-bottom);justify-content:flex-start;align-items:center;display:flex}.comment__header.svelte-6fqqrp header:where(.svelte-6fqqrp) time:where(.svelte-6fqqrp){font-size:var(--comment-timestamp-font-size);color:var(--comment-timestamp-color)}.comment__header.svelte-6fqqrp .comment__content:where(.svelte-6fqqrp){padding:var(--comment-content-padding);background-color:var(--comment-content-background);border-radius:var(--comment-content-border-radius);flex:1}@media (prefers-color-scheme:dark){.comment__header.svelte-6fqqrp .comment__content:where(.svelte-6fqqrp){background-color:var(--comment-content-background-dark)}}.comment__header.svelte-6fqqrp .comment__text:where(.svelte-6fqqrp){white-space:pre-line}.comment__replies.svelte-6fqqrp{padding:var(--comment-replies-padding);gap:var(--comment-replies-gap);flex-direction:column;margin:0;list-style:none;display:flex}footer.svelte-6fqqrp{gap:var(--comment-footer-gap);padding:var(--comment-footer-padding);flex-direction:column;display:flex}footer.svelte-6fqqrp .buttons:where(.svelte-6fqqrp){gap:var(--comment-buttons-gap);align-items:flex-end;display:flex}.is-hidden.svelte-6fqqrp{display:none}'
 };
 function Comment$1($$anchor, $$props) {
   var _a2;
   push($$props, true);
   append_styles($$anchor, $$css$7);
   const comment2 = prop($$props, "comment", 7), scrollIntoView = prop($$props, "scrollIntoView", 7), handleSubmit = prop($$props, "handleSubmit", 7), cancel = prop($$props, "cancel", 7);
-  function formatDate(timestamp) {
-    const date = new Date(timestamp * 1e3);
-    return date.toLocaleString();
-  }
   let openReplyForm = state(false);
   let detailsOpen = state(proxy(((_a2 = comment2().replies) == null ? void 0 : _a2.length) > 0 && !panel.showResolvedOnly));
   var details = root$8();
@@ -4417,13 +4447,14 @@ function Comment$1($$anchor, $$props) {
   reset$1(footer);
   reset$1(details);
   template_effect(
-    ($0, $1, $2, $3) => {
+    ($0, $1, $2, $3, $4) => {
       set_attribute(details, "id", `comment-${comment2().id ?? ""}`);
-      classes = set_class(details, 1, `comment comment--${comment2().status ?? ""}`, "svelte-cyfq6q", classes, $0);
+      classes = set_class(details, 1, `comment comment--${comment2().status ?? ""}`, "svelte-6fqqrp", classes, $0);
       set_attribute(summary, "aria-label", `${$1 ?? ""} ${comment2().author ?? ""}: ${comment2().comment ?? ""}`);
       set_text(text_1, comment2().author);
       set_attribute(time, "datetime", $2);
-      set_text(text_2, $3);
+      set_attribute(time, "title", $3);
+      set_text(text_2, $4);
       set_text(text_3, comment2().comment);
     },
     [
@@ -4431,7 +4462,8 @@ function Comment$1($$anchor, $$props) {
         "comment--current": panel.currentCommentId === comment2().id
       }),
       () => t("ui.comment.summary.aria.label", "Comment by"),
-      () => formatDate(comment2().timestamp),
+      () => formatDateISO(comment2().timestamp),
+      () => formatDate(comment2().timestamp, false),
       () => formatDate(comment2().timestamp)
     ]
   );
