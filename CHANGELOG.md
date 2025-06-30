@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.0-beta.5](///compare/v1.0.0-beta.4...v1.0.0-beta.5) (2025-06-30)
+
+### Bug Fixes
+
+* decode html entities cf00460
+* make sure to add a guest name before replying or commenting 763c904
+
 ## [1.0.0-beta.4](///compare/v1.0.0-beta.3...v1.0.0-beta.4) (2025-06-30)
 
 ### Features
