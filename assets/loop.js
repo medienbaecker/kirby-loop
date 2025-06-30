@@ -4162,7 +4162,7 @@ function Author($$anchor, $$props) {
   });
 }
 create_custom_element(Author, { initials: {} }, [], [], true);
-var root$9 = /* @__PURE__ */ template(`<div class="reply svelte-1i0bwsu"><!> <article class="reply__content svelte-1i0bwsu"><header class="svelte-1i0bwsu"><strong> </strong> <time class="svelte-1i0bwsu"> </time></header> <div class="reply__text svelte-1i0bwsu"> </div></article></div>`);
+var root$9 = /* @__PURE__ */ template(`<article class="reply svelte-1i0bwsu"><!> <div class="reply__content svelte-1i0bwsu"><header class="svelte-1i0bwsu"><strong> </strong> <time class="svelte-1i0bwsu"> </time></header> <div class="reply__text svelte-1i0bwsu"> </div></div></article>`);
 const $$css$8 = {
   hash: "svelte-1i0bwsu",
   code: ".reply.svelte-1i0bwsu{gap:var(--reply-gap);flex-direction:row;align-items:start;display:flex}.reply__content.svelte-1i0bwsu{padding:var(--reply-content-padding);background-color:var(--reply-content-background);border-radius:var(--reply-content-border-radius)}.reply__content.svelte-1i0bwsu header:where(.svelte-1i0bwsu){gap:var(--reply-header-gap);margin-bottom:var(--reply-header-margin-bottom);justify-content:flex-start;align-items:flex-start;display:flex}.reply__content.svelte-1i0bwsu header:where(.svelte-1i0bwsu) time:where(.svelte-1i0bwsu){font-size:var(--reply-timestamp-font-size);color:var(--reply-timestamp-color)}@media (prefers-color-scheme:dark){.reply__content.svelte-1i0bwsu{background-color:var(--reply-content-background-dark)}}.reply__text.svelte-1i0bwsu{white-space:pre-line}"
@@ -4176,16 +4176,16 @@ function Reply($$anchor, $$props) {
     return date.toLocaleString();
   }
   init();
-  var div = root$9();
-  var node = child(div);
+  var article = root$9();
+  var node = child(article);
   const expression = /* @__PURE__ */ derived_safe_equal(() => reply().author.substring(0, 1));
   Author(node, {
     get initials() {
       return get(expression);
     }
   });
-  var article = sibling(node, 2);
-  var header = child(article);
+  var div = sibling(node, 2);
+  var header = child(div);
   var strong = child(header);
   var text2 = child(strong, true);
   reset$1(strong);
@@ -4196,23 +4196,25 @@ function Reply($$anchor, $$props) {
   var div_1 = sibling(header, 2);
   var text_2 = child(div_1, true);
   reset$1(div_1);
-  reset$1(article);
   reset$1(div);
+  reset$1(article);
   template_effect(
-    ($0, $1) => {
-      set_attribute(div, "data-id", reply().id);
+    ($0, $1, $2) => {
+      set_attribute(article, "data-id", reply().id);
+      set_attribute(article, "aria-label", `${$0 ?? ""} ${reply().author ?? ""}: ${reply().comment ?? ""}`);
       set_text(text2, reply().author);
-      set_attribute(time, "datetime", $0);
-      set_text(text_1, $1);
+      set_attribute(time, "datetime", $1);
+      set_text(text_1, $2);
       set_text(text_2, reply().comment);
     },
     [
+      () => t("ui.reply.aria.label", "Reply by"),
       () => formatDate(reply().timestamp),
       () => formatDate(reply().timestamp)
     ],
     derived_safe_equal
   );
-  append($$anchor, div);
+  append($$anchor, article);
   return pop({
     get reply() {
       return reply();

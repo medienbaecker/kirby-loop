@@ -20,6 +20,7 @@ function getTranslations(): array
         'ui.comment.keyboardHint' => t('moinframe.loop.ui.comment.keyboardHint', '⌘+Enter or Ctrl+Enter to submit', $customLang),
         'ui.comment.maker.aria.label' => t('moinframe.loop.ui.comment.maker.aria.label', 'Jump to marker', $customLang),
         'ui.comment.summary.aria.label' => t('moinframe.loop.ui.comment.summary.aria.label', 'Comment by', $customLang),
+        'ui.reply.aria.label' => t('moinframe.loop.ui.reply.aria.label', 'Reply by', $customLang),
         'ui.comment.replies.aria.label' => t('moinframe.loop.ui.comment.replies.aria.label', 'Show replies', $customLang),
         'ui.reply.placeholder' => t('moinframe.loop.ui.reply.placeholder', 'Write a reply...', $customLang),
         'ui.reply.submit' => t('moinframe.loop.ui.reply.submit', 'Reply', $customLang),

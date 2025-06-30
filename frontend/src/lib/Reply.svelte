@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { Reply } from "../types";
   import Author from "./Author.svelte";
+  import { t } from "../store/translations.svelte";
   export let reply: Reply;
 
   function formatDate(timestamp: number) {
@@ -9,9 +10,13 @@
   }
 </script>
 
-<div class="reply" data-id={reply.id}>
+<article
+  class="reply"
+  data-id={reply.id}
+  aria-label="{t('ui.reply.aria.label', 'Reply by')} {reply.author}: {reply.comment}"
+>
   <Author initials={reply.author.substring(0, 1)} />
-  <article class="reply__content">
+  <div class="reply__content">
     <header>
       <strong>{reply.author}</strong>
       <time datetime={formatDate(reply.timestamp)}>
@@ -19,8 +24,8 @@
       </time>
     </header>
     <div class="reply__text">{reply.comment}</div>
-  </article>
-</div>
+  </div>
+</article>
 
 <style>
   .reply {
