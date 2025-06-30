@@ -5532,6 +5532,10 @@ function App($$anchor, $$props) {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!get(isAuthenticated) && !guestName.get()) {
+      welcomeDialog == null ? void 0 : welcomeDialog.showModal();
+      return;
+    }
     const { text: text2, parentId } = formData;
     if (parentId) {
       const reply = { parentId, comment: text2 };

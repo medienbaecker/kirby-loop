@@ -104,6 +104,12 @@
   const handleSubmit = (e: SubmitEvent) => {
     e.preventDefault();
 
+    // For non-authenticated users, require a guest name before allowing comments or replies
+    if (!isAuthenticated && !guestName.get()) {
+      welcomeDialog?.showModal();
+      return;
+    }
+
     const { text, parentId } = formData;
     // submit is a reply
     if (parentId) {
