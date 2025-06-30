@@ -4691,22 +4691,43 @@ function IconChat($$anchor) {
   append($$anchor, svg);
 }
 create_custom_element(IconChat, {}, [], [], true);
-var root_2$1 = /* @__PURE__ */ template(`<li class="no-threads svelte-e8bu4j"><p> </p></li>`);
-var root_4 = /* @__PURE__ */ template(`<li class="no-threads svelte-e8bu4j"><p> </p></li>`);
-var root_6 = /* @__PURE__ */ template(`<li class="svelte-e8bu4j"><!></li>`);
-var root$3 = /* @__PURE__ */ template(`<div><header class="svelte-e8bu4j"><!></header> <ul class="threads svelte-e8bu4j" data-lenis-prevent=""><!></ul> <!></div>`);
+var root_2$1 = /* @__PURE__ */ template(`<li class="no-threads svelte-n6dlaf"><p> </p></li>`);
+var root_4 = /* @__PURE__ */ template(`<li class="no-threads svelte-n6dlaf"><p> </p></li>`);
+var root_6 = /* @__PURE__ */ template(`<li class="svelte-n6dlaf"><!></li>`);
+var root$3 = /* @__PURE__ */ template(`<dialog><header class="svelte-n6dlaf"><!></header> <ul class="threads svelte-n6dlaf" data-lenis-prevent=""><!></ul> <!></dialog>`);
 const $$css$2 = {
-  hash: "svelte-e8bu4j",
-  code: ".panel.svelte-e8bu4j{position:var(--panel-position);right:var(--panel-right);top:var(--panel-top);transform:var(--panel-transform-closed);width:var(--panel-width);height:var(--panel-height);color:var(--panel-color);border-radius:var(--panel-border-radius);border-top-left-radius:var(--panel-border-top-left-radius);transition:var(--panel-transition);z-index:var(--panel-z-index);cursor:auto;flex-direction:column;justify-content:flex-start;align-items:flex-start;display:flex}@media screen and (max-width:600px){.panel.svelte-e8bu4j{width:var(--panel-mobile-width)}}.panel.open.svelte-e8bu4j{transform:var(--panel-transform-open);box-shadow:var(--panel-shadow)}.panel.open.svelte-e8bu4j header:where(.svelte-e8bu4j){transform:var(--panel-header-transform-open)}.panel.svelte-e8bu4j header:where(.svelte-e8bu4j){transform:var(--panel-header-transform-closed);border-top-left-radius:var(--panel-header-border-radius);border-bottom-left-radius:var(--panel-header-border-radius);gap:var(--panel-header-gap);-webkit-backdrop-filter:var(--panel-header-backdrop-filter);backdrop-filter:var(--panel-header-backdrop-filter);background:var(--panel-header-background);box-shadow:var(--shadow-l),var(--shadow-light-edge),var(--shadow-dark-edge);transition:transform var(--transition-duration)var(--transition-easing);border-top-right-radius:0;border-bottom-right-radius:0;flex-direction:column;display:flex;position:absolute}.panel.svelte-e8bu4j header:where(.svelte-e8bu4j):hover,.panel.svelte-e8bu4j header:where(.svelte-e8bu4j):focus-visible{transform:var(--panel-header-transform-hover)}.threads.svelte-e8bu4j{overscroll-behavior:contain;padding:var(--panel-threads-padding);box-sizing:border-box;background-color:var(--panel-threads-background);width:100%;-webkit-backdrop-filter:var(--panel-threads-backdrop);backdrop-filter:var(--panel-threads-backdrop);z-index:2;border-radius:var(--panel-threads-border-radius);border-top-left-radius:var(--panel-threads-border-top-left-radius);scrollbar-width:var(--panel-threads-scrollbar-width);scrollbar-gutter:stable;flex-direction:column;flex:100%;margin:0;list-style:none;display:flex;overflow-y:auto}.threads.svelte-e8bu4j li:where(.svelte-e8bu4j)+li:where(.svelte-e8bu4j){margin-top:var(--panel-threads-item-margin)}.threads.svelte-e8bu4j .no-threads:where(.svelte-e8bu4j){text-align:center;padding:var(--panel-no-threads-padding);font-size:var(--panel-no-threads-font-size);color:var(--panel-no-threads-color);margin-block:auto}"
+  hash: "svelte-n6dlaf",
+  code: ".panel.svelte-n6dlaf{position:var(--panel-position);right:var(--panel-right);top:var(--panel-top);transform:var(--panel-transform-closed);width:var(--panel-width);max-width:none;height:var(--panel-height);color:var(--panel-color);border-radius:var(--panel-border-radius);border-top-left-radius:var(--panel-border-top-left-radius);transition:var(--panel-transition);z-index:var(--panel-z-index);cursor:auto;border:0;flex-direction:column;justify-content:flex-start;align-items:flex-start;margin:0;padding:0;display:flex;bottom:auto;left:auto}@media screen and (max-width:600px){.panel.svelte-n6dlaf{width:var(--panel-mobile-width)}}.panel.open.svelte-n6dlaf{transform:var(--panel-transform-open);box-shadow:var(--panel-shadow)}.panel.open.svelte-n6dlaf header:where(.svelte-n6dlaf){transform:var(--panel-header-transform-open)}.panel.svelte-n6dlaf header:where(.svelte-n6dlaf){transform:var(--panel-header-transform-closed);border-top-left-radius:var(--panel-header-border-radius);border-bottom-left-radius:var(--panel-header-border-radius);gap:var(--panel-header-gap);-webkit-backdrop-filter:var(--panel-header-backdrop-filter);backdrop-filter:var(--panel-header-backdrop-filter);background:var(--panel-header-background);box-shadow:var(--shadow-l),var(--shadow-light-edge),var(--shadow-dark-edge);transition:transform var(--transition-duration)var(--transition-easing);border-top-right-radius:0;border-bottom-right-radius:0;flex-direction:column;display:flex;position:absolute}.panel.svelte-n6dlaf header:where(.svelte-n6dlaf):hover,.panel.svelte-n6dlaf header:where(.svelte-n6dlaf):focus-visible{transform:var(--panel-header-transform-hover)}.threads.svelte-n6dlaf{overscroll-behavior:contain;padding:var(--panel-threads-padding);box-sizing:border-box;background-color:var(--panel-threads-background);width:100%;-webkit-backdrop-filter:var(--panel-threads-backdrop);backdrop-filter:var(--panel-threads-backdrop);z-index:2;border-radius:var(--panel-threads-border-radius);border-top-left-radius:var(--panel-threads-border-top-left-radius);scrollbar-width:var(--panel-threads-scrollbar-width);scrollbar-gutter:stable;flex-direction:column;flex:100%;margin:0;list-style:none;display:flex;overflow-y:auto}.threads.svelte-n6dlaf li:where(.svelte-n6dlaf)+li:where(.svelte-n6dlaf){margin-top:var(--panel-threads-item-margin)}.threads.svelte-n6dlaf .no-threads:where(.svelte-n6dlaf){text-align:center;padding:var(--panel-no-threads-padding);font-size:var(--panel-no-threads-font-size);color:var(--panel-no-threads-color);margin-block:auto}"
 };
 function Panel($$anchor, $$props) {
   push($$props, true);
   append_styles($$anchor, $$css$2);
   const scrollIntoView = prop($$props, "scrollIntoView", 7), handleSubmit = prop($$props, "handleSubmit", 7), cancel = prop($$props, "cancel", 7);
+  let dialogEl;
   const filteredComments = /* @__PURE__ */ derived(() => panel.showResolvedOnly ? store.comments.filter((comment2) => comment2.status === "RESOLVED") : store.comments.filter((comment2) => comment2.status === "OPEN"));
-  var div = root$3();
+  user_effect(() => {
+    if (!dialogEl) return;
+    if (panel.open && !dialogEl.open) {
+      dialogEl.show();
+    } else if (!panel.open && dialogEl.open) {
+      dialogEl.close();
+    }
+  });
+  onMount(() => {
+    const handleKeydown2 = (event2) => {
+      if (event2.key === "Escape" && panel.open) {
+        panel.open = false;
+      }
+    };
+    document.addEventListener("keydown", handleKeydown2);
+    return () => document.removeEventListener("keydown", handleKeydown2);
+  });
+  function handleDialogClose() {
+    panel.open = false;
+  }
+  var dialog = root$3();
   let classes;
-  var header = child(div);
+  var header = child(dialog);
   var node = child(header);
   const expression = /* @__PURE__ */ derived(() => t("ui.panel.open", "Open comments"));
   Button(node, {
@@ -4792,15 +4813,17 @@ function Panel($$anchor, $$props) {
   reset$1(ul);
   var node_4 = sibling(ul, 2);
   ContextMenu(node_4, {});
-  reset$1(div);
+  reset$1(dialog);
+  bind_this(dialog, ($$value) => dialogEl = $$value, () => dialogEl);
   template_effect(
     ($0) => {
-      classes = set_class(div, 1, "panel svelte-e8bu4j", null, classes, $0);
+      classes = set_class(dialog, 1, "panel svelte-n6dlaf", null, classes, $0);
       ul.inert = !panel.open;
     },
     [() => ({ open: panel.open })]
   );
-  append($$anchor, div);
+  event("close", dialog, handleDialogClose);
+  append($$anchor, dialog);
   return pop({
     get scrollIntoView() {
       return scrollIntoView();

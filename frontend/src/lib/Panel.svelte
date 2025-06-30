@@ -7,6 +7,9 @@
   import Button from "./Button.svelte";
   import ContextMenu from "./ContextMenu.svelte";
   import IconChat from "./Icon/IconChat.svelte";
+  import { onMount } from "svelte";
+
+  let dialogEl: HTMLDialogElement;
 
   // Filter comments based on resolved status
   const filteredComments = $derived(
@@ -14,9 +17,42 @@
       ? store.comments.filter((comment) => comment.status === "RESOLVED")
       : store.comments.filter((comment) => comment.status === "OPEN"),
   );
+
+  // Sync dialog state with panel store
+  $effect(() => {
+    if (!dialogEl) return;
+
+    if (panel.open && !dialogEl.open) {
+      dialogEl.show();
+    } else if (!panel.open && dialogEl.open) {
+      dialogEl.close();
+    }
+  });
+
+  // Handle ESC key to close panel
+  onMount(() => {
+    const handleKeydown = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && panel.open) {
+        panel.open = false;
+      }
+    };
+
+    document.addEventListener("keydown", handleKeydown);
+    return () => document.removeEventListener("keydown", handleKeydown);
+  });
+
+  // Handle dialog close event
+  function handleDialogClose() {
+    panel.open = false;
+  }
 </script>
 
-<div class="panel" class:open={panel.open}>
+<dialog
+  bind:this={dialogEl}
+  class="panel"
+  class:open={panel.open}
+  onclose={handleDialogClose}
+>
   <header>
     <Button
       onclick={() => (panel.open = !panel.open)}
@@ -48,16 +84,22 @@
   </ul>
 
   <ContextMenu />
-</div>
+</dialog>
 
 <style>
   .panel {
     position: var(--panel-position);
     right: var(--panel-right);
     top: var(--panel-top);
+    left: auto;
+    bottom: auto;
     transform: var(--panel-transform-closed);
     width: var(--panel-width);
+    max-width: none;
+    margin: 0;
+    padding: 0;
     height: var(--panel-height);
+    border: 0;
     color: var(--panel-color);
     border-radius: var(--panel-border-radius);
     border-top-left-radius: var(--panel-border-top-left-radius);
