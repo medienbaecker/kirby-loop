@@ -94,10 +94,10 @@
       />
     {:else}
       <div class="buttons">
-        <Button style="button--solid" onclick={() => (openReplyForm = true)}>
-          {t("ui.reply.submit", "Reply")}
-        </Button>
         {#if comment.status === "OPEN"}
+          <Button style="button--solid" onclick={() => (openReplyForm = true)}>
+            {t("ui.reply.submit", "Reply")}
+          </Button>
           <Button onclick={() => resolveComment(comment)}>
             {t("ui.comment.mark.solved", "Resolve")}
           </Button>

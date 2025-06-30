@@ -1,4 +1,4 @@
-!function(){"use strict";try{if("undefined"!=typeof document){var r=document.createElement("style");r.appendChild(document.createTextNode('kirby-loop{--color-neutral-h:900;--color-neutral-c:0;--color-accent-h:900;--color-accent-c:.18;--color-accent-l:.75;--color-accent-dark-factor:.4;--color-accent-light-factor:1.2;--color-neutral-l-0:1;--color-neutral-l-100:.95;--color-neutral-l-200:.9;--color-neutral-l-300:.7;--color-neutral-l-400:.6;--color-neutral-l-600:.4;--color-neutral-l-500:.5;--color-neutral-l-700:.3;--color-neutral-l-800:.2;--color-neutral-l-900:.1;--color-neutral-l-1000:0}kirby-loop[theme=dark]{--color-accent-l:.85;--color-neutral-l-0:0;--color-neutral-l-100:.1;--color-neutral-l-200:.2;--color-neutral-l-300:.45;--color-neutral-l-400:.5;--color-neutral-l-600:.55;--color-neutral-l-500:.6;--color-neutral-l-700:.7;--color-neutral-l-800:.8;--color-neutral-l-900:.95;--color-neutral-l-1000:1;--shadow-s:0 .1em .25em oklch(var(--color-neutral-l-100)var(--color-neutral-c)var(--color-neutral-h)/.1);--shadow-m:0 2px 8px oklch(var(--color-neutral-l-100)var(--color-neutral-c)var(--color-neutral-h)/.08),0 8px 16px oklch(var(--color-neutral-l-100)var(--color-neutral-c)var(--color-neutral-h)/.12),0 16px 24px oklch(var(--color-neutral-l-100)var(--color-neutral-c)var(--color-neutral-h)/.08);--shadow-l:0 4px 16px oklch(var(--color-neutral-l-100)var(--color-neutral-c)var(--color-neutral-h)/.08),0 12px 32px oklch(var(--color-neutral-l-100)var(--color-neutral-c)var(--color-neutral-h)/.12),0 24px 48px oklch(var(--color-neutral-l-100)var(--color-neutral-c)var(--color-neutral-h)/.16),0 48px 80px oklch(var(--color-neutral-l-100)var(--color-neutral-c)var(--color-neutral-h)/.08);--shadow-light-edge:inset 1px 1px 1px oklch(var(--color-neutral-l-1000)var(--color-neutral-c)var(--color-neutral-h)/.3);--shadow-dark-edge:inset -1px -1px 1px oklch(var(--color-neutral-l-100)var(--color-neutral-c)var(--color-neutral-h)/.3);--background-glass:linear-gradient(135deg,transparent,var(--color-base-background-o-50));--panel-threads-background:oklch(var(--color-neutral-l-200)var(--color-neutral-c)var(--color-neutral-h)/.99)}kirby-loop{--color-base:var(--color-neutral-900);--color-base-background:var(--color-neutral-0);--color-base-background-o-5:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.05);--color-base-background-o-10:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.1);--color-base-background-o-20:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.2);--color-base-background-o-50:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.5);--color-base-background-o-60:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.6);--color-base-background-o-75:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.75);--color-base-background-o-95:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.95);--color-accent-light:oklch(calc(var(--color-accent-l)*var(--color-accent-light-factor))var(--color-accent-c)var(--color-accent-h));--color-accent:oklch(var(--color-accent-l)var(--color-accent-c)var(--color-accent-h));--color-accent-dark:oklch(calc(var(--color-accent-l)*var(--color-accent-dark-factor))var(--color-accent-c)var(--color-accent-h));--color-neutral-0:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-100:oklch(var(--color-neutral-l-100)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-200:oklch(var(--color-neutral-l-200)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-300:oklch(var(--color-neutral-l-300)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-400:oklch(var(--color-neutral-l-400)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-500:oklch(var(--color-neutral-l-500)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-600:oklch(var(--color-neutral-l-600)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-700:oklch(var(--color-neutral-l-700)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-800:oklch(var(--color-neutral-l-800)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-900:oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-1000:oklch(var(--color-neutral-l-1000)var(--color-neutral-c)var(--color-neutral-h));--color-success:oklch(.65 .15 150);--color-warning:oklch(.75 .15 80);--color-error:oklch(.65 .18 25);--color-info:oklch(.65 .15 220);--font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol",sans-serif;--line-height:1.4;--font-weight-light:300;--font-weight-normal:400;--font-weight-medium:550;--font-weight-bold:700;--font-size-3:clamp(1.9531rem,1.4262rem + 1.7565vw,3.5339rem);--font-size-4:clamp(1.5625rem,1.2503rem + 1.0408vw,2.4992rem);--font-size-5:clamp(1.25rem,1.0775rem + .575vw,1.7675rem);--font-size-6:clamp(1rem,.9167rem + .2778vw,1.25rem);--font-size-7:clamp(.8rem,.772rem + .0934vw,.884rem);--font-size-8:clamp(.6252rem,.6449rem + -.0165vw,.64rem);--border-radius-s:.125rem;--border-radius:.25rem;--border-radius-rounded:4096px;--space-2xs:clamp(.25rem,.2292rem + .0694vw,.3125rem);--space-xs:clamp(.5rem,.4583rem + .1389vw,.625rem);--space-s:clamp(1rem,.9167rem + .2778vw,1.25rem);--space-m:clamp(1.5rem,1.375rem + .4167vw,1.875rem);--space-l:clamp(2rem,1.8333rem + .5556vw,2.5rem);--space-2xs-xs:clamp(.25rem,.125rem + .4167vw,.625rem);--space-xs-s:clamp(.5rem,.25rem + .8333vw,1.25rem);--space-s-m:clamp(1rem,.7083rem + .9722vw,1.875rem);--space-m-l:clamp(1.5rem,1.1667rem + 1.1111vw,2.5rem);--space-s-l:clamp(1rem,.5rem + 1.6667vw,2.5rem);--shadow-s:0 .1em .25em oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h)/.1);--shadow-m:0 2px 8px oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h)/.08),0 8px 16px oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h)/.12),0 16px 24px oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h)/.08);--shadow-l:0 4px 16px oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h)/.08),0 12px 32px oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h)/.12),0 24px 48px oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h)/.16),0 48px 80px oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h)/.08);--shadow-light-edge:inset 1px 1px 1px oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.3);--shadow-dark-edge:inset 0 -1px 1px oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h)/.3);--backdrop-blur:blur(6px);--backdrop-glass:var(--backdrop-blur)saturate(1.4)brightness(1.2);--background-glass:linear-gradient(135deg,transparent,var(--color-base-background-o-95));--background-glass-frosted:linear-gradient(0deg,var(--color-base-background-o-75)0%,var(--color-base-background-o-95)50%);--opacity-subtle:.5;--opacity-medium:.7;--opacity-strong:.9;--outline-color:var(--color-accent);--outline-offset:.25rem;--transition-duration:.2s;--transition-duration-jump:.4s;--transition-easing-jump:cubic-bezier(.44,1.2,.64,1);--transition-easing:cubic-bezier(0,0,.2,1);--z-loop-marker:9998;--z-loop-panel:9999;--z-loop-dialog:10000;--author-avatar-color:var(--color-neutral-600);--author-avatar-background-color:var(--color-neutral-100);--author-avatar-size:2.5rem;--author-avatar-border-radius:var(--border-radius-rounded);--author-avatar-font-size:var(--font-size-6);--button-background:transparent;--button-color:var(--color-neutral-600);--button-border-radius:var(--border-radius);--button-padding:0 var(--space-xs);--button-gap:var(--space-2xs);--button-font-size:var(--font-size-7);--button-font-weight:var(--font-weight-medium);--button-height:2.25rem;--button-transition:var(--transition-duration)var(--transition-easing);--button-outline-color:var(--outline-color);--button-outline-offset:var(--outline-offset);--button-hover-color:var(--color-neutral-900);--button-hover-background:var(--color-neutral-200);--button-header-background:transparent;--button-header-height:3rem;--button-header-padding:0 var(--space-s);--button-header-hover-background:var(--color-base-background-o-95);--button-header-blend-mode:multiply;--button-panel-background:transparent;--button-panel-padding:0 calc(var(--space-s)*.4);--button-solid-background:var(--color-neutral-100);--button-solid-hover-color:var(--color-neutral-900);--button-solid-hover-background:var(--color-neutral-200);--button-small-height:1.5rem;--button-small-font-size:var(--font-size-7);--button-icon-background:var(--color-neutral-0);--button-icon-color:var(--color-neutral-900);--button-icon-height:3rem;--button-icon-shadow:var(--shadow-s);--button-icon-border-radius:var(--border-radius-rounded);--button-icon-font-size:var(--font-size-6);--button-icon-hover-background:var(--color-neutral-100);--button-marker-background:var(--color-accent);--button-marker-color:var(--color-accent-dark);--button-marker-font-weight:var(--font-weight-bold);--button-marker-border-radius:var(--border-radius-rounded);--button-marker-highlighted-background:var(--color-accent);--button-marker-highlighted-color:var(--color-accent-dark);--button-filter-background:transparent;--button-filter-color:var(--color-neutral-500);--button-filter-height:1.75rem;--button-filter-font-size:var(--font-size-8);--button-filter-padding:0 var(--space-xs);--button-filter-border-radius:calc(var(--border-radius) - 2px);--button-filter-hover-color:var(--color-neutral-700);--button-filter-hover-background:var(--color-neutral-200);--button-filter-active-background:var(--color-base-background);--button-filter-active-color:var(--color-base);--button-filter-active-font-weight:var(--font-weight-medium);--button-menu-item-background:transparent;--button-menu-item-color:var(--color-neutral-700);--button-menu-item-padding:var(--space-2xs)var(--space-xs);--button-menu-item-border-radius:calc(var(--border-radius) - 2px);--button-menu-item-font-size:var(--font-size-7);--button-menu-item-gap:var(--space-2xs);--button-menu-item-hover-background:var(--color-neutral-100);--button-menu-item-hover-color:var(--color-neutral-900);--button-menu-item-active-background:var(--color-accent-light);--button-menu-item-active-color:var(--color-accent-dark);--button-menu-item-active-font-weight:var(--font-weight-medium);--button-active-background:var(--color-accent);--button-active-color:var(--color-accent-dark);--button-disabled-opacity:var(--opacity-subtle);--button-disabled-hover-color:var(--color-neutral-700);--button-disabled-hover-background:var(--color-neutral-100);--comment-avatar-size:2.5rem;--comment-marker-background:var(--color-neutral-200);--comment-marker-color:var(--color-neutral-800);--comment-line-background:var(--color-neutral-100);--comment-line-width:.1rem;--comment-line-offset:calc(var(--space-s) + var(--comment-avatar-size)/2);--comment-header-font-size:var(--font-size-7);--comment-header-padding:var(--space-s);--comment-header-gap:var(--space-s);--comment-content-padding:var(--space-xs);--comment-content-background:var(--color-neutral-100);--comment-content-background-dark:var(--color-neutral-200);--comment-content-border-radius:var(--border-radius);--comment-author-gap:var(--space-xs);--comment-author-margin-bottom:var(--space-2xs);--comment-timestamp-font-size:var(--font-size-8);--comment-timestamp-color:var(--color-neutral-300);--comment-replies-padding:0 var(--space-s);--comment-replies-gap:var(--space-s);--comment-footer-padding:var(--space-s);--comment-footer-gap:var(--space-s);--comment-buttons-gap:var(--space-xs);--comment-dialog-position:absolute;--comment-dialog-max-width:300px;--comment-dialog-border-radius:var(--border-radius);--comment-dialog-shadow:var(--shadow-s);--comment-dialog-backdrop-background:transparent;--comment-dialog-textarea-font-size:var(--font-size-6);--comment-form-background:var(--color-base-background);--comment-form-color:var(--color-base);--comment-form-border:1px solid var(--color-neutral-200);--comment-form-border-radius:var(--border-radius);--comment-form-textarea-height:15ch;--comment-form-textarea-padding:var(--space-s);--comment-form-textarea-background:var(--color-base-background);--comment-form-textarea-font-family:var(--font-family);--comment-form-textarea-font-size:var(--font-size-7);--comment-form-footer-padding:var(--space-xs);--comment-form-footer-gap:var(--space-xs);--comment-form-hint-font-size:var(--font-size-8);--comment-form-hint-color:var(--color-neutral-300);--comment-form-hint-padding:0 var(--space-xs)var(--space-xs)var(--space-xs);--context-menu-container-bottom:var(--space-s);--context-menu-container-right:var(--space-s);--context-menu-container-z-index:10;--context-menu-trigger-size:2.5rem;--context-menu-trigger-border-radius:var(--border-radius-rounded);--context-menu-background:var(--color-base-background);--context-menu-border-radius:var(--border-radius);--context-menu-shadow:var(--shadow-m);--context-menu-padding:var(--space-xs);--context-menu-min-width:12rem;--context-menu-backdrop-background:transparent;--context-menu-section-gap:var(--space-2xs);--context-menu-title-font-size:var(--font-size-8);--context-menu-title-font-weight:var(--font-weight-medium);--context-menu-title-color:var(--color-neutral-500);--context-menu-title-margin-bottom:var(--space-2xs);--context-menu-title-letter-spacing:.05em;--context-menu-filter-gap:1px;--context-menu-filter-dot-size:.5em;--context-menu-filter-dot-border-radius:50%;--context-menu-filter-dot-margin-right:var(--space-2xs);--context-menu-filter-dot-open-background:var(--color-accent);--context-menu-filter-dot-resolved-background:var(--color-neutral-400);--header-position:fixed;--header-top:var(--space-xs);--header-transform:translateX(-50%);--header-color:var(--color-base);--header-border-radius:var(--border-radius-rounded);--header-z-index:9999;--header-bottom-position:var(--space-xs);--header-backdrop-filter:var(--backdrop-glass);--header-background:var(--background-glass);--header-count-size:2rem;--header-count-border-radius:var(--border-radius-rounded);--header-count-backdrop-filter:var(--backdrop-glass);--header-count-background:var(--background-glass);--marker-size:2rem;--marker-position:absolute;--marker-z-index:var(--z-loop-marker);--marker-transform:translate(-50%,-50%);--marker-border-radius:var(--border-radius-rounded);--marker-pulse-animation:pulse 1s ease-in-out;--marker-pulse-shadow-start:0 0 0 0 var(--color-accent);--marker-pulse-shadow-transparent:0 0 0 8px transparent;--marker-pulse-shadow-subtle:0 0 0 8px #80808026;--marker-pulse-shadow-final:0 0 0 16px transparent;--panel-width:380px;--panel-mobile-width:85svw;--panel-position:fixed;--panel-right:var(--space-xs);--panel-top:var(--space-xs);--panel-height:calc(100svh - var(--space-xs)*2);--panel-transform-closed:translateX(calc(100% + var(--space-xs)));--panel-transform-open:translateX(0);--panel-color:var(--color-base);--panel-border-radius:var(--border-radius);--panel-border-top-left-radius:0;--panel-transition:var(--transition-duration-jump)var(--transition-easing-jump);--panel-z-index:var(--z-loop-panel);--panel-shadow:var(--shadow-m);--panel-header-transform-closed:translate(-95%);--panel-header-transform-open:translate(calc(-100% + 1px));--panel-header-transform-hover:translate(calc(-100% + 1px));--panel-header-border-radius:var(--border-radius-rounded);--panel-header-gap:var(--space-xs);--panel-header-backdrop-filter:var(--backdrop-glass);--panel-header-background:var(--background-glass);--panel-threads-background:var(--color-base-background-o-95);--panel-threads-backdrop:var(--backdrop-blur);--panel-threads-border-radius:var(--border-radius);--panel-threads-border-top-left-radius:0;--panel-threads-padding:0 0 var(--space-s)0;--panel-threads-item-margin:var(--space-s);--panel-threads-scrollbar-width:thin;--panel-no-threads-padding:var(--space-s)var(--space-l);--panel-no-threads-font-size:var(--font-size-6);--panel-no-threads-color:var(--color-neutral-300);--reply-gap:var(--space-s);--reply-content-padding:var(--space-xs);--reply-content-background:var(--color-neutral-100);--reply-content-background-dark:var(--color-neutral-200);--reply-content-border-radius:var(--border-radius);--reply-header-gap:var(--space-xs);--reply-header-margin-bottom:var(--space-2xs);--reply-timestamp-font-size:var(--font-size-8);--reply-timestamp-color:var(--color-neutral-300);--welcome-dialog-background:var(--background-glass-frosted);--welcome-dialog-backdrop-filter:var(--backdrop-glass);--welcome-dialog-border:0px;--welcome-dialog-border-radius:var(--border-radius);--welcome-dialog-shadow:var(--shadow-l),var(--shadow-light-edge),var(--shadow-dark-edge);--welcome-dialog-max-width:500px;--welcome-dialog-backdrop-background:var(--color-base-background-o-10);--welcome-dialog-backdrop-backdrop-filter:none;--welcome-dialog-form-padding:var(--space-l);--welcome-dialog-title-margin:0 0 var(--space-s)0;--welcome-dialog-title-font-size:var(--font-size-4);--welcome-dialog-title-color:var(--color-base);--welcome-dialog-title-font-weight:var(--font-weight-bold);--welcome-dialog-text-margin:0 0 var(--space-m)0;--welcome-dialog-text-font-size:var(--font-size-6);--welcome-dialog-text-color:var(--color-neutral-600);--welcome-dialog-text-line-height:var(--line-height);--welcome-dialog-name-section-margin:var(--space-l);--welcome-dialog-input-border:1px solid var(--color-neutral-300);--welcome-dialog-input-border-radius:var(--border-radius-s);--welcome-dialog-input-padding:var(--space-xs);--welcome-dialog-input-font-family:var(--font-family);--welcome-dialog-input-font-size:var(--font-size-6);--welcome-dialog-input-color:var(--color-base);--welcome-dialog-input-background:var(--color-base-background);--welcome-dialog-input-outline-color:var(--outline-color);--welcome-dialog-input-outline-offset:var(--outline-offset);--welcome-dialog-footer-gap:var(--space-xs);--icon-size:1em}kirby-loop[data-theme=dark]{--color-neutral-l-0:0;--color-neutral-l-100:.1;--color-neutral-l-200:.2;--color-neutral-l-300:.3;--color-neutral-l-400:.4;--color-neutral-l-500:.5;--color-neutral-l-600:.6;--color-neutral-l-700:.7;--color-neutral-l-800:.9;--color-neutral-l-900:.95;--color-neutral-l-1000:1}kirby-loop{font-family:var(--font-family);line-height:var(--line-height);font-weight:var(--font-weight-normal);font-size:var(--font-size-7);box-sizing:border-box}html.loop-overlay-open a{pointer-events:none}')),document.head.appendChild(r)}}catch(o){console.error("vite-plugin-css-injected-by-js",o)}}();
+!function(){"use strict";try{if("undefined"!=typeof document){var r=document.createElement("style");r.appendChild(document.createTextNode('kirby-loop{--color-neutral-h:900;--color-neutral-c:0;--color-accent-h:900;--color-accent-c:.18;--color-accent-l:.75;--color-accent-dark-factor:.4;--color-accent-light-factor:1.2;--color-neutral-l-0:1;--color-neutral-l-100:.95;--color-neutral-l-200:.9;--color-neutral-l-300:.7;--color-neutral-l-400:.6;--color-neutral-l-600:.4;--color-neutral-l-500:.5;--color-neutral-l-700:.3;--color-neutral-l-800:.2;--color-neutral-l-900:.1;--color-neutral-l-1000:0}kirby-loop[theme=dark]{--color-accent-l:.85;--color-neutral-l-0:0;--color-neutral-l-100:.1;--color-neutral-l-200:.2;--color-neutral-l-300:.45;--color-neutral-l-400:.5;--color-neutral-l-600:.55;--color-neutral-l-500:.6;--color-neutral-l-700:.7;--color-neutral-l-800:.8;--color-neutral-l-900:.95;--color-neutral-l-1000:1;--shadow-s:0 .1em .25em oklch(var(--color-neutral-l-100)var(--color-neutral-c)var(--color-neutral-h)/.1);--shadow-m:0 2px 8px oklch(var(--color-neutral-l-100)var(--color-neutral-c)var(--color-neutral-h)/.08),0 8px 16px oklch(var(--color-neutral-l-100)var(--color-neutral-c)var(--color-neutral-h)/.12),0 16px 24px oklch(var(--color-neutral-l-100)var(--color-neutral-c)var(--color-neutral-h)/.08);--shadow-l:0 4px 16px oklch(var(--color-neutral-l-100)var(--color-neutral-c)var(--color-neutral-h)/.08),0 12px 32px oklch(var(--color-neutral-l-100)var(--color-neutral-c)var(--color-neutral-h)/.12),0 24px 48px oklch(var(--color-neutral-l-100)var(--color-neutral-c)var(--color-neutral-h)/.16),0 48px 80px oklch(var(--color-neutral-l-100)var(--color-neutral-c)var(--color-neutral-h)/.08);--shadow-light-edge:inset 1px 1px 1px oklch(var(--color-neutral-l-1000)var(--color-neutral-c)var(--color-neutral-h)/.3);--shadow-dark-edge:inset -1px -1px 1px oklch(var(--color-neutral-l-100)var(--color-neutral-c)var(--color-neutral-h)/.3);--background-glass:linear-gradient(135deg,transparent,var(--color-base-background-o-50));--panel-threads-background:oklch(var(--color-neutral-l-200)var(--color-neutral-c)var(--color-neutral-h)/.99)}kirby-loop{--color-base:var(--color-neutral-900);--color-base-background:var(--color-neutral-0);--color-base-background-o-5:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.05);--color-base-background-o-10:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.1);--color-base-background-o-20:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.2);--color-base-background-o-50:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.5);--color-base-background-o-60:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.6);--color-base-background-o-75:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.75);--color-base-background-o-95:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.95);--color-accent-light:oklch(calc(var(--color-accent-l)*var(--color-accent-light-factor))var(--color-accent-c)var(--color-accent-h));--color-accent:oklch(var(--color-accent-l)var(--color-accent-c)var(--color-accent-h));--color-accent-dark:oklch(calc(var(--color-accent-l)*var(--color-accent-dark-factor))var(--color-accent-c)var(--color-accent-h));--color-neutral-0:oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-100:oklch(var(--color-neutral-l-100)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-200:oklch(var(--color-neutral-l-200)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-300:oklch(var(--color-neutral-l-300)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-400:oklch(var(--color-neutral-l-400)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-500:oklch(var(--color-neutral-l-500)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-600:oklch(var(--color-neutral-l-600)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-700:oklch(var(--color-neutral-l-700)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-800:oklch(var(--color-neutral-l-800)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-900:oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h));--color-neutral-1000:oklch(var(--color-neutral-l-1000)var(--color-neutral-c)var(--color-neutral-h));--color-success:oklch(.65 .15 150);--color-warning:oklch(.75 .15 80);--color-error:oklch(.65 .18 25);--color-info:oklch(.65 .15 220);--font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol",sans-serif;--line-height:1.4;--font-weight-light:300;--font-weight-normal:400;--font-weight-medium:550;--font-weight-bold:700;--font-size-3:clamp(1.9531rem,1.4262rem + 1.7565vw,3.5339rem);--font-size-4:clamp(1.5625rem,1.2503rem + 1.0408vw,2.4992rem);--font-size-5:clamp(1.25rem,1.0775rem + .575vw,1.7675rem);--font-size-6:clamp(1rem,.9167rem + .2778vw,1.25rem);--font-size-7:clamp(.8rem,.772rem + .0934vw,.884rem);--font-size-8:clamp(.6252rem,.6449rem + -.0165vw,.64rem);--border-radius-s:.125rem;--border-radius:.25rem;--border-radius-rounded:4096px;--space-2xs:clamp(.25rem,.2292rem + .0694vw,.3125rem);--space-xs:clamp(.5rem,.4583rem + .1389vw,.625rem);--space-s:clamp(1rem,.9167rem + .2778vw,1.25rem);--space-m:clamp(1.5rem,1.375rem + .4167vw,1.875rem);--space-l:clamp(2rem,1.8333rem + .5556vw,2.5rem);--space-2xs-xs:clamp(.25rem,.125rem + .4167vw,.625rem);--space-xs-s:clamp(.5rem,.25rem + .8333vw,1.25rem);--space-s-m:clamp(1rem,.7083rem + .9722vw,1.875rem);--space-m-l:clamp(1.5rem,1.1667rem + 1.1111vw,2.5rem);--space-s-l:clamp(1rem,.5rem + 1.6667vw,2.5rem);--shadow-s:0 .1em .25em oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h)/.1);--shadow-m:0 2px 8px oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h)/.08),0 8px 16px oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h)/.12),0 16px 24px oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h)/.08);--shadow-l:0 4px 16px oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h)/.08),0 12px 32px oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h)/.12),0 24px 48px oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h)/.16),0 48px 80px oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h)/.08);--shadow-light-edge:inset 1px 1px 1px oklch(var(--color-neutral-l-0)var(--color-neutral-c)var(--color-neutral-h)/.3);--shadow-dark-edge:inset 0 -1px 1px oklch(var(--color-neutral-l-900)var(--color-neutral-c)var(--color-neutral-h)/.3);--backdrop-blur:blur(6px);--backdrop-glass:var(--backdrop-blur)saturate(1.4)brightness(1.2);--background-glass:linear-gradient(135deg,transparent,var(--color-base-background-o-95));--background-glass-frosted:linear-gradient(0deg,var(--color-base-background-o-75)0%,var(--color-base-background-o-95)50%);--opacity-subtle:.5;--opacity-medium:.7;--opacity-strong:.9;--outline-color:var(--color-accent);--outline-offset:.25rem;--transition-duration:.2s;--transition-duration-jump:.4s;--transition-easing-jump:cubic-bezier(.44,1.2,.64,1);--transition-easing:cubic-bezier(0,0,.2,1);--z-loop-marker:9998;--z-loop-panel:9999;--z-loop-dialog:10000;--author-avatar-color:var(--color-neutral-600);--author-avatar-background-color:var(--color-neutral-100);--author-avatar-size:2.5rem;--author-avatar-border-radius:var(--border-radius-rounded);--author-avatar-font-size:var(--font-size-6);--button-background:transparent;--button-color:var(--color-neutral-600);--button-border-radius:var(--border-radius);--button-padding:0 var(--space-xs);--button-gap:var(--space-2xs);--button-font-size:var(--font-size-7);--button-font-weight:var(--font-weight-medium);--button-height:2.25rem;--button-transition:var(--transition-duration)var(--transition-easing);--button-outline-color:var(--outline-color);--button-outline-offset:var(--outline-offset);--button-hover-color:var(--color-neutral-900);--button-hover-background:var(--color-neutral-200);--button-header-background:transparent;--button-header-height:3rem;--button-header-padding:0 var(--space-s);--button-header-hover-background:var(--color-base-background-o-95);--button-header-blend-mode:multiply;--button-panel-background:transparent;--button-panel-padding:0 calc(var(--space-s)*.4);--button-solid-background:var(--color-neutral-100);--button-solid-hover-color:var(--color-neutral-900);--button-solid-hover-background:var(--color-neutral-200);--button-small-height:1.5rem;--button-small-font-size:var(--font-size-7);--button-icon-background:var(--color-neutral-0);--button-icon-color:var(--color-neutral-500);--button-icon-height:3rem;--button-icon-shadow:var(--shadow-s);--button-icon-border-radius:var(--border-radius-rounded);--button-icon-font-size:var(--font-size-6);--button-icon-hover-background:var(--color-neutral-200);--button-icon-hover-color:var(--color-neutral-900);--button-marker-background:var(--color-accent);--button-marker-color:var(--color-accent-dark);--button-marker-font-weight:var(--font-weight-bold);--button-marker-border-radius:var(--border-radius-rounded);--button-marker-highlighted-background:var(--color-accent);--button-marker-highlighted-color:var(--color-accent-dark);--button-filter-background:transparent;--button-filter-color:var(--color-neutral-500);--button-filter-height:1.75rem;--button-filter-font-size:var(--font-size-8);--button-filter-padding:0 var(--space-xs);--button-filter-border-radius:calc(var(--border-radius) - 2px);--button-filter-hover-color:var(--color-neutral-700);--button-filter-hover-background:var(--color-neutral-200);--button-filter-active-background:var(--color-base-background);--button-filter-active-color:var(--color-base);--button-filter-active-font-weight:var(--font-weight-medium);--button-menu-item-background:transparent;--button-menu-item-color:var(--color-neutral-700);--button-menu-item-padding:var(--space-2xs)var(--space-xs);--button-menu-item-border-radius:calc(var(--border-radius) - 2px);--button-menu-item-font-size:var(--font-size-7);--button-menu-item-gap:var(--space-2xs);--button-menu-item-hover-background:var(--color-neutral-100);--button-menu-item-hover-color:var(--color-neutral-900);--button-menu-item-active-background:var(--color-accent-light);--button-menu-item-active-color:var(--color-accent-dark);--button-menu-item-active-font-weight:var(--font-weight-medium);--button-active-background:var(--color-accent);--button-active-color:var(--color-accent-dark);--button-disabled-opacity:var(--opacity-subtle);--button-disabled-hover-color:var(--color-neutral-700);--button-disabled-hover-background:var(--color-neutral-100);--comment-avatar-size:2.5rem;--comment-marker-background:var(--color-neutral-200);--comment-marker-color:var(--color-neutral-800);--comment-line-background:var(--color-neutral-100);--comment-line-width:.1rem;--comment-line-offset:calc(var(--space-s) + var(--comment-avatar-size)/2);--comment-header-font-size:var(--font-size-7);--comment-header-padding:var(--space-s);--comment-header-gap:var(--space-s);--comment-content-padding:var(--space-xs);--comment-content-background:var(--color-neutral-100);--comment-content-background-dark:var(--color-neutral-200);--comment-content-border-radius:var(--border-radius);--comment-author-gap:var(--space-xs);--comment-author-margin-bottom:var(--space-2xs);--comment-timestamp-font-size:var(--font-size-8);--comment-timestamp-color:var(--color-neutral-300);--comment-replies-padding:0 var(--space-s);--comment-replies-gap:var(--space-s);--comment-footer-padding:var(--space-s);--comment-footer-gap:var(--space-s);--comment-buttons-gap:var(--space-xs);--comment-dialog-position:absolute;--comment-dialog-max-width:300px;--comment-dialog-border-radius:var(--border-radius);--comment-dialog-shadow:var(--shadow-s);--comment-dialog-backdrop-background:transparent;--comment-dialog-textarea-font-size:var(--font-size-6);--comment-form-background:var(--color-base-background);--comment-form-color:var(--color-base);--comment-form-border:1px solid var(--color-neutral-200);--comment-form-border-radius:var(--border-radius);--comment-form-textarea-height:15ch;--comment-form-textarea-padding:var(--space-s);--comment-form-textarea-background:var(--color-base-background);--comment-form-textarea-font-family:var(--font-family);--comment-form-textarea-font-size:var(--font-size-7);--comment-form-footer-padding:var(--space-xs);--comment-form-footer-gap:var(--space-xs);--comment-form-hint-font-size:var(--font-size-8);--comment-form-hint-color:var(--color-neutral-300);--comment-form-hint-padding:0 var(--space-xs)var(--space-xs)var(--space-xs);--context-menu-container-bottom:var(--space-s);--context-menu-container-right:var(--space-s);--context-menu-container-z-index:10;--context-menu-trigger-size:2.5rem;--context-menu-trigger-border-radius:var(--border-radius-rounded);--context-menu-background:var(--color-base-background);--context-menu-border-radius:var(--border-radius);--context-menu-shadow:var(--shadow-s);--context-menu-padding:var(--space-xs);--context-menu-min-width:12rem;--context-menu-backdrop-background:transparent;--context-menu-section-gap:var(--space-2xs);--context-menu-title-font-size:var(--font-size-8);--context-menu-title-font-weight:var(--font-weight-medium);--context-menu-title-color:var(--color-neutral-500);--context-menu-title-margin-bottom:var(--space-2xs);--context-menu-title-letter-spacing:.05em;--context-menu-filter-gap:1px;--context-menu-filter-dot-size:.5em;--context-menu-filter-dot-border-radius:50%;--context-menu-filter-dot-margin-right:var(--space-2xs);--context-menu-filter-dot-open-background:var(--color-accent);--context-menu-filter-dot-resolved-background:var(--color-neutral-400);--header-position:fixed;--header-top:var(--space-xs);--header-transform:translateX(-50%);--header-color:var(--color-base);--header-border-radius:var(--border-radius-rounded);--header-z-index:9999;--header-bottom-position:var(--space-xs);--header-backdrop-filter:var(--backdrop-glass);--header-background:var(--background-glass);--header-count-size:2rem;--header-count-border-radius:var(--border-radius-rounded);--header-count-backdrop-filter:var(--backdrop-glass);--header-count-background:var(--background-glass);--marker-size:2rem;--marker-position:absolute;--marker-z-index:var(--z-loop-marker);--marker-transform:translate(-50%,-50%);--marker-border-radius:var(--border-radius-rounded);--marker-pulse-animation:pulse 1s ease-in-out;--marker-pulse-shadow-start:0 0 0 0 var(--color-accent);--marker-pulse-shadow-transparent:0 0 0 8px transparent;--marker-pulse-shadow-subtle:0 0 0 8px #80808026;--marker-pulse-shadow-final:0 0 0 16px transparent;--panel-width:380px;--panel-mobile-width:85svw;--panel-position:fixed;--panel-right:var(--space-xs);--panel-top:var(--space-xs);--panel-height:calc(100svh - var(--space-xs)*2);--panel-transform-closed:translateX(calc(100% + var(--space-xs)));--panel-transform-open:translateX(0);--panel-color:var(--color-base);--panel-border-radius:var(--border-radius);--panel-border-top-left-radius:0;--panel-transition:var(--transition-duration-jump)var(--transition-easing-jump);--panel-z-index:var(--z-loop-panel);--panel-shadow:var(--shadow-m);--panel-header-transform-closed:translate(-95%);--panel-header-transform-open:translate(calc(-100% + 1px));--panel-header-transform-hover:translate(calc(-100% + 1px));--panel-header-border-radius:var(--border-radius-rounded);--panel-header-gap:var(--space-xs);--panel-header-backdrop-filter:var(--backdrop-glass);--panel-header-background:var(--background-glass);--panel-threads-background:var(--color-base-background-o-95);--panel-threads-backdrop:var(--backdrop-blur);--panel-threads-border-radius:var(--border-radius);--panel-threads-border-top-left-radius:0;--panel-threads-padding:0 0 var(--space-s)0;--panel-threads-item-margin:var(--space-s);--panel-threads-scrollbar-width:thin;--panel-no-threads-padding:var(--space-s)var(--space-l);--panel-no-threads-font-size:var(--font-size-6);--panel-no-threads-color:var(--color-neutral-300);--reply-gap:var(--space-s);--reply-content-padding:var(--space-xs);--reply-content-background:var(--color-neutral-100);--reply-content-background-dark:var(--color-neutral-200);--reply-content-border-radius:var(--border-radius);--reply-header-gap:var(--space-xs);--reply-header-margin-bottom:var(--space-2xs);--reply-timestamp-font-size:var(--font-size-8);--reply-timestamp-color:var(--color-neutral-300);--welcome-dialog-background:var(--background-glass-frosted);--welcome-dialog-backdrop-filter:var(--backdrop-glass);--welcome-dialog-border:0px;--welcome-dialog-border-radius:var(--border-radius);--welcome-dialog-shadow:var(--shadow-l),var(--shadow-light-edge),var(--shadow-dark-edge);--welcome-dialog-max-width:500px;--welcome-dialog-backdrop-background:var(--color-base-background-o-10);--welcome-dialog-backdrop-backdrop-filter:none;--welcome-dialog-form-padding:var(--space-l);--welcome-dialog-title-margin:0 0 var(--space-s)0;--welcome-dialog-title-font-size:var(--font-size-4);--welcome-dialog-title-color:var(--color-base);--welcome-dialog-title-font-weight:var(--font-weight-bold);--welcome-dialog-text-margin:0 0 var(--space-m)0;--welcome-dialog-text-font-size:var(--font-size-6);--welcome-dialog-text-color:var(--color-neutral-600);--welcome-dialog-text-line-height:var(--line-height);--welcome-dialog-name-section-margin:var(--space-l);--welcome-dialog-input-border:1px solid var(--color-neutral-300);--welcome-dialog-input-border-radius:var(--border-radius-s);--welcome-dialog-input-padding:var(--space-xs);--welcome-dialog-input-font-family:var(--font-family);--welcome-dialog-input-font-size:var(--font-size-6);--welcome-dialog-input-color:var(--color-base);--welcome-dialog-input-background:var(--color-base-background);--welcome-dialog-input-outline-color:var(--outline-color);--welcome-dialog-input-outline-offset:var(--outline-offset);--welcome-dialog-footer-gap:var(--space-xs);--icon-size:1em}kirby-loop[data-theme=dark]{--color-neutral-l-0:0;--color-neutral-l-100:.1;--color-neutral-l-200:.2;--color-neutral-l-300:.3;--color-neutral-l-400:.4;--color-neutral-l-500:.5;--color-neutral-l-600:.6;--color-neutral-l-700:.7;--color-neutral-l-800:.9;--color-neutral-l-900:.95;--color-neutral-l-1000:1}kirby-loop{font-family:var(--font-family);line-height:var(--line-height);font-weight:var(--font-weight-normal);font-size:var(--font-size-7);box-sizing:border-box}html.loop-overlay-open a{pointer-events:none}')),document.head.appendChild(r)}}catch(o){console.error("vite-plugin-css-injected-by-js",o)}}();
 var __defProp = Object.defineProperty;
 var __typeError = (msg) => {
   throw TypeError(msg);
@@ -3417,29 +3417,29 @@ const setTranslations = (newTranslations) => {
   set(translations, proxy(newTranslations));
 };
 enable_legacy_mode_flag();
-var root$f = /* @__PURE__ */ ns_template(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-1q9atlb"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="1.5"></path><path d="M15 12H12M12 12H9M12 12V9M12 12V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>`);
-const $$css$f = {
+var root$h = /* @__PURE__ */ ns_template(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-1q9atlb"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="1.5"></path><path d="M15 12H12M12 12H9M12 12V9M12 12V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>`);
+const $$css$h = {
   hash: "svelte-1q9atlb",
   code: "svg.svelte-1q9atlb{width:var(--size,var(--icon-size));height:var(--size,var(--icon-size))}"
 };
 function IconComment($$anchor) {
-  append_styles($$anchor, $$css$f);
-  var svg = root$f();
+  append_styles($$anchor, $$css$h);
+  var svg = root$h();
   append($$anchor, svg);
 }
 create_custom_element(IconComment, {}, [], [], true);
-var root_1$2 = /* @__PURE__ */ template(`<span class="svelte-cyjll8"><!></span>`);
-var root$e = /* @__PURE__ */ template(`<button><!> <!></button>`);
-const $$css$e = {
-  hash: "svelte-cyjll8",
-  code: "button.svelte-cyjll8{appearance:none;background-color:var(--button-background);color:var(--button-color);padding:var(--button-padding);font-family:var(--font-family);letter-spacing:.01em;border-radius:var(--button-border-radius);gap:var(--button-gap);cursor:pointer;font-size:var(--button-font-size);font-weight:var(--button-font-weight);transition:var(--button-transition);white-space:nowrap;height:var(--button-height);outline-color:var(--button-outline-color);border:0;flex:none;justify-content:center;align-items:center;line-height:1;display:inline-flex}button.svelte-cyjll8:focus-visible{outline-offset:var(--button-outline-offset)}button.svelte-cyjll8:hover,button.svelte-cyjll8:focus-visible{color:var(--button-hover-color);background-color:var(--button-hover-background)}button.svelte-cyjll8 span:where(.svelte-cyjll8){text-overflow:ellipsis;min-width:0;display:block;overflow-x:clip}button.button--header.svelte-cyjll8{background-color:var(--button-header-background);height:var(--button-header-height);padding:var(--button-header-padding);mix-blend-mode:var(--button-header-blend-mode);border:0;border-radius:0}button.button--header.svelte-cyjll8:hover,button.button--header.svelte-cyjll8:focus-visible{background-color:var(--button-header-hover-background)}button.button--panel.svelte-cyjll8{background-color:var(--button-panel-background);height:auto;padding:var(--button-panel-padding);border:0;border-radius:0}button.button--panel.svelte-cyjll8 span:where(.svelte-cyjll8){overflow:visible}button.button--solid.svelte-cyjll8{background-color:var(--button-solid-background)}button.button--solid.svelte-cyjll8:hover,button.button--solid.svelte-cyjll8:focus-visible{color:var(--button-solid-hover-color);background-color:var(--button-solid-hover-background)}button.button--small.svelte-cyjll8{height:var(--button-small-height);font-size:var(--button-small-font-size)}button.button--icon.svelte-cyjll8{background-color:var(--button-icon-background);color:var(--button-icon-color);height:var(--button-icon-height);box-shadow:var(--button-icon-shadow);aspect-ratio:1;font-size:var(--button-icon-font-size);border-radius:var(--button-icon-border-radius);border:0;padding:0}button.button--icon.svelte-cyjll8:hover,button.button--icon.svelte-cyjll8:focus-visible{background-color:var(--button-icon-hover-background);color:var(--button-icon-color)}button.button--marker.svelte-cyjll8{background-color:var(--button-marker-background);color:var(--button-marker-color);height:var(--marker-size);width:var(--marker-size);font-weight:var(--button-marker-font-weight);border-radius:var(--button-marker-border-radius);border:0;padding:0}button.button--marker.svelte-cyjll8 :where(.svelte-cyjll8){pointer-events:none}button.button--marker.button--marker-highlighted.svelte-cyjll8{background-color:var(--button-marker-highlighted-background);color:var(--button-marker-highlighted-color)}button.button--marker-open.svelte-cyjll8{background-color:var(--color-accent);color:var(--color-accent-dark)}button.button--filter.svelte-cyjll8{background-color:var(--button-filter-background);color:var(--button-filter-color);height:var(--button-filter-height);font-size:var(--button-filter-font-size);padding:var(--button-filter-padding);border-radius:var(--button-filter-border-radius);flex:1}button.button--filter.svelte-cyjll8:hover,button.button--filter.svelte-cyjll8:focus-visible{color:var(--button-filter-hover-color);background-color:var(--button-filter-hover-background)}button.button--filter.button--filter-active.svelte-cyjll8{background-color:var(--button-filter-active-background);color:var(--button-filter-active-color);font-weight:var(--button-filter-active-font-weight)}button.button--filter.button--filter-active.svelte-cyjll8:hover,button.button--filter.button--filter-active.svelte-cyjll8:focus-visible{background-color:var(--button-filter-active-background);color:var(--button-filter-active-color)}button.button--menu-item.svelte-cyjll8{background-color:var(--button-menu-item-background);color:var(--button-menu-item-color);width:100%;padding:var(--button-menu-item-padding);border-radius:var(--button-menu-item-border-radius);font-size:var(--button-menu-item-font-size);justify-content:flex-start;gap:var(--button-menu-item-gap)}button.button--menu-item.svelte-cyjll8:hover,button.button--menu-item.svelte-cyjll8:focus-visible{background-color:var(--button-menu-item-hover-background);color:var(--button-menu-item-hover-color)}button.button--menu-item.button--menu-item-active.svelte-cyjll8{background-color:var(--button-menu-item-active-background);color:var(--button-menu-item-active-color);font-weight:var(--button-menu-item-active-font-weight)}button.button--menu-item.button--menu-item-active.svelte-cyjll8:hover,button.button--menu-item.button--menu-item-active.svelte-cyjll8:focus-visible{background-color:var(--button-menu-item-active-background);color:var(--button-menu-item-active-color)}button.is-active.svelte-cyjll8{background-color:var(--button-active-background);color:var(--button-active-color)}button.is-active.svelte-cyjll8:hover{color:var(--button-active-color);background-color:var(--button-active-background)}button.svelte-cyjll8:disabled{opacity:var(--button-disabled-opacity);cursor:not-allowed}button.svelte-cyjll8:disabled:hover{color:var(--button-disabled-hover-color);background-color:var(--button-disabled-hover-background)}"
+var root_1$2 = /* @__PURE__ */ template(`<span class="svelte-ehi0xp"><!></span>`);
+var root$g = /* @__PURE__ */ template(`<button><!> <!></button>`);
+const $$css$g = {
+  hash: "svelte-ehi0xp",
+  code: "button.svelte-ehi0xp{appearance:none;background-color:var(--button-background);color:var(--button-color);padding:var(--button-padding);font-family:var(--font-family);letter-spacing:.01em;border-radius:var(--button-border-radius);gap:var(--button-gap);cursor:pointer;font-size:var(--button-font-size);font-weight:var(--button-font-weight);transition:var(--button-transition);white-space:nowrap;height:var(--button-height);outline-color:var(--button-outline-color);border:0;flex:none;justify-content:center;align-items:center;line-height:1;display:inline-flex}button.svelte-ehi0xp:focus-visible{outline-offset:var(--button-outline-offset)}button.svelte-ehi0xp:hover,button.svelte-ehi0xp:focus-visible{color:var(--button-hover-color);background-color:var(--button-hover-background)}button.svelte-ehi0xp span:where(.svelte-ehi0xp){text-overflow:ellipsis;min-width:0;display:block;overflow-x:clip}button.button--header.svelte-ehi0xp{--icon-size:1.25rem;background-color:var(--button-header-background);height:var(--button-header-height);padding:var(--button-header-padding);mix-blend-mode:var(--button-header-blend-mode);border:0;border-radius:0}button.button--header.svelte-ehi0xp:hover,button.button--header.svelte-ehi0xp:focus-visible{background-color:var(--button-header-hover-background)}button.button--panel.svelte-ehi0xp{background-color:var(--button-panel-background);height:auto;padding:var(--button-panel-padding);border:0;border-radius:0}button.button--panel.svelte-ehi0xp span:where(.svelte-ehi0xp){overflow:visible}button.button--solid.svelte-ehi0xp{background-color:var(--button-solid-background)}button.button--solid.svelte-ehi0xp:hover,button.button--solid.svelte-ehi0xp:focus-visible{color:var(--button-solid-hover-color);background-color:var(--button-solid-hover-background)}button.button--small.svelte-ehi0xp{height:var(--button-small-height);font-size:var(--button-small-font-size)}button.button--icon.svelte-ehi0xp{background-color:var(--button-icon-background);color:var(--button-icon-color);height:var(--button-icon-height);box-shadow:var(--button-icon-shadow);aspect-ratio:1;font-size:var(--button-icon-font-size);border-radius:var(--button-icon-border-radius);border:0;padding:0}button.button--icon.svelte-ehi0xp:hover,button.button--icon.svelte-ehi0xp:focus-visible{background-color:var(--button-icon-hover-background);color:var(--button-icon-hover-color)}button.button--marker.svelte-ehi0xp{background-color:var(--button-marker-background);color:var(--button-marker-color);height:var(--marker-size);width:var(--marker-size);font-weight:var(--button-marker-font-weight);border-radius:var(--button-marker-border-radius);border:0;padding:0}button.button--marker.svelte-ehi0xp :where(.svelte-ehi0xp){pointer-events:none}button.button--marker.button--marker-highlighted.svelte-ehi0xp{background-color:var(--button-marker-highlighted-background);color:var(--button-marker-highlighted-color)}button.button--marker-open.svelte-ehi0xp{background-color:var(--color-accent);color:var(--color-accent-dark)}button.button--filter.svelte-ehi0xp{background-color:var(--button-filter-background);color:var(--button-filter-color);height:var(--button-filter-height);font-size:var(--button-filter-font-size);padding:var(--button-filter-padding);border-radius:var(--button-filter-border-radius);flex:1}button.button--filter.svelte-ehi0xp:hover,button.button--filter.svelte-ehi0xp:focus-visible{color:var(--button-filter-hover-color);background-color:var(--button-filter-hover-background)}button.button--filter.button--filter-active.svelte-ehi0xp{background-color:var(--button-filter-active-background);color:var(--button-filter-active-color);font-weight:var(--button-filter-active-font-weight)}button.button--filter.button--filter-active.svelte-ehi0xp:hover,button.button--filter.button--filter-active.svelte-ehi0xp:focus-visible{background-color:var(--button-filter-active-background);color:var(--button-filter-active-color)}button.button--menu-item.svelte-ehi0xp{background-color:var(--button-menu-item-background);color:var(--button-menu-item-color);width:100%;padding:var(--button-menu-item-padding);border-radius:var(--button-menu-item-border-radius);font-size:var(--button-menu-item-font-size);justify-content:flex-start;gap:var(--button-menu-item-gap)}button.button--menu-item.svelte-ehi0xp:hover,button.button--menu-item.svelte-ehi0xp:focus-visible{background-color:var(--button-menu-item-hover-background);color:var(--button-menu-item-hover-color)}button.button--menu-item.button--menu-item-active.svelte-ehi0xp{background-color:var(--button-menu-item-active-background);color:var(--button-menu-item-active-color);font-weight:var(--button-menu-item-active-font-weight)}button.button--menu-item.button--menu-item-active.svelte-ehi0xp:hover,button.button--menu-item.button--menu-item-active.svelte-ehi0xp:focus-visible{background-color:var(--button-menu-item-active-background);color:var(--button-menu-item-active-color)}button.is-active.svelte-ehi0xp{background-color:var(--button-active-background);color:var(--button-active-color)}button.is-active.svelte-ehi0xp:hover{color:var(--button-active-color);background-color:var(--button-active-background)}button.svelte-ehi0xp:disabled{opacity:var(--button-disabled-opacity);cursor:not-allowed}button.svelte-ehi0xp:disabled:hover{color:var(--button-disabled-hover-color);background-color:var(--button-disabled-hover-background)}"
 };
 function Button($$anchor, $$props) {
   const $$slots = sanitize_slots($$props);
   push($$props, true);
-  append_styles($$anchor, $$css$e);
+  append_styles($$anchor, $$css$g);
   const onclick = prop($$props, "onclick", 7), onmouseenter = prop($$props, "onmouseenter", 7), onmouseout = prop($$props, "onmouseout", 7), onblur = prop($$props, "onblur", 7), active = prop($$props, "active", 7, false), type = prop($$props, "type", 7, "button"), style = prop($$props, "style", 7, ""), disabled = prop($$props, "disabled", 7, false), ariaLabel = prop($$props, "ariaLabel", 7, "");
-  var button = root$e();
+  var button = root$g();
   button.__click = function(...$$args) {
     var _a2;
     (_a2 = onclick()) == null ? void 0 : _a2.apply(this, $$args);
@@ -3467,7 +3467,7 @@ function Button($$anchor, $$props) {
   reset$1(button);
   template_effect(
     ($0) => {
-      classes = set_class(button, 1, `button ${style() ?? ""}`, "svelte-cyjll8", classes, $0);
+      classes = set_class(button, 1, `button ${style() ?? ""}`, "svelte-ehi0xp", classes, $0);
       set_attribute(button, "type", type());
       set_attribute(button, "aria-label", ariaLabel());
       button.disabled = disabled();
@@ -3567,30 +3567,30 @@ create_custom_element(
   [],
   true
 );
-var root$d = /* @__PURE__ */ ns_template(`<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-1q9atlb"><path d="M15.359 16.9999L12.8975 14.5385L12.1459 15.2902C11.3764 16.0597 10.9916 16.4444 10.5781 16.3536C10.1645 16.2628 9.97641 15.7522 9.60019 14.731L8.34544 11.3253C7.59492 9.28816 7.21966 8.2696 7.74463 7.74463C8.2696 7.21966 9.28816 7.59492 11.3253 8.34544L14.731 9.60019C15.7522 9.97641 16.2628 10.1645 16.3536 10.5781C16.4444 10.9916 16.0597 11.3764 15.2902 12.1459L14.5385 12.8975L16.9999 15.359C17.2548 15.6138 17.3822 15.7413 17.4411 15.8834C17.5196 16.073 17.5196 16.2859 17.4411 16.4755C17.3822 16.6176 17.2548 16.7451 16.9999 16.9999C16.7451 17.2548 16.6176 17.3822 16.4755 17.4411C16.2859 17.5196 16.073 17.5196 15.8834 17.4411C15.7413 17.3822 15.6138 17.2548 15.359 16.9999Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2.5 12.5C2.5 7.78595 2.5 5.42893 3.96447 3.96447C5.42893 2.5 7.78595 2.5 12.5 2.5C17.214 2.5 19.5711 2.5 21.0355 3.96447C22.5 5.42893 22.5 7.78595 22.5 12.5C22.5 17.214 22.5 19.5711 21.0355 21.0355C19.5711 22.5 17.214 22.5 12.5 22.5C7.78595 22.5 5.42893 22.5 3.96447 21.0355C2.5 19.5711 2.5 17.214 2.5 12.5Z" stroke="currentColor" stroke-width="1.5"></path></svg>`);
-const $$css$d = {
+var root$f = /* @__PURE__ */ ns_template(`<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-1q9atlb"><path d="M15.359 16.9999L12.8975 14.5385L12.1459 15.2902C11.3764 16.0597 10.9916 16.4444 10.5781 16.3536C10.1645 16.2628 9.97641 15.7522 9.60019 14.731L8.34544 11.3253C7.59492 9.28816 7.21966 8.2696 7.74463 7.74463C8.2696 7.21966 9.28816 7.59492 11.3253 8.34544L14.731 9.60019C15.7522 9.97641 16.2628 10.1645 16.3536 10.5781C16.4444 10.9916 16.0597 11.3764 15.2902 12.1459L14.5385 12.8975L16.9999 15.359C17.2548 15.6138 17.3822 15.7413 17.4411 15.8834C17.5196 16.073 17.5196 16.2859 17.4411 16.4755C17.3822 16.6176 17.2548 16.7451 16.9999 16.9999C16.7451 17.2548 16.6176 17.3822 16.4755 17.4411C16.2859 17.5196 16.073 17.5196 15.8834 17.4411C15.7413 17.3822 15.6138 17.2548 15.359 16.9999Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2.5 12.5C2.5 7.78595 2.5 5.42893 3.96447 3.96447C5.42893 2.5 7.78595 2.5 12.5 2.5C17.214 2.5 19.5711 2.5 21.0355 3.96447C22.5 5.42893 22.5 7.78595 22.5 12.5C22.5 17.214 22.5 19.5711 21.0355 21.0355C19.5711 22.5 17.214 22.5 12.5 22.5C7.78595 22.5 5.42893 22.5 3.96447 21.0355C2.5 19.5711 2.5 17.214 2.5 12.5Z" stroke="currentColor" stroke-width="1.5"></path></svg>`);
+const $$css$f = {
   hash: "svelte-1q9atlb",
   code: "svg.svelte-1q9atlb{width:var(--size,var(--icon-size));height:var(--size,var(--icon-size))}"
 };
 function IconBrowse($$anchor) {
-  append_styles($$anchor, $$css$d);
-  var svg = root$d();
+  append_styles($$anchor, $$css$f);
+  var svg = root$f();
   append($$anchor, svg);
 }
 create_custom_element(IconBrowse, {}, [], [], true);
 var root_2$2 = /* @__PURE__ */ template(`<svelte-css-wrapper style="display: contents"><!></svelte-css-wrapper>`, 1);
 var root_4$2 = /* @__PURE__ */ template(`<svelte-css-wrapper style="display: contents"><!></svelte-css-wrapper>`, 1);
 var root_5$2 = /* @__PURE__ */ template(`<span class="count svelte-13e3mw1"> </span>`);
-var root$c = /* @__PURE__ */ template(`<header><div class="toggle svelte-13e3mw1"><!> <!></div> <!></header>`);
-const $$css$c = {
+var root$e = /* @__PURE__ */ template(`<header><div class="toggle svelte-13e3mw1"><!> <!></div> <!></header>`);
+const $$css$e = {
   hash: "svelte-13e3mw1",
   code: ".toggle.svelte-13e3mw1{display:flex}header.svelte-13e3mw1{position:var(--header-position);top:var(--header-top);max-width:100%;transform:var(--header-transform);color:var(--header-color);border-radius:var(--header-border-radius);z-index:var(--header-z-index);-webkit-backdrop-filter:var(--header-backdrop-filter);backdrop-filter:var(--header-backdrop-filter);box-shadow:var(--shadow-l),var(--shadow-light-edge),var(--shadow-dark-edge);background:var(--header-background);justify-content:space-between;align-items:stretch;display:flex;left:50%;overflow:hidden}header.bottom.svelte-13e3mw1{top:auto;bottom:var(--header-bottom-position)}.count.svelte-13e3mw1{width:var(--header-count-size);height:var(--header-count-size);border-radius:var(--header-count-border-radius);-webkit-backdrop-filter:var(--header-count-backdrop-filter);backdrop-filter:var(--header-count-backdrop-filter);box-shadow:var(--shadow-s),var(--shadow-light-edge),var(--shadow-dark-edge);background:var(--header-count-background);justify-content:center;align-items:center;display:flex}"
 };
 function Header($$anchor, $$props) {
   push($$props, true);
-  append_styles($$anchor, $$css$c);
+  append_styles($$anchor, $$css$e);
   const position = prop($$props, "position", 7), commentsCount = prop($$props, "commentsCount", 7);
-  var header = root$c();
+  var header = root$e();
   let classes;
   var div = child(header);
   var node = child(div);
@@ -3786,13 +3786,13 @@ const getDocumentHeight = () => {
   );
 };
 var root_1$1 = /* @__PURE__ */ template(`<div><!></div>`);
-const $$css$b = {
+const $$css$d = {
   hash: "svelte-t6ozb1",
   code: ".marker.svelte-t6ozb1{position:var(--marker-position);z-index:var(--marker-z-index);transform:var(--marker-transform);border-radius:var(--marker-border-radius)}.marker--pulse.svelte-t6ozb1{animation:var(--marker-pulse-animation)}@keyframes svelte-t6ozb1-pulse{0%{box-shadow:var(--marker-pulse-shadow-start),0 0 0 0 #8080804d,0 0 0 0 #80808033}30%{box-shadow:var(--marker-pulse-shadow-transparent),0 0 0 0 #8080804d,0 0 0 0 #80808033}60%{box-shadow:0 0 0 12px transparent,var(--marker-pulse-shadow-subtle),0 0 0 0 #80808033}to{box-shadow:var(--marker-pulse-shadow-final),0 0 0 12px transparent,0 0 0 8px transparent}}"
 };
 function Marker($$anchor, $$props) {
   push($$props, true);
-  append_styles($$anchor, $$css$b);
+  append_styles($$anchor, $$css$d);
   const comment$1 = prop($$props, "comment", 7);
   let shouldPulse = state(false);
   user_effect(() => {
@@ -4014,17 +4014,17 @@ function handleKeydown(e) {
     }
   }
 }
-var root$b = /* @__PURE__ */ template(`<form method="POST" class="svelte-w3h34c"><div class="input"><textarea name="comment" required class="svelte-w3h34c"></textarea></div> <div class="keyboard-hint svelte-w3h34c"> </div> <footer class="svelte-w3h34c"><!> <!></footer></form>`);
-const $$css$a = {
+var root$d = /* @__PURE__ */ template(`<form method="POST" class="svelte-w3h34c"><div class="input"><textarea name="comment" required class="svelte-w3h34c"></textarea></div> <div class="keyboard-hint svelte-w3h34c"> </div> <footer class="svelte-w3h34c"><!> <!></footer></form>`);
+const $$css$c = {
   hash: "svelte-w3h34c",
   code: "form.svelte-w3h34c{cursor:auto;background-color:var(--comment-form-background);color:var(--comment-form-color);border-radius:var(--comment-form-border-radius);border:var(--comment-form-border);padding:0;overflow:hidden}textarea.svelte-w3h34c{width:100%;height:var(--comment-form-textarea-height);resize:none;padding:var(--comment-form-textarea-padding);box-sizing:border-box;background-color:var(--comment-form-textarea-background);font-family:var(--comment-form-textarea-font-family);font-size:var(--comment-form-textarea-font-size);color:currentColor;border:0;margin:0}textarea.svelte-w3h34c:focus-visible,textarea.svelte-w3h34c:focus{outline:0}footer.svelte-w3h34c{padding:var(--comment-form-footer-padding);gap:var(--comment-form-footer-gap);display:flex}footer.svelte-w3h34c button{flex:1}.keyboard-hint.svelte-w3h34c{font-size:var(--comment-form-hint-font-size);color:var(--comment-form-hint-color);padding:var(--comment-form-hint-padding);white-space:nowrap;align-self:center;margin-left:auto}"
 };
 function CommentForm($$anchor, $$props) {
   push($$props, true);
-  append_styles($$anchor, $$css$a);
+  append_styles($$anchor, $$css$c);
   const handleSubmit = prop($$props, "handleSubmit", 7), cancel = prop($$props, "cancel", 7), parentId = prop($$props, "parentId", 7, null);
   formData.parentId = parentId() ? Number(parentId()) : null;
-  var form_1 = root$b();
+  var form_1 = root$d();
   var div = child(form_1);
   var textarea = child(div);
   remove_textarea_child(textarea);
@@ -4105,16 +4105,16 @@ function CommentForm($$anchor, $$props) {
 }
 delegate(["keydown"]);
 create_custom_element(CommentForm, { handleSubmit: {}, cancel: {}, parentId: {} }, [], [], true);
-var root$a = /* @__PURE__ */ template(`<div class="author svelte-1xlsy1x"> </div>`);
-const $$css$9 = {
+var root$c = /* @__PURE__ */ template(`<div class="author svelte-1xlsy1x"> </div>`);
+const $$css$b = {
   hash: "svelte-1xlsy1x",
   code: ".author.svelte-1xlsy1x{font-size:var(--author-avatar-font-size);text-transform:uppercase;color:var(--author-avatar-color);background-color:var(--author-avatar-background-color);aspect-ratio:1;flex:0 0 var(--author-avatar-size);border-radius:var(--author-avatar-border-radius);justify-content:center;align-items:center;display:flex}"
 };
 function Author($$anchor, $$props) {
   push($$props, true);
-  append_styles($$anchor, $$css$9);
+  append_styles($$anchor, $$css$b);
   const initials = prop($$props, "initials", 7);
-  var div = root$a();
+  var div = root$c();
   var text2 = child(div, true);
   reset$1(div);
   template_effect(() => set_text(text2, initials()));
@@ -4130,21 +4130,21 @@ function Author($$anchor, $$props) {
   });
 }
 create_custom_element(Author, { initials: {} }, [], [], true);
-var root$9 = /* @__PURE__ */ template(`<div class="reply svelte-1i0bwsu"><!> <article class="reply__content svelte-1i0bwsu"><header class="svelte-1i0bwsu"><strong> </strong> <time class="svelte-1i0bwsu"> </time></header> <div class="reply__text svelte-1i0bwsu"> </div></article></div>`);
-const $$css$8 = {
+var root$b = /* @__PURE__ */ template(`<div class="reply svelte-1i0bwsu"><!> <article class="reply__content svelte-1i0bwsu"><header class="svelte-1i0bwsu"><strong> </strong> <time class="svelte-1i0bwsu"> </time></header> <div class="reply__text svelte-1i0bwsu"> </div></article></div>`);
+const $$css$a = {
   hash: "svelte-1i0bwsu",
   code: ".reply.svelte-1i0bwsu{gap:var(--reply-gap);flex-direction:row;align-items:start;display:flex}.reply__content.svelte-1i0bwsu{padding:var(--reply-content-padding);background-color:var(--reply-content-background);border-radius:var(--reply-content-border-radius)}.reply__content.svelte-1i0bwsu header:where(.svelte-1i0bwsu){gap:var(--reply-header-gap);margin-bottom:var(--reply-header-margin-bottom);justify-content:flex-start;align-items:flex-start;display:flex}.reply__content.svelte-1i0bwsu header:where(.svelte-1i0bwsu) time:where(.svelte-1i0bwsu){font-size:var(--reply-timestamp-font-size);color:var(--reply-timestamp-color)}@media (prefers-color-scheme:dark){.reply__content.svelte-1i0bwsu{background-color:var(--reply-content-background-dark)}}.reply__text.svelte-1i0bwsu{white-space:pre-line}"
 };
 function Reply($$anchor, $$props) {
   push($$props, false);
-  append_styles($$anchor, $$css$8);
+  append_styles($$anchor, $$css$a);
   let reply = prop($$props, "reply", 12);
   function formatDate(timestamp) {
     const date = new Date(timestamp * 1e3);
     return date.toLocaleString();
   }
   init();
-  var div = root$9();
+  var div = root$b();
   var node = child(div);
   const expression = /* @__PURE__ */ derived_safe_equal(() => reply().author.substring(0, 1));
   Author(node, {
@@ -4194,16 +4194,17 @@ function Reply($$anchor, $$props) {
 create_custom_element(Reply, { reply: {} }, [], [], true);
 var root_5$1 = /* @__PURE__ */ template(`<li><!></li>`);
 var root_4$1 = /* @__PURE__ */ template(`<ul class="comment__replies svelte-m6br8e"></ul>`);
-var root_7 = /* @__PURE__ */ template(`<div class="buttons svelte-m6br8e"><!> <!></div>`);
-var root$8 = /* @__PURE__ */ template(`<details><summary class="comment__header svelte-m6br8e"><!> <div class="comment__content svelte-m6br8e"><header class="svelte-m6br8e"><strong> </strong> <time class="svelte-m6br8e"> </time></header> <div class="comment__text svelte-m6br8e"> </div></div> <!></summary> <!> <footer class="svelte-m6br8e"><!></footer></details>`);
-const $$css$7 = {
+var root_8 = /* @__PURE__ */ template(`<!> <!>`, 1);
+var root_7 = /* @__PURE__ */ template(`<div class="buttons svelte-m6br8e"><!></div>`);
+var root$a = /* @__PURE__ */ template(`<details><summary class="comment__header svelte-m6br8e"><!> <div class="comment__content svelte-m6br8e"><header class="svelte-m6br8e"><strong> </strong> <time class="svelte-m6br8e"> </time></header> <div class="comment__text svelte-m6br8e"> </div></div> <!></summary> <!> <footer class="svelte-m6br8e"><!></footer></details>`);
+const $$css$9 = {
   hash: "svelte-m6br8e",
   code: '.comment.svelte-m6br8e{--loop-marker-background:var(--comment-marker-background);--loop-marker-color:var(--comment-marker-color);--marker-size:var(--comment-avatar-size);position:relative}.comment.svelte-m6br8e>:where(.svelte-m6br8e){z-index:1;position:relative}.comment.svelte-m6br8e:after{content:"";left:var(--comment-line-offset);width:var(--comment-line-width);background-color:var(--comment-line-background);z-index:0;height:calc(100% - 4rem);position:absolute;top:1.5rem}.comment.svelte-m6br8e:not([open]):after{height:calc(100% - 2.75rem)}.comment__header.svelte-m6br8e{font-size:var(--comment-header-font-size);padding:var(--comment-header-padding);align-items:flex-start;gap:var(--comment-header-gap);cursor:pointer;display:flex}.comment__header.svelte-m6br8e .comment__replies-count{bottom:0;left:var(--space-s);min-width:var(--comment-avatar-size);position:absolute}.comment__header.svelte-m6br8e header:where(.svelte-m6br8e){gap:var(--comment-author-gap);margin-bottom:var(--comment-author-margin-bottom);justify-content:flex-start;align-items:flex-start;display:flex}.comment__header.svelte-m6br8e header:where(.svelte-m6br8e) time:where(.svelte-m6br8e){font-size:var(--comment-timestamp-font-size);color:var(--comment-timestamp-color)}.comment__header.svelte-m6br8e .comment__content:where(.svelte-m6br8e){padding:var(--comment-content-padding);background-color:var(--comment-content-background);border-radius:var(--comment-content-border-radius);flex:1}@media (prefers-color-scheme:dark){.comment__header.svelte-m6br8e .comment__content:where(.svelte-m6br8e){background-color:var(--comment-content-background-dark)}}.comment__header.svelte-m6br8e .comment__text:where(.svelte-m6br8e){white-space:pre-line}.comment__replies.svelte-m6br8e{padding:var(--comment-replies-padding);gap:var(--comment-replies-gap);flex-direction:column;margin:0;list-style:none;display:flex}footer.svelte-m6br8e{gap:var(--comment-footer-gap);padding:var(--comment-footer-padding);flex-direction:column;display:flex}footer.svelte-m6br8e .buttons:where(.svelte-m6br8e){gap:var(--comment-buttons-gap);align-items:flex-end;display:flex}.is-hidden.svelte-m6br8e{display:none}'
 };
 function Comment$1($$anchor, $$props) {
   var _a2;
   push($$props, true);
-  append_styles($$anchor, $$css$7);
+  append_styles($$anchor, $$css$9);
   const comment2 = prop($$props, "comment", 7), scrollIntoView = prop($$props, "scrollIntoView", 7), handleSubmit = prop($$props, "handleSubmit", 7), cancel = prop($$props, "cancel", 7);
   function formatDate(timestamp) {
     const date = new Date(timestamp * 1e3);
@@ -4211,7 +4212,7 @@ function Comment$1($$anchor, $$props) {
   }
   let openReplyForm = state(false);
   let detailsOpen = state(proxy(((_a2 = comment2().replies) == null ? void 0 : _a2.length) > 0 && !panel.showResolvedOnly));
-  var details = root$8();
+  var details = root$a();
   let classes;
   var summary = child(details);
   var node = child(summary);
@@ -4314,21 +4315,23 @@ function Comment$1($$anchor, $$props) {
     var alternate = ($$anchor2) => {
       var div_2 = root_7();
       var node_5 = child(div_2);
-      Button(node_5, {
-        style: "button--solid",
-        onclick: () => set(openReplyForm, true),
-        children: ($$anchor3, $$slotProps) => {
-          next();
-          var text_5 = text();
-          template_effect(($0) => set_text(text_5, $0), [() => t("ui.reply.submit", "Reply")]);
-          append($$anchor3, text_5);
-        },
-        $$slots: { default: true }
-      });
-      var node_6 = sibling(node_5, 2);
       {
         var consequent_3 = ($$anchor3) => {
-          Button($$anchor3, {
+          var fragment_4 = root_8();
+          var node_6 = first_child(fragment_4);
+          Button(node_6, {
+            style: "button--solid",
+            onclick: () => set(openReplyForm, true),
+            children: ($$anchor4, $$slotProps) => {
+              next();
+              var text_5 = text();
+              template_effect(($0) => set_text(text_5, $0), [() => t("ui.reply.submit", "Reply")]);
+              append($$anchor4, text_5);
+            },
+            $$slots: { default: true }
+          });
+          var node_7 = sibling(node_6, 2);
+          Button(node_7, {
             onclick: () => resolveComment(comment2()),
             children: ($$anchor4, $$slotProps) => {
               next();
@@ -4340,6 +4343,7 @@ function Comment$1($$anchor, $$props) {
             },
             $$slots: { default: true }
           });
+          append($$anchor3, fragment_4);
         };
         var alternate_1 = ($$anchor3) => {
           Button($$anchor3, {
@@ -4355,7 +4359,7 @@ function Comment$1($$anchor, $$props) {
             $$slots: { default: true }
           });
         };
-        if_block(node_6, ($$render) => {
+        if_block(node_5, ($$render) => {
           if (comment2().status === "OPEN") $$render(consequent_3);
           else $$render(alternate_1, false);
         });
@@ -4432,50 +4436,61 @@ create_custom_element(
   [],
   true
 );
-var root$7 = /* @__PURE__ */ ns_template(`<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-1q9atlb"><path d="M2.5 12.5C2.5 7.78595 2.5 5.42893 3.96447 3.96447C5.42893 2.5 7.78595 2.5 12.5 2.5C17.214 2.5 19.5711 2.5 21.0355 3.96447C22.5 5.42893 22.5 7.78595 22.5 12.5C22.5 17.214 22.5 19.5711 21.0355 21.0355C19.5711 22.5 17.214 22.5 12.5 22.5C7.78595 22.5 5.42893 22.5 3.96447 21.0355C2.5 19.5711 2.5 17.214 2.5 12.5Z" stroke="currentColor" stroke-width="1.5"></path><path d="M9 9.5L12 12.5L9 15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M13 9.5L16 12.5L13 15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`);
-const $$css$6 = {
+var root$9 = /* @__PURE__ */ ns_template(`<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-1q9atlb"><path d="M2.5 12.5C2.5 7.78595 2.5 5.42893 3.96447 3.96447C5.42893 2.5 7.78595 2.5 12.5 2.5C17.214 2.5 19.5711 2.5 21.0355 3.96447C22.5 5.42893 22.5 7.78595 22.5 12.5C22.5 17.214 22.5 19.5711 21.0355 21.0355C19.5711 22.5 17.214 22.5 12.5 22.5C7.78595 22.5 5.42893 22.5 3.96447 21.0355C2.5 19.5711 2.5 17.214 2.5 12.5Z" stroke="currentColor" stroke-width="1.5"></path><path d="M9 9.5L12 12.5L9 15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M13 9.5L16 12.5L13 15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`);
+const $$css$8 = {
   hash: "svelte-1q9atlb",
   code: "svg.svelte-1q9atlb{width:var(--size,var(--icon-size));height:var(--size,var(--icon-size))}"
 };
 function IconSidebarClose($$anchor) {
-  append_styles($$anchor, $$css$6);
-  var svg = root$7();
+  append_styles($$anchor, $$css$8);
+  var svg = root$9();
   append($$anchor, svg);
 }
 create_custom_element(IconSidebarClose, {}, [], [], true);
-var root$6 = /* @__PURE__ */ ns_template(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-1q9atlb"><path d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z" stroke="currentColor" stroke-width="1.5"></path><path d="M15.5 9L12.5 12L15.5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11.5 9L8.5 12L11.5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`);
-const $$css$5 = {
+var root$8 = /* @__PURE__ */ ns_template(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-1q9atlb"><path d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z" stroke="currentColor" stroke-width="1.5"></path><path d="M15.5 9L12.5 12L15.5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11.5 9L8.5 12L11.5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`);
+const $$css$7 = {
   hash: "svelte-1q9atlb",
   code: "svg.svelte-1q9atlb{width:var(--size,var(--icon-size));height:var(--size,var(--icon-size))}"
 };
 function IconSidebarOpen($$anchor) {
-  append_styles($$anchor, $$css$5);
-  var svg = root$6();
+  append_styles($$anchor, $$css$7);
+  var svg = root$8();
   append($$anchor, svg);
 }
 create_custom_element(IconSidebarOpen, {}, [], [], true);
-var root$5 = /* @__PURE__ */ ns_template(`<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-1q9atlb"><path d="M5.44067 14.4885C6.54524 14.4885 7.44067 13.5931 7.44067 12.4885C7.44067 11.384 6.54524 10.4885 5.44067 10.4885C4.3361 10.4885 3.44067 11.384 3.44067 12.4885C3.44067 13.5931 4.3361 14.4885 5.44067 14.4885Z" stroke="currentColor" stroke-width="1.5"></path><path d="M12.4407 14.4885C13.5452 14.4885 14.4407 13.5931 14.4407 12.4885C14.4407 11.384 13.5452 10.4885 12.4407 10.4885C11.3361 10.4885 10.4407 11.384 10.4407 12.4885C10.4407 13.5931 11.3361 14.4885 12.4407 14.4885Z" stroke="currentColor" stroke-width="1.5"></path><path d="M19.4407 14.4885C20.5452 14.4885 21.4407 13.5931 21.4407 12.4885C21.4407 11.384 20.5452 10.4885 19.4407 10.4885C18.3361 10.4885 17.4407 11.384 17.4407 12.4885C17.4407 13.5931 18.3361 14.4885 19.4407 14.4885Z" stroke="currentColor" stroke-width="1.5"></path></svg>`);
-const $$css$4 = {
+var root$7 = /* @__PURE__ */ ns_template(`<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-1q9atlb"><path d="M5.44067 14.4885C6.54524 14.4885 7.44067 13.5931 7.44067 12.4885C7.44067 11.384 6.54524 10.4885 5.44067 10.4885C4.3361 10.4885 3.44067 11.384 3.44067 12.4885C3.44067 13.5931 4.3361 14.4885 5.44067 14.4885Z" stroke="currentColor" stroke-width="1.5"></path><path d="M12.4407 14.4885C13.5452 14.4885 14.4407 13.5931 14.4407 12.4885C14.4407 11.384 13.5452 10.4885 12.4407 10.4885C11.3361 10.4885 10.4407 11.384 10.4407 12.4885C10.4407 13.5931 11.3361 14.4885 12.4407 14.4885Z" stroke="currentColor" stroke-width="1.5"></path><path d="M19.4407 14.4885C20.5452 14.4885 21.4407 13.5931 21.4407 12.4885C21.4407 11.384 20.5452 10.4885 19.4407 10.4885C18.3361 10.4885 17.4407 11.384 17.4407 12.4885C17.4407 13.5931 18.3361 14.4885 19.4407 14.4885Z" stroke="currentColor" stroke-width="1.5"></path></svg>`);
+const $$css$6 = {
   hash: "svelte-1q9atlb",
   code: "svg.svelte-1q9atlb{width:var(--size,var(--icon-size));height:var(--size,var(--icon-size))}"
 };
 function IconDots($$anchor) {
-  append_styles($$anchor, $$css$4);
-  var svg = root$5();
+  append_styles($$anchor, $$css$6);
+  var svg = root$7();
   append($$anchor, svg);
 }
 create_custom_element(IconDots, {}, [], [], true);
+var root$6 = /* @__PURE__ */ ns_template(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-1q9atlb"><path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="currentColor" stroke-width="1.5"></path><path d="M13.7654 2.15224C13.3978 2 12.9319 2 12 2C11.0681 2 10.6022 2 10.2346 2.15224C9.74457 2.35523 9.35522 2.74458 9.15223 3.23463C9.05957 3.45834 9.0233 3.7185 9.00911 4.09799C8.98826 4.65568 8.70226 5.17189 8.21894 5.45093C7.73564 5.72996 7.14559 5.71954 6.65219 5.45876C6.31645 5.2813 6.07301 5.18262 5.83294 5.15102C5.30704 5.08178 4.77518 5.22429 4.35436 5.5472C4.03874 5.78938 3.80577 6.1929 3.33983 6.99993C2.87389 7.80697 2.64092 8.21048 2.58899 8.60491C2.51976 9.1308 2.66227 9.66266 2.98518 10.0835C3.13256 10.2756 3.3397 10.437 3.66119 10.639C4.1338 10.936 4.43789 11.4419 4.43786 12C4.43783 12.5581 4.13375 13.0639 3.66118 13.3608C3.33965 13.5629 3.13248 13.7244 2.98508 13.9165C2.66217 14.3373 2.51966 14.8691 2.5889 15.395C2.64082 15.7894 2.87379 16.193 3.33973 17C3.80568 17.807 4.03865 18.2106 4.35426 18.4527C4.77508 18.7756 5.30694 18.9181 5.83284 18.8489C6.07289 18.8173 6.31632 18.7186 6.65204 18.5412C7.14547 18.2804 7.73556 18.27 8.2189 18.549C8.70224 18.8281 8.98826 19.3443 9.00911 19.9021C9.02331 20.2815 9.05957 20.5417 9.15223 20.7654C9.35522 21.2554 9.74457 21.6448 10.2346 21.8478C10.6022 22 11.0681 22 12 22C12.9319 22 13.3978 22 13.7654 21.8478C14.2554 21.6448 14.6448 21.2554 14.8477 20.7654C14.9404 20.5417 14.9767 20.2815 14.9909 19.902C15.0117 19.3443 15.2977 18.8281 15.781 18.549C16.2643 18.2699 16.8544 18.2804 17.3479 18.5412C17.6836 18.7186 17.927 18.8172 18.167 18.8488C18.6929 18.9181 19.2248 18.7756 19.6456 18.4527C19.9612 18.2105 20.1942 17.807 20.6601 16.9999C21.1261 16.1929 21.3591 15.7894 21.411 15.395C21.4802 14.8691 21.3377 14.3372 21.0148 13.9164C20.8674 13.7243 20.6602 13.5628 20.3387 13.3608C19.8662 13.0639 19.5621 12.558 19.5621 11.9999C19.5621 11.4418 19.8662 10.9361 20.3387 10.6392C20.6603 10.4371 20.8675 10.2757 21.0149 10.0835C21.3378 9.66273 21.4803 9.13087 21.4111 8.60497C21.3592 8.21055 21.1262 7.80703 20.6602 7C20.1943 6.19297 19.9613 5.78945 19.6457 5.54727C19.2249 5.22436 18.693 5.08185 18.1671 5.15109C17.9271 5.18269 17.6837 5.28136 17.3479 5.4588C16.8545 5.71959 16.2644 5.73002 15.7811 5.45096C15.2977 5.17191 15.0117 4.65566 14.9909 4.09794C14.9767 3.71848 14.9404 3.45833 14.8477 3.23463C14.6448 2.74458 14.2554 2.35523 13.7654 2.15224Z" stroke="currentColor" stroke-width="1.5"></path></svg>`);
+const $$css$5 = {
+  hash: "svelte-1q9atlb",
+  code: "svg.svelte-1q9atlb{width:var(--size,var(--icon-size));height:var(--size,var(--icon-size))}"
+};
+function IconSettings($$anchor) {
+  append_styles($$anchor, $$css$5);
+  var svg = root$6();
+  append($$anchor, svg);
+}
+create_custom_element(IconSettings, {}, [], [], true);
 var $$_import_panel = reactive_import(() => panel);
-var root_3$1 = /* @__PURE__ */ template(`<span class="filter-dot filter-dot--open svelte-15wfo7b" slot="icon"></span>`);
+var root_3 = /* @__PURE__ */ template(`<span class="filter-dot filter-dot--open svelte-15wfo7b" slot="icon"></span>`);
 var root_5 = /* @__PURE__ */ template(`<span class="filter-dot filter-dot--resolved svelte-15wfo7b" slot="icon"></span>`);
-var root$4 = /* @__PURE__ */ template(`<div class="context-menu-container svelte-15wfo7b"><div class="context-menu-trigger svelte-15wfo7b"><!></div> <div class="context-menu svelte-15wfo7b" popover="auto" role="menu" aria-labelledby="context-menu-trigger"><div class="menu-section svelte-15wfo7b"><div class="menu-section-title svelte-15wfo7b"> </div> <div class="filter-options svelte-15wfo7b"><!> <!></div></div></div></div>`);
-const $$css$3 = {
+var root$5 = /* @__PURE__ */ template(`<div class="context-menu-container svelte-15wfo7b"><div class="context-menu-trigger svelte-15wfo7b"><!></div> <div class="context-menu svelte-15wfo7b" popover="auto" role="menu" aria-labelledby="context-menu-trigger"><div class="menu-section svelte-15wfo7b"><div class="menu-section-title svelte-15wfo7b"> </div> <div class="filter-options svelte-15wfo7b"><!> <!></div></div></div></div>`);
+const $$css$4 = {
   hash: "svelte-15wfo7b",
   code: ".context-menu-container.svelte-15wfo7b{bottom:var(--context-menu-container-bottom);right:var(--context-menu-container-right);z-index:var(--context-menu-container-z-index);position:absolute}.context-menu-trigger.svelte-15wfo7b{width:var(--context-menu-trigger-size);height:var(--context-menu-trigger-size);border-radius:var(--context-menu-trigger-border-radius);justify-content:center;align-items:center;display:flex}.context-menu.svelte-15wfo7b{background:var(--context-menu-background);border-radius:var(--context-menu-border-radius);box-shadow:var(--context-menu-shadow);padding:var(--context-menu-padding);min-width:var(--context-menu-min-width);border:0;margin:0;position:fixed}.context-menu.svelte-15wfo7b::backdrop{background:var(--context-menu-backdrop-background)}.menu-section.svelte-15wfo7b{gap:var(--context-menu-section-gap);flex-direction:column;display:flex}.menu-section-title.svelte-15wfo7b{font-size:var(--context-menu-title-font-size);font-weight:var(--context-menu-title-font-weight);color:var(--context-menu-title-color);margin-bottom:var(--context-menu-title-margin-bottom);text-transform:uppercase;letter-spacing:var(--context-menu-title-letter-spacing);padding:0}.filter-options.svelte-15wfo7b{gap:var(--context-menu-filter-gap);flex-direction:column;display:flex}.filter-dot.svelte-15wfo7b{width:var(--context-menu-filter-dot-size);height:var(--context-menu-filter-dot-size);border-radius:var(--context-menu-filter-dot-border-radius);margin-right:var(--context-menu-filter-dot-margin-right);display:inline-block}.filter-dot--open.svelte-15wfo7b{background:var(--context-menu-filter-dot-open-background)}.filter-dot--resolved.svelte-15wfo7b{background:var(--context-menu-filter-dot-resolved-background)}"
 };
 function ContextMenu($$anchor, $$props) {
   push($$props, false);
-  append_styles($$anchor, $$css$3);
+  append_styles($$anchor, $$css$4);
   let contextMenu = mutable_state();
   let triggerButton = mutable_state();
   const toggleMenu = () => {
@@ -4505,7 +4520,7 @@ function ContextMenu($$anchor, $$props) {
     closeMenu();
   };
   init();
-  var div = root$4();
+  var div = root$5();
   var div_1 = child(div);
   var node = child(div_1);
   const expression = /* @__PURE__ */ derived_safe_equal(() => t("ui.panel.menu.open", "Open menu"));
@@ -4517,7 +4532,7 @@ function ContextMenu($$anchor, $$props) {
     style: "button--icon",
     $$slots: {
       icon: ($$anchor2, $$slotProps) => {
-        IconDots($$anchor2);
+        IconSettings($$anchor2);
       }
     }
   });
@@ -4545,7 +4560,7 @@ function ContextMenu($$anchor, $$props) {
     $$slots: {
       default: true,
       icon: ($$anchor2, $$slotProps) => {
-        var span = root_3$1();
+        var span = root_3();
         append($$anchor2, span);
       }
     }
@@ -4593,11 +4608,20 @@ function ContextMenu($$anchor, $$props) {
   pop();
 }
 create_custom_element(ContextMenu, {}, [], [], true);
-var root_2$1 = /* @__PURE__ */ template(`<svelte-css-wrapper style="display: contents"><!></svelte-css-wrapper>`, 1);
-var root_3 = /* @__PURE__ */ template(`<svelte-css-wrapper style="display: contents"><!></svelte-css-wrapper>`, 1);
+var root$4 = /* @__PURE__ */ ns_template(`<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="svelte-1q9atlb"><path d="M12.5 22.5C18.0228 22.5 22.5 18.0228 22.5 12.5C22.5 6.97715 18.0228 2.5 12.5 2.5C6.97715 2.5 2.5 6.97715 2.5 12.5C2.5 14.0997 2.87562 15.6116 3.54346 16.9525C3.72094 17.3088 3.78001 17.7161 3.67712 18.1006L3.08151 20.3267C2.82295 21.293 3.70701 22.177 4.67335 21.9185L6.89939 21.3229C7.28393 21.22 7.69121 21.2791 8.04753 21.4565C9.38837 22.1244 10.9003 22.5 12.5 22.5Z" stroke="currentColor" stroke-width="1.5"></path><path d="M8.5 11H16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><path d="M8.5 14.5H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>`);
+const $$css$3 = {
+  hash: "svelte-1q9atlb",
+  code: "svg.svelte-1q9atlb{width:var(--size,var(--icon-size));height:var(--size,var(--icon-size))}"
+};
+function IconChat($$anchor) {
+  append_styles($$anchor, $$css$3);
+  var svg = root$4();
+  append($$anchor, svg);
+}
+create_custom_element(IconChat, {}, [], [], true);
+var root_2$1 = /* @__PURE__ */ template(`<li class="no-threads svelte-odttbw"><p> </p></li>`);
 var root_4 = /* @__PURE__ */ template(`<li class="no-threads svelte-odttbw"><p> </p></li>`);
-var root_6 = /* @__PURE__ */ template(`<li class="no-threads svelte-odttbw"><p> </p></li>`);
-var root_8 = /* @__PURE__ */ template(`<li class="svelte-odttbw"><!></li>`);
+var root_6 = /* @__PURE__ */ template(`<li class="svelte-odttbw"><!></li>`);
 var root$3 = /* @__PURE__ */ template(`<div><header class="svelte-odttbw"><!></header> <ul class="threads svelte-odttbw" data-lenis-prevent=""><!></ul> <!></div>`);
 const $$css$2 = {
   hash: "svelte-odttbw",
@@ -4615,45 +4639,18 @@ function Panel($$anchor, $$props) {
   Button(node, {
     onclick: () => panel.open = !panel.open,
     style: "button--header",
-    children: ($$anchor2, $$slotProps) => {
-      var fragment = comment();
-      var node_1 = first_child(fragment);
-      {
-        var consequent = ($$anchor3) => {
-          var fragment_1 = root_2$1();
-          var node_2 = first_child(fragment_1);
-          {
-            css_props(node_2, () => ({ "--size": "1.5em" }));
-            IconSidebarClose(node_2.lastChild);
-            reset$1(node_2);
-          }
-          append($$anchor3, fragment_1);
-        };
-        var alternate = ($$anchor3) => {
-          var fragment_2 = root_3();
-          var node_3 = first_child(fragment_2);
-          {
-            css_props(node_3, () => ({ "--size": "1.5em" }));
-            IconSidebarOpen(node_3.lastChild);
-            reset$1(node_3);
-          }
-          append($$anchor3, fragment_2);
-        };
-        if_block(node_1, ($$render) => {
-          if (panel.open) $$render(consequent);
-          else $$render(alternate, false);
-        });
+    $$slots: {
+      icon: ($$anchor2, $$slotProps) => {
+        IconChat($$anchor2);
       }
-      append($$anchor2, fragment);
-    },
-    $$slots: { default: true }
+    }
   });
   reset$1(header);
   var ul = sibling(header, 2);
-  var node_4 = child(ul);
+  var node_1 = child(ul);
   {
-    var consequent_1 = ($$anchor2) => {
-      var li = root_4();
+    var consequent = ($$anchor2) => {
+      var li = root_2$1();
       var p = child(li);
       var text2 = child(p, true);
       reset$1(p);
@@ -4663,10 +4660,10 @@ function Panel($$anchor, $$props) {
       ]);
       append($$anchor2, li);
     };
-    var alternate_1 = ($$anchor2, $$elseif) => {
+    var alternate = ($$anchor2, $$elseif) => {
       {
-        var consequent_2 = ($$anchor3) => {
-          var li_1 = root_6();
+        var consequent_1 = ($$anchor3) => {
+          var li_1 = root_4();
           var p_1 = child(li_1);
           var text_1 = child(p_1, true);
           reset$1(p_1);
@@ -4676,13 +4673,13 @@ function Panel($$anchor, $$props) {
           ]);
           append($$anchor3, li_1);
         };
-        var alternate_2 = ($$anchor3) => {
-          var fragment_3 = comment();
-          var node_5 = first_child(fragment_3);
-          each(node_5, 17, () => get(filteredComments), (comment2) => comment2.id, ($$anchor4, comment2) => {
-            var li_2 = root_8();
-            var node_6 = child(li_2);
-            Comment$1(node_6, {
+        var alternate_1 = ($$anchor3) => {
+          var fragment_1 = comment();
+          var node_2 = first_child(fragment_1);
+          each(node_2, 17, () => get(filteredComments), (comment2) => comment2.id, ($$anchor4, comment2) => {
+            var li_2 = root_6();
+            var node_3 = child(li_2);
+            Comment$1(node_3, {
               get comment() {
                 return get(comment2);
               },
@@ -4699,26 +4696,26 @@ function Panel($$anchor, $$props) {
             reset$1(li_2);
             append($$anchor4, li_2);
           });
-          append($$anchor3, fragment_3);
+          append($$anchor3, fragment_1);
         };
         if_block(
           $$anchor2,
           ($$render) => {
-            if (get(filteredComments).length === 0 && panel.showResolvedOnly) $$render(consequent_2);
-            else $$render(alternate_2, false);
+            if (get(filteredComments).length === 0 && panel.showResolvedOnly) $$render(consequent_1);
+            else $$render(alternate_1, false);
           },
           $$elseif
         );
       }
     };
-    if_block(node_4, ($$render) => {
-      if (get(filteredComments).length === 0) $$render(consequent_1);
-      else $$render(alternate_1, false);
+    if_block(node_1, ($$render) => {
+      if (get(filteredComments).length === 0) $$render(consequent);
+      else $$render(alternate, false);
     });
   }
   reset$1(ul);
-  var node_7 = sibling(ul, 2);
-  ContextMenu(node_7, {});
+  var node_4 = sibling(ul, 2);
+  ContextMenu(node_4, {});
   reset$1(div);
   template_effect(($0) => classes = set_class(div, 1, "panel svelte-odttbw", null, classes, $0), [() => ({ open: panel.open })]);
   append($$anchor, div);
