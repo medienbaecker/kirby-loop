@@ -51,9 +51,9 @@ git submodule add https://github.com/moinframe/kirby-loop.git site/plugins/loop
 
 After successful installation:
 
-1. **Configuration**: See [Configuration Guide](https://moinfra.me/docs/kirby-loop/02-configuration) for customization options
-2. **Multi-language**: If using multiple languages, review [Multi-language Setup](https://moinfra.me/docs/kirby-loop/03-multi-language)
-3. **API Integration**: For custom implementations, check the [API Reference](https://moinfra.me/docs/kirby-loop/05-api)
+1. **Configuration**: See [Configuration Guide](https://moinfra.me/docs/moinframe-loop/02-configuration) for customization options
+2. **Multi-language**: If using multiple languages, review [Multi-language Setup](https://moinfra.me/docs/moinframe-loop/03-multi-language)
+3. **API Integration**: For custom implementations, check the [API Reference](https://moinfra.me/docs/moinframe-loop/05-api)
 
 ## Updating
 

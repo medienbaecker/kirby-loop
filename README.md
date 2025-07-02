@@ -39,11 +39,11 @@ Kirby Loop transforms your website into a collaborative workspace where teams ca
 
 Detailed documentation is available in the `docs/` folder:
 
-- **[Installation Guide](https://moinfra.me/docs/kirby-loop/01-installation)** - Complete installation instructions
-- **[Configuration Guide](https://moinfra.me/docs/kirby-loop/02-configuration)** - All configuration options and advanced settings
-- **[Multi-Language Support](https://moinfra.me/docs/kirby-loop/03-multi-language)** - Setup and customization for multi-language sites
-- **[API Reference](https://moinfra.me/docs/kirby-loop/05-api)** - API documentation
-- **[Theming Guide](https://moinfra.me/docs/kirby-loop/04-theming)** - Theme customization and creating custom themes
+- **[Installation Guide](https://moinfra.me/docs/moinframe-loop/01-installation)** - Complete installation instructions
+- **[Configuration Guide](https://moinfra.me/docs/moinframe-loop/02-configuration)** - All configuration options and advanced settings
+- **[Multi-Language Support](https://moinfra.me/docs/moinframe-loop/03-multi-language)** - Setup and customization for multi-language sites
+- **[API Reference](https://moinfra.me/docs/moinframe-loop/05-api)** - API documentation
+- **[Theming Guide](https://moinfra.me/docs/moinframe-loop/04-theming)** - Theme customization and creating custom themes
 
 ## Basic Configuration
 
@@ -76,7 +76,7 @@ return [
 ];
 ```
 
-See the [Configuration Guide](https://moinfra.me/docs/kirby-loop/02-configuration) for all available options.
+See the [Configuration Guide](https://moinfra.me/docs/moinframe-loop/02-configuration) for all available options.
 
 ## Requirements
 
@@ -92,7 +92,7 @@ See the [Configuration Guide](https://moinfra.me/docs/kirby-loop/02-configuratio
 
 ## Support
 
-- **Documentation**: See the [Documentation](https://moinfra.me/docs/kirby-loop) for installation and usage instructions
+- **Documentation**: See the [Documentation](https://moinfra.me/docs/moinframe-loop) for installation and usage instructions
 - **Issues**: Report bugs on [GitHub Issues](https://github.com/moinframe/kirby-loop/issues)
 
 ## License

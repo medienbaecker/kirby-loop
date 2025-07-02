@@ -185,7 +185,7 @@ Sets the visual theme for the loop interface.
 **Available themes:**
 - `'default'` - Light theme with clean, bright interface
 - `'dark'` - Dark theme for low-light environments
-- Custom theme names - See [Theming Guide](https://moinfra.me/docs/kirby-loop/04-theming) for creating custom themes
+- Custom theme names - See [Theming Guide](https://moinfra.me/docs/moinframe-loop/04-theming) for creating custom themes
 
 ### Welcome Dialog
 

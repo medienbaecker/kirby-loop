@@ -31,7 +31,7 @@
         }
     },
     "support": {
-        "docs": "https://moinfra.me/docs/kirby-loop",
+        "docs": "https://moinfra.me/docs/moinframe-loop",
         "source": "https://github.com/moinframe/kirby-loop",
         "issues": "https://github.com/moinframe/kirby-loop/issues"
     },
