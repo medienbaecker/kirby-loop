@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.0-beta.6](///compare/v1.0.0-beta.5...v1.0.0-beta.6) (2025-07-02)
+
+### Features
+
+* add screenshot c3ef6f3
+
 ## [1.0.0-beta.5](///compare/v1.0.0-beta.4...v1.0.0-beta.5) (2025-06-30)
 
 ### Bug Fixes
