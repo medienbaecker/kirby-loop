@@ -3,10 +3,64 @@
 use \Kirby\Cms\App as Kirby;
 use \Moinframe\Loop\Options;
 use \Moinframe\Loop\Routes;
+use \Kirby\Toolkit\Str;
+use \Moinframe\Loop\App;
 
 @include_once __DIR__ . '/vendor/autoload.php';
 
 Kirby::plugin('moinframe/loop', [
+    'areas' => [
+        'loop' => function () {
+            return [
+                'label' => 'Feedback',
+                'icon' => 'chat',
+                'menu' => true,
+                'views' => [
+                    [
+                        'pattern' => 'loop',
+                        'action' => function () {
+                            return [
+                                'component' => 'k-loop-view',
+                                'props' => [
+                                    'reports' => function () {
+                                        return [
+                                            [
+                                                'label' => 'Unresolved',
+                                                'value' => count(App::getComments()),
+                                            ],
+                                            [
+                                                'label' => 'Total',
+                                                'value' => count(App::getComments())
+                                            ]
+                                        ];
+                                    },
+                                    'comments' => function () {
+                                        $comments = App::getComments();
+                                        $panelComments = [];
+                                        foreach ($comments as $comment) {
+                                            $page = page("page://" . $comment->page);
+                                            $panelComments[] = [
+                                                'comment' => $comment->toArray(),
+                                                'text' => Str::excerpt($comment->comment, 100),
+                                                'image' => [
+                                                    "icon" => "",
+                                                    "alt" => $comment->id
+                                                ],
+                                                'panel' => $page?->panel()->url(),
+                                                'preview' => $page?->url(),
+                                                'info' => $comment->author
+                                            ];
+                                        }
+                                        return $panelComments;
+                                    }
+                                ]
+                            ];
+                        }
+                    ]
+                ]
+            ];
+        }
+    ],
     'translations' => [
         'en' => [
             // General errors
@@ -97,7 +151,7 @@ Kirby::plugin('moinframe/loop', [
             'moinframe.loop.ui.panel.menu.open' => 'Open menu',
             'moinframe.loop.ui.panel.menu.filter.title' => 'Show Comments',
             'moinframe.loop.ui.panel.no.resolved' => 'No resolved comments yet.',
-            
+
             // Time formatting
             'moinframe.loop.ui.time.just_now' => 'just now',
             'moinframe.loop.ui.time.minute_ago' => 'a minute ago',
@@ -196,7 +250,7 @@ Kirby::plugin('moinframe/loop', [
             'moinframe.loop.ui.panel.menu.open' => 'Menü öffnen',
             'moinframe.loop.ui.panel.menu.filter.title' => 'Kommentare anzeigen',
             'moinframe.loop.ui.panel.no.resolved' => 'Noch keine erledigten Kommentare.',
-            
+
             // Time formatting
             'moinframe.loop.ui.time.just_now' => 'gerade eben',
             'moinframe.loop.ui.time.minute_ago' => 'vor einer Minute',
