@@ -14,7 +14,7 @@
           @select="onSelectionChange">
           <template #default="{ item }">
             <k-item :text="item.text" :image="item.image" :info="item.info" :buttons="commentButtons(item)"
-              :options="commentOptions(item)">
+              :options="commentOptions(item)" :link="item.preview">
               <template #image>
                 <k-frame>
                   <div class="loop-marker">
@@ -59,9 +59,9 @@ const commentButtons = (item) => {
 
   if (item.preview) {
     buttons.push({
-      icon: "open",
+      icon: "page",
       title: "Open",
-      click: () => panel.open(item.preview),
+      click: () => panel.open(item.panel),
       responsive: true
     })
   }
@@ -74,19 +74,16 @@ const commentOptions = (item) => {
   if (!props.comments.length) {
     return [];
   }
-  const options = [];
+  const options = [{
+    icon: "trash",
+    text: 'Delete',
+    click: () => { },
+    responsive: true
+  }];
 
-  if (item.panel) {
-    options.push({
-      icon: "edit",
-      text: 'Edit',
-      click: () => panel.open(item.panel),
-      responsive: true
-    })
-  }
 
   if (item.comment.status === 'OPEN') {
-    options.push({
+    options.unshift({
       icon: "check",
       text: 'Resolve',
       click: () => { },
