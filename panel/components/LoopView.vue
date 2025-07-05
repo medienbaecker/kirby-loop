@@ -5,16 +5,28 @@
       <template #buttons></template>
     </k-header>
     <k-section>
-      <k-stats :reports="props.reports" size="small"></k-stats>
+      <k-stats :reports="props.reports" size="large"></k-stats>
+    </k-section>
+    <k-section headline="Pages">
+      <k-empty v-if="loading" icon="loader">Loading...</k-empty>
+      <template v-else-if="props.pages.length">
+        <k-items :items="props.pages" layout="list">
+          <template #default="{ item }">
+            <k-item :text="item.text" :image="item.image" :info="item.info" :buttons="pagesButtons(item)"
+              :link="item.panel">
+            </k-item>
+          </template>
+        </k-items>
+      </template>
+      <k-empty v-else icon="check">No comments</k-empty>
     </k-section>
     <k-section headline="Comments">
       <k-empty v-if="loading" icon="loader">Loading...</k-empty>
       <template v-else-if="props.comments.length">
-        <k-items :items="props.comments" layout="list" :selecting="true" :value="selectedComments"
-          @select="onSelectionChange">
+        <k-items :items="props.comments" layout="list">
           <template #default="{ item }">
             <k-item :text="item.text" :image="item.image" :info="item.info" :buttons="commentButtons(item)"
-              :options="commentOptions(item)" :link="item.preview">
+              :options="commentOptions(item)" :link="item.panel">
               <template #image>
                 <k-frame>
                   <div class="loop-marker">
@@ -43,6 +55,10 @@ const props = defineProps({
     type: Array,
     required: true,
   },
+  pages: {
+    type: Array,
+    required: true,
+  },
 });
 
 console.log(props.comments);
@@ -50,7 +66,23 @@ const panel = usePanel();
 const loading = ref(false);
 
 const selectedComments = ref([]);
+const pagesButtons = (item) => {
+  if (!props.pages.length) {
+    return [];
+  }
+  const buttons = [];
 
+  if (item.preview) {
+    buttons.push({
+      icon: "open",
+      title: "Open",
+      click: () => panel.open(item.preview, { target: "_blank" }),
+      responsive: true
+    })
+  }
+
+  return buttons;
+}
 const commentButtons = (item) => {
   if (!props.comments.length) {
     return [];
@@ -59,9 +91,9 @@ const commentButtons = (item) => {
 
   if (item.preview) {
     buttons.push({
-      icon: "page",
+      icon: "open",
       title: "Open",
-      click: () => panel.open(item.panel),
+      click: () => panel.open(item.preview, { target: "_blank" }),
       responsive: true
     })
   }

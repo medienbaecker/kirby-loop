@@ -23,16 +23,49 @@ Kirby::plugin('moinframe/loop', [
                                 'component' => 'k-loop-view',
                                 'props' => [
                                     'reports' => function () {
-                                        return [
-                                            [
-                                                'label' => 'Unresolved',
-                                                'value' => count(App::getComments()),
-                                            ],
-                                            [
-                                                'label' => 'Total',
-                                                'value' => count(App::getComments())
-                                            ]
-                                        ];
+                                        $reports = [];
+                                        $groups = [];
+                                        $comments = App::getComments();
+                                        foreach ($comments as $comment) {
+                                            $page = page("page://" . $comment->page);
+                                            if ($page === null) continue;
+                                            $uuid = $page->uuid()?->id();
+                                            if ($uuid === null) continue;
+                                            $groups[$uuid][] = $comment;
+                                        }
+                                        foreach ($groups as $groupUid => $groupComments) {
+                                            $page = page("page://" . $groupUid);
+                                            $reports[] = [
+                                                'label' => $page?->title()->value() ?? $groupUid,
+                                                'value' => count($groupComments) . '/10',
+                                                'info' => "",
+                                                'icon' => 'folder',
+                                                'link' => $page?->url()
+                                            ];
+                                        }
+
+                                        return $reports;
+                                    },
+                                    'pages' => function () {
+                                        $comments = App::getComments();
+                                        $pages = [];
+                                        $comments = App::getComments();
+                                        foreach ($comments as $comment) {
+                                            $page = page("page://" . $comment->page);
+                                            if ($page === null) continue;
+                                            $uuid = $page->uuid()?->id();
+                                            if ($uuid === null) continue;
+
+                                            if (isset($pages[$uuid])) continue;
+
+                                            $pages[$uuid] = [
+                                                'text' => $page->title()->value(),
+                                                'panel' => $page->panel()->url(),
+                                                'preview' => $page->url(),
+                                                'info' => "10/13"
+                                            ];
+                                        }
+                                        return array_values($pages);
                                     },
                                     'comments' => function () {
                                         $comments = App::getComments();
