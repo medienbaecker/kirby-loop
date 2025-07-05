@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.0-beta.7](///compare/v1.0.0-beta.6...v1.0.0-beta.7) (2025-07-05)
+
+### Bug Fixes
+
+* use autoloader for classes 7464553
+
 ## [1.0.0-beta.6](///compare/v1.0.0-beta.5...v1.0.0-beta.6) (2025-07-02)
 
 ### Features
