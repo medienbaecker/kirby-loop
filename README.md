@@ -27,10 +27,6 @@ Kirby Loop transforms your website into a collaborative workspace where teams ca
 
 ## Quick Start
 
-> [!WARNING]
-> This plugin is currently in beta and is not yet ready for production use.
-
-
 1. **Install**: `composer require moinframe/kirby-loop`
 2. **Use**: Kirby Loop is automatically active on all pages for authenticated users
 3. **Configure**: Customize settings in `site/config/config.php` (optional)
