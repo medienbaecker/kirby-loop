@@ -3,8 +3,18 @@
 use \Kirby\Cms\App as Kirby;
 use \Moinframe\Loop\Options;
 use \Moinframe\Loop\Routes;
+use \Kirby\Filesystem\F;
 
-@include_once __DIR__ . '/vendor/autoload.php';
+F::loadClasses([
+    'moinframe\\loop\\App' => 'src/App.php',
+    'moinframe\\loop\\Database' => 'src/Database.php',
+    'moinframe\\loop\\Middleware' => 'src/Middleware.php',
+    'moinframe\\loop\\Options' => 'src/Options.php',
+    'moinframe\\loop\\Routes' => 'src/Routes.php',
+    'moinframe\\loop\\Models\\Comment' => 'src/Models/Comment.php',
+    'moinframe\\loop\\Models\\Reply' => 'src/Models/Reply.php',
+    'moinframe\\loop\\Enums\\CommentStatus' => 'src/Enums/CommentStatus.php',
+], __DIR__);
 
 Kirby::plugin('moinframe/loop', [
     'translations' => [
@@ -97,7 +107,7 @@ Kirby::plugin('moinframe/loop', [
             'moinframe.loop.ui.panel.menu.open' => 'Open menu',
             'moinframe.loop.ui.panel.menu.filter.title' => 'Show Comments',
             'moinframe.loop.ui.panel.no.resolved' => 'No resolved comments yet.',
-            
+
             // Time formatting
             'moinframe.loop.ui.time.just_now' => 'just now',
             'moinframe.loop.ui.time.minute_ago' => 'a minute ago',
@@ -196,7 +206,7 @@ Kirby::plugin('moinframe/loop', [
             'moinframe.loop.ui.panel.menu.open' => 'Menü öffnen',
             'moinframe.loop.ui.panel.menu.filter.title' => 'Kommentare anzeigen',
             'moinframe.loop.ui.panel.no.resolved' => 'Noch keine erledigten Kommentare.',
-            
+
             // Time formatting
             'moinframe.loop.ui.time.just_now' => 'gerade eben',
             'moinframe.loop.ui.time.minute_ago' => 'vor einer Minute',
