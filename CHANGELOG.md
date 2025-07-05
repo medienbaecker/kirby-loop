@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.0.0](///compare/v1.0.0-beta.7...v1.0.0) (2025-07-05)
+
 ## [1.0.0-beta.7](///compare/v1.0.0-beta.6...v1.0.0-beta.7) (2025-07-05)
 
 ### Bug Fixes
