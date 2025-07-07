@@ -13,13 +13,16 @@ const headers = {
   'X-CSRF-Token': csrfToken || ''
 };
 
-export const getComments = async (pageId: string) => {
+export const getComments = async (pageId: string): Promise<boolean> => {
   const url = `${apiBase}/${apiPrefix}/comments/${pageId}`;
   const response = await fetch(url, {
     headers
   });
   const data = await response.json();
-  store.comments = data.comments;
+  if (data.status === 'ok') {
+    store.comments = data.comments;
+  }
+  return data.status === 'ok';
 }
 
 export const addComment = async (comment: CommentPayload) => {
@@ -29,8 +32,10 @@ export const addComment = async (comment: CommentPayload) => {
     headers,
     body: JSON.stringify(comment)
   });
-  const data: { comment: Comment } = await response.json();
-  store.comments = [data.comment, ...store.comments];
+  const data: { comment: Comment, status: string } = await response.json();
+  if (data.status === 'ok') {
+    store.comments = [data.comment, ...store.comments];
+  }
 }
 
 export const resolveComment = async (comment: Comment) => {
@@ -83,9 +88,11 @@ export const addReply = async (reply: ReplyPayload) => {
     headers,
     body: JSON.stringify(reply)
   });
-  const data: { reply: Reply } = await response.json();
-  const parent = store.comments.find(c => c.id === data.reply.parentId)
-  if (parent) parent.replies = [...parent.replies, data.reply];
+  const data: { reply: Reply, status: string } = await response.json();
+  if (data.status === 'ok') {
+    const parent = store.comments.find(c => c.id === data.reply.parentId)
+    if (parent) parent.replies = [...parent.replies, data.reply];
+  }
 }
 
 export default store;
