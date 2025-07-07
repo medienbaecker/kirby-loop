@@ -111,4 +111,13 @@ class Options
     {
         return option('moinframe.loop.theme', 'default');
     }
+
+    /**
+     * Check if draft page access is allowed
+     * @return bool
+     */
+    public static function allowDraftAccess(): bool
+    {
+        return option('moinframe.loop.allowDraftAccess', false);
+    }
 }

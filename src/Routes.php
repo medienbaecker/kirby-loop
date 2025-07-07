@@ -66,6 +66,17 @@ class Routes
                         $onPage = page($pageId);
                     endif;
 
+                    // If not found, check if it's a draft and validate access
+                    if (null === $onPage) {
+                        $draftPage = kirby()->page($pageId);
+                        if ($draftPage !== null && $draftPage->isDraft()) {
+
+                            if (Options::allowDraftAccess()) {
+                                $onPage = $draftPage;
+                            }
+                        }
+                    }
+
                     if (null === $onPage) {
                         return Response::json(self::errorResponse(
                             tt('moinframe.loop.page.not.found', ['pageId' => $pageId]),
@@ -132,6 +143,17 @@ class Routes
                     }
 
                     $page = ($pageId === 'home') ? kirby()->site()->homePage() : page($pageId);
+
+                    // If not found, check if it's a draft and validate access
+                    if (null === $page) {
+                        $draftPage = kirby()->page($pageId);
+                        if ($draftPage !== null && $draftPage->isDraft()) {
+
+                            if (Options::allowDraftAccess()) {
+                                $page = $draftPage;
+                            }
+                        }
+                    }
 
                     if (null === $page) {
                         return Response::json(self::errorResponse(
