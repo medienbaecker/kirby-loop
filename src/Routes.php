@@ -69,11 +69,8 @@ class Routes
                     // If not found, check if it's a draft and validate access
                     if (null === $onPage) {
                         $draftPage = kirby()->page($pageId);
-                        if ($draftPage !== null && $draftPage->isDraft()) {
-
-                            if (Options::allowDraftAccess()) {
-                                $onPage = $draftPage;
-                            }
+                        if ($draftPage !== null && $draftPage->isDraft() && $draftPage->renderVersionFromRequest() !== null) {
+                            $onPage = $draftPage;
                         }
                     }
 
@@ -147,11 +144,8 @@ class Routes
                     // If not found, check if it's a draft and validate access
                     if (null === $page) {
                         $draftPage = kirby()->page($pageId);
-                        if ($draftPage !== null && $draftPage->isDraft()) {
-
-                            if (Options::allowDraftAccess()) {
-                                $page = $draftPage;
-                            }
+                        if ($draftPage !== null && $draftPage->isDraft() && $draftPage->renderVersionFromRequest() !== null) {
+                            $page = $draftPage;
                         }
                     }
 
