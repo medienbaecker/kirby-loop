@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.0.1](///compare/v1.0.0...v1.0.1) (2025-07-08)
+
+### Features
+
+* add allow draft pages option 351471e
+* add major version check 02d3690
+
+### Bug Fixes
+
+* add token to fetch universally (if set) 9c33fdd
+* check for valid draft token 091a135
+* check for verified token with kirby 4 too dec2d34
+* remove draft page access docs 7e71ee9
+* remove draftaccess option 98148a0
+* show ui only if comments fetch goes through a5188f0
+* use default minification b9ce0f6
+
 ## [1.0.0](///compare/v1.0.0-beta.7...v1.0.0) (2025-07-05)
 
 ## [1.0.0-beta.7](///compare/v1.0.0-beta.6...v1.0.0-beta.7) (2025-07-05)
