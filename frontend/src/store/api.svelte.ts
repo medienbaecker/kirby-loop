@@ -13,28 +13,46 @@ const headers = {
   'X-CSRF-Token': csrfToken || ''
 };
 
-export const getComments = async (pageId: string) => {
-  const url = `${apiBase}/${apiPrefix}/comments/${pageId}`;
+const buildApiUrl = (endpoint: string): string => {
+  const url = new URL(`${apiBase}/${apiPrefix}/${endpoint}`, window.location.origin);
+  
+  // Add token query params from current page if they exist
+  const currentParams = new URLSearchParams(window.location.search);
+  const token = currentParams.get('token') || currentParams.get('_token');
+  if (token) {
+    url.searchParams.set(currentParams.has('token') ? 'token' : '_token', token);
+  }
+  
+  return url.toString();
+};
+
+export const getComments = async (pageId: string): Promise<boolean> => {
+  const url = buildApiUrl(`comments/${pageId}`);
   const response = await fetch(url, {
     headers
   });
   const data = await response.json();
-  store.comments = data.comments;
+  if (data.status === 'ok') {
+    store.comments = data.comments;
+  }
+  return data.status === 'ok';
 }
 
 export const addComment = async (comment: CommentPayload) => {
-  const url = `${apiBase}/${apiPrefix}/comment/new`;
+  const url = buildApiUrl('comment/new');
   const response = await fetch(url, {
     method: 'POST',
     headers,
     body: JSON.stringify(comment)
   });
-  const data: { comment: Comment } = await response.json();
-  store.comments = [data.comment, ...store.comments];
+  const data: { comment: Comment, status: string } = await response.json();
+  if (data.status === 'ok') {
+    store.comments = [data.comment, ...store.comments];
+  }
 }
 
 export const resolveComment = async (comment: Comment) => {
-  const url = `${apiBase}/${apiPrefix}/comment/resolve`;
+  const url = buildApiUrl('comment/resolve');
   const response = await fetch(url, {
     method: 'POST',
     headers,
@@ -51,7 +69,7 @@ export const resolveComment = async (comment: Comment) => {
 }
 
 export const unresolveComment = async (comment: Comment) => {
-  const url = `${apiBase}/${apiPrefix}/comment/unresolve`;
+  const url = buildApiUrl('comment/unresolve');
   const response = await fetch(url, {
     method: 'POST',
     headers,
@@ -68,7 +86,7 @@ export const unresolveComment = async (comment: Comment) => {
 }
 
 export const setGuestName = async (name: string) => {
-  const response = await fetch(`${apiBase}/${apiPrefix}/guest/name`, {
+  const response = await fetch(buildApiUrl('guest/name'), {
     method: 'POST',
     headers,
     body: JSON.stringify({ name })
@@ -77,15 +95,17 @@ export const setGuestName = async (name: string) => {
 }
 
 export const addReply = async (reply: ReplyPayload) => {
-  const url = `${apiBase}/${apiPrefix}/comment/reply`;
+  const url = buildApiUrl('comment/reply');
   const response = await fetch(url, {
     method: 'POST',
     headers,
     body: JSON.stringify(reply)
   });
-  const data: { reply: Reply } = await response.json();
-  const parent = store.comments.find(c => c.id === data.reply.parentId)
-  if (parent) parent.replies = [...parent.replies, data.reply];
+  const data: { reply: Reply, status: string } = await response.json();
+  if (data.status === 'ok') {
+    const parent = store.comments.find(c => c.id === data.reply.parentId)
+    if (parent) parent.replies = [...parent.replies, data.reply];
+  }
 }
 
 export default store;

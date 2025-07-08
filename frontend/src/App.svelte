@@ -32,6 +32,8 @@
     translations,
   }: LoopProps = $props();
 
+  let showLoop = $state(false);
+
   // Feedback Dialog
   let showModal = $state(false);
   let welcomeDialog: { showModal: () => void; close: () => void };
@@ -146,18 +148,18 @@
     }
   };
 
-  onMount(() => {
+  onMount(async () => {
     // Initialize translations
     const translationsData = JSON.parse(translations || "{}");
     setTranslations(translationsData);
 
-    getComments(pageId);
+    showLoop = await getComments(pageId);
 
     // Initialize guest name from session storage
     guestName.get();
 
     // Show welcome dialog on page load if enabled and conditions are met
-    if (isWelcomeEnabled) {
+    if (isWelcomeEnabled && showLoop) {
       // For authenticated users, show only if not dismissed
       // For unauthenticated users, show if no guest name is set (mandatory)
       if (
@@ -168,7 +170,7 @@
       }
     }
     // Even if welcome is disabled, show dialog for non-authenticated users without a name
-    else if (!isAuthenticated && !guestName.get()) {
+    else if (!isAuthenticated && !guestName.get() && showLoop) {
       welcomeDialog?.showModal();
     }
   });
@@ -192,15 +194,17 @@
 
 <svelte:document on:click={clickToComment} />
 
-<Header {position} commentsCount={visibleComments.length} />
+{#if showLoop}
+  <Header {position} commentsCount={visibleComments.length} />
 
-<Panel {scrollIntoView} {handleSubmit} {cancel} />
+  <Panel {scrollIntoView} {handleSubmit} {cancel} />
 
-{#each visibleComments as comment (comment.id)}
-  <Marker {comment} />
-{/each}
+  {#each visibleComments as comment (comment.id)}
+    <Marker {comment} />
+  {/each}
 
-<CommentDialog {handleSubmit} {showModal} {newMarker} {cancel} />
+  <CommentDialog {handleSubmit} {showModal} {newMarker} {cancel} />
+{/if}
 
 <WelcomeDialog
   bind:this={welcomeDialog}

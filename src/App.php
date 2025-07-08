@@ -3,12 +3,24 @@
 namespace Moinframe\Loop;
 
 use Kirby\Cms\Page;
+use Kirby\Cms\App as KirbyApp;
 use Moinframe\Loop\Models\Comment;
 use Moinframe\Loop\Models\Reply;
 
 class App
 {
     private static ?Database $instance = null;
+
+    /**
+     * Gets the major version of Kirby
+     * @return int Major version number
+     */
+    public static function getKirbyMajorVersion(): int
+    {
+        $version = KirbyApp::version() ?? '0.0.0';
+        $parts = explode('.', $version);
+        return (int) ($parts[0] ?? 0);
+    }
 
     /**
      * Renders the loop component HTML

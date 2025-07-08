@@ -25,10 +25,7 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       cssMinify: 'lightningcss',
-      minify: 'terser',
-      terserOptions: {
-        keep_classnames: true
-      },
+      minify: true,
       lib: {
         entry: resolve(_dirname, "src/main.ts"),
         name: "Loop",
