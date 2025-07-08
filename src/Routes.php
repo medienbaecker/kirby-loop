@@ -69,7 +69,11 @@ class Routes
                     // If not found, check if it's a draft and validate access
                     if (null === $onPage) {
                         $draftPage = kirby()->page($pageId);
-                        if ($draftPage !== null && $draftPage->isDraft() && $draftPage->renderVersionFromRequest() !== null) {
+                        if ($draftPage !== null && $draftPage->isDraft() && (
+                            (App::getKirbyMajorVersion() >= 5 && $draftPage->renderVersionFromRequest() !== null) ||
+                            // @phpstan-ignore method.notFound
+                            (App::getKirbyMajorVersion() < 5 && $draftPage->isVerified(get('token')) === true)
+                        )) {
                             $onPage = $draftPage;
                         }
                     }
@@ -144,7 +148,11 @@ class Routes
                     // If not found, check if it's a draft and validate access
                     if (null === $page) {
                         $draftPage = kirby()->page($pageId);
-                        if ($draftPage !== null && $draftPage->isDraft() && $draftPage->renderVersionFromRequest() !== null) {
+                        if ($draftPage !== null && $draftPage->isDraft() && (
+                            (App::getKirbyMajorVersion() >= 5 && $draftPage->renderVersionFromRequest() !== null) ||
+                            // @phpstan-ignore method.notFound
+                            (App::getKirbyMajorVersion() < 5 && $draftPage->isVerified(get('token')) === true)
+                        )) {
                             $page = $draftPage;
                         }
                     }
