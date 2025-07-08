@@ -145,33 +145,6 @@ Controls whether loop requires authentication.
 - Client review sites with controlled access
 - Public beta feedback collection
 
-### Draft Page Access
-
-**Option**: `moinframe.loop.allowDraftAccess`
-**Type**: `boolean`
-**Default**: `false`
-
-Controls whether loop can access and display comments on draft pages.
-
-```php
-// Allow access to draft pages
-'moinframe.loop.allowDraftAccess' => true,
-```
-
-**Security considerations:**
-- `false` (default): Comments can only be added to published pages
-- `true`: Comments can be added to both published and draft pages
-
-**When to enable:**
-- Development environments where you want to review draft content
-- Staging sites where clients review unpublished content
-- Internal content workflows that require feedback before publishing
-
-**Important notes:**
-- Draft pages are typically protected by Kirby's authentication system
-- This option only affects whether loop will attempt to load comments for draft pages
-- Users must still have appropriate Kirby permissions to access draft pages through normal navigation
-
 ### Language Override
 
 **Option**: `moinframe.loop.language`
