@@ -5,7 +5,9 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "pnpm --filter=loop-frontend run dev",
-		"build": "pnpm --filter=loop-frontend run build",
+		"build": "pnpm --filter=loop-frontend run build && pnpm run panel:build",
+		"panel:dev": "kirbyup serve panel/index.js",
+		"panel:build": "kirbyup panel/index.js",
 		"release": "release-it"
 	},
 	"keywords": [],
@@ -15,6 +17,7 @@
 	"devDependencies": {
 		"@release-it/bumper": "^7.0.1",
 		"@release-it/conventional-changelog": "^10.0.0",
+		"kirbyup": "3.3.0",
 		"release-it": "^18.1.2"
 	}
 }

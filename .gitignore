@@ -29,3 +29,7 @@
 /vendor/**/php4/*
 /vendor/getkirby/composer-installer
 /.phpstan-cache
+
+# Built panel assets
+/index.js
+/index.css
