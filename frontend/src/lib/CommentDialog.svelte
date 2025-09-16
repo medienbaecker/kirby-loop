@@ -3,6 +3,7 @@
   import CommentForm from "./CommentForm.svelte";
   const { handleSubmit, showModal, newMarker, cancel } = $props();
   let dialogElement: HTMLDialogElement;
+  let commentFormRef: CommentForm;
   let dialogPosition: { left: number; top: number } = $state({
     left: 0,
     top: 0,
@@ -13,6 +14,10 @@
       dialogElement.showModal();
       dialogPosition = getDialogPosition(newMarker, dialogElement);
       ready = true;
+      // Focus textarea after dialog is ready
+      requestAnimationFrame(() => {
+        commentFormRef?.focusTextarea();
+      });
     } else {
       dialogElement.close();
       ready = false;
@@ -26,7 +31,7 @@
   class:is-visible={ready}
   style="--left: {dialogPosition.left}px; --top: {dialogPosition.top}px;"
 >
-  <CommentForm {handleSubmit} {cancel} />
+  <CommentForm bind:this={commentFormRef} {handleSubmit} {cancel} />
 </dialog>
 
 <style>

@@ -13,6 +13,12 @@
   import { formData } from "../store/form.svelte";
   formData.parentId = parentId ? Number(parentId) : null;
 
+  let textareaElement: HTMLTextAreaElement;
+
+  export function focusTextarea() {
+    textareaElement?.focus();
+  }
+
   function handleKeydown(e: KeyboardEvent) {
     if ((e.metaKey || e.ctrlKey) && e.key === "Enter") {
       e.preventDefault();
@@ -27,6 +33,7 @@
 <form onsubmit={handleSubmit} method="POST">
   <div class="input">
     <textarea
+      bind:this={textareaElement}
       bind:value={formData.text}
       name="comment"
       placeholder={parentId
