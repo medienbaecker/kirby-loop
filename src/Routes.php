@@ -39,7 +39,74 @@ class Routes
         return $response;
     }
     /**
-     * Registers routes and returns route definitions
+     * Registers Panel API routes and returns route definitions
+     * @return array<mixed> Panel route definitions array
+     */
+    public static function registerPanelRoutes(): array
+    {
+        return [
+            [
+                'pattern' => 'loop/panel/comments',
+                'method' => 'GET',
+                'action' => function () {
+                    $comments = App::getAllCommentsWithPageInfo();
+                    return Response::json([
+                        'status' => 'ok',
+                        'comments' => $comments
+                    ], 200);
+                }
+            ],
+            [
+                'pattern' => 'loop/panel/comment/(:num)',
+                'method' => 'DELETE',
+                'action' => function ($commentId) {
+                    $success = App::deleteComment((int)$commentId);
+                    return Response::json([
+                        'status' => 'ok',
+                        'success' => $success
+                    ], 200);
+                }
+            ],
+            [
+                'pattern' => 'loop/panel/reply/(:num)',
+                'method' => 'DELETE',
+                'action' => function ($replyId) {
+                    $success = App::deleteReply((int)$replyId);
+                    return Response::json([
+                        'status' => 'ok',
+                        'success' => $success
+                    ], 200);
+                }
+            ],
+            [
+                'pattern' => 'loop/comment/resolve',
+                'method' => 'POST',
+                'action' => function () {
+                    $data = kirby()->request()->data();
+                    $success = App::resolveComment((int)$data['id']);
+                    return Response::json([
+                        'status' => 'ok',
+                        'success' => $success
+                    ], 200);
+                }
+            ],
+            [
+                'pattern' => 'loop/comment/unresolve',
+                'method' => 'POST',
+                'action' => function () {
+                    $data = kirby()->request()->data();
+                    $success = App::unresolveComment((int)$data['id']);
+                    return Response::json([
+                        'status' => 'ok',
+                        'success' => $success
+                    ], 200);
+                }
+            ]
+        ];
+    }
+
+    /**
+     * Registers frontend routes and returns route definitions
      * @return array<mixed> Route definitions array
      */
     public static function register(): array

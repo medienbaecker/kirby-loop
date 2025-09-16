@@ -1,9 +1,11 @@
 <?php
 
 use \Kirby\Cms\App as Kirby;
+use \Moinframe\Loop\App;
 use \Moinframe\Loop\Options;
 use \Moinframe\Loop\Routes;
 use \Kirby\Filesystem\F;
+use \Kirby\Toolkit\Str;
 
 F::loadClasses([
     'moinframe\\loop\\App' => 'src/App.php',
@@ -17,6 +19,97 @@ F::loadClasses([
 ], __DIR__);
 
 Kirby::plugin('moinframe/loop', [
+    'areas' => [
+        'loop' => function () {
+            return [
+                'label' => 'Feedback',
+                'icon' => 'chat',
+                'menu' => true,
+                'views' => [
+                    [
+                        'pattern' => 'loop',
+                        'action' => function () {
+                            return [
+                                'component' => 'k-loop-view',
+                                'props' => [
+                                    'comments' => function () {
+                                        $comments = App::getAllCommentsWithPageInfo();
+                                        $panelComments = [];
+                                        foreach ($comments as $comment) {
+                                            $page = page("page://" . $comment['page']);
+                                            $pageTitle = $comment['pageExists'] ? $comment['pageTitle'] : $comment['pageTitle'] . ' (missing)';
+
+                                            // Count replies
+                                            $replyCount = isset($comment['replies']) ? count($comment['replies']) : 0;
+                                            $replyInfo = $replyCount > 0 ? ' • ' . $replyCount . ' ' . ($replyCount === 1 ? t('moinframe.loop.ui.panel.reply.singular') : t('moinframe.loop.ui.panel.reply.plural')) : '';
+
+                                            $panelComments[] = [
+                                                'id' => $comment['id'],
+                                                'text' => '#' . $comment['id'] . ' — ' . Str::excerpt($comment['comment'], 120),
+                                                'info' => $pageTitle . ' • ' . $comment['author'] . $replyInfo,
+                                                'comment' => $comment,
+                                                'preview' => $page?->url(),
+                                                'panel' => $page?->panel()->url()
+                                            ];
+                                        }
+
+                                        // Sort by page sorting number first, then by status (open before resolved), then by ID
+                                        usort($panelComments, function ($a, $b) {
+                                            // Get page objects to access sorting numbers
+                                            $pageA = page("page://" . $a['comment']['page']);
+                                            $pageB = page("page://" . $b['comment']['page']);
+
+                                            $sortA = $pageA ? $pageA->num() : 999999;
+                                            $sortB = $pageB ? $pageB->num() : 999999;
+
+                                            $pageCompare = $sortA - $sortB;
+                                            if ($pageCompare !== 0) {
+                                                return $pageCompare;
+                                            }
+
+                                            // Sort by status (OPEN before RESOLVED)
+                                            $statusA = $a['comment']['status'] === 'OPEN' ? 0 : 1;
+                                            $statusB = $b['comment']['status'] === 'OPEN' ? 0 : 1;
+                                            $statusCompare = $statusA - $statusB;
+                                            if ($statusCompare !== 0) {
+                                                return $statusCompare;
+                                            }
+
+                                            // Finally sort by ID
+                                            return $a['id'] - $b['id'];
+                                        });
+
+                                        return $panelComments;
+                                    },
+                                    'translations' => function () {
+                                        return [
+                                            'title' => 'Feedback',
+                                            'comments' => t('moinframe.loop.ui.panel.section.comments'),
+                                            'filter_label' => t('moinframe.loop.ui.panel.filter.label'),
+                                            'filter_placeholder' => t('moinframe.loop.ui.panel.show.all'),
+                                            'filter_open' => t('moinframe.loop.ui.panel.filter.open.inactive'),
+                                            'filter_resolved' => t('moinframe.loop.ui.panel.filter.resolved.inactive'),
+                                            'empty_no_comments' => t('moinframe.loop.ui.panel.no.comments'),
+                                            'empty_no_open' => 'No ' . strtolower(t('moinframe.loop.ui.panel.filter.open')),
+                                            'empty_no_resolved' => t('moinframe.loop.ui.panel.no.resolved'),
+                                            'action_open_page' => t('moinframe.loop.ui.panel.action.open_page'),
+                                            'action_resolve' => t('moinframe.loop.ui.panel.action.resolve'),
+                                            'action_reopen' => t('moinframe.loop.ui.panel.action.reopen'),
+                                            'action_delete' => t('moinframe.loop.ui.panel.action.delete'),
+                                            'message_resolved' => 'Comment resolved successfully',
+                                            'message_reopened' => 'Comment reopened successfully',
+                                            'message_deleted' => 'Comment deleted successfully',
+                                            'loading' => 'Loading...'
+                                        ];
+                                    }
+                                ]
+                            ];
+                        }
+                    ]
+                ]
+            ];
+        }
+    ],
     'translations' => [
         'en' => [
             // General errors
@@ -107,6 +200,14 @@ Kirby::plugin('moinframe/loop', [
             'moinframe.loop.ui.panel.menu.open' => 'Open menu',
             'moinframe.loop.ui.panel.menu.filter.title' => 'Show Comments',
             'moinframe.loop.ui.panel.no.resolved' => 'No resolved comments yet.',
+            'moinframe.loop.ui.panel.action.open_page' => 'Open Page',
+            'moinframe.loop.ui.panel.action.resolve' => 'Resolve',
+            'moinframe.loop.ui.panel.action.reopen' => 'Reopen',
+            'moinframe.loop.ui.panel.action.delete' => 'Delete',
+            'moinframe.loop.ui.panel.filter.label' => 'Filter',
+            'moinframe.loop.ui.panel.section.comments' => 'Comments',
+            'moinframe.loop.ui.panel.reply.singular' => 'reply',
+            'moinframe.loop.ui.panel.reply.plural' => 'replies',
 
             // Time formatting
             'moinframe.loop.ui.time.just_now' => 'just now',
@@ -193,7 +294,7 @@ Kirby::plugin('moinframe/loop', [
             'moinframe.loop.ui.welcome.dismiss' => 'Schließen',
             'moinframe.loop.ui.header.position.top' => 'oben',
             'moinframe.loop.ui.header.position.bottom' => 'unten',
-            'moinframe.loop.ui.comment.mark.solved' => 'Erledigt',
+            'moinframe.loop.ui.comment.mark.solved' => 'Erledigen',
             'moinframe.loop.ui.comment.mark.unsolved' => 'Wieder öffnen',
             'moinframe.loop.ui.panel.show.resolved' => 'Nur erledigte anzeigen',
             'moinframe.loop.ui.panel.show.all' => 'Alle Kommentare anzeigen',
@@ -206,6 +307,14 @@ Kirby::plugin('moinframe/loop', [
             'moinframe.loop.ui.panel.menu.open' => 'Menü öffnen',
             'moinframe.loop.ui.panel.menu.filter.title' => 'Kommentare anzeigen',
             'moinframe.loop.ui.panel.no.resolved' => 'Noch keine erledigten Kommentare.',
+            'moinframe.loop.ui.panel.action.open_page' => 'Seite öffnen',
+            'moinframe.loop.ui.panel.action.resolve' => 'Erledigen',
+            'moinframe.loop.ui.panel.action.reopen' => 'Wieder öffnen',
+            'moinframe.loop.ui.panel.action.delete' => 'Löschen',
+            'moinframe.loop.ui.panel.filter.label' => 'Filter',
+            'moinframe.loop.ui.panel.section.comments' => 'Kommentare',
+            'moinframe.loop.ui.panel.reply.singular' => 'Antwort',
+            'moinframe.loop.ui.panel.reply.plural' => 'Antworten',
 
             // Time formatting
             'moinframe.loop.ui.time.just_now' => 'gerade eben',
@@ -214,7 +323,8 @@ Kirby::plugin('moinframe/loop', [
             'moinframe.loop.ui.time.hour_ago' => 'vor einer Stunde',
             'moinframe.loop.ui.time.hours_ago' => 'vor {count} Stunden',
             'moinframe.loop.ui.time.yesterday' => 'gestern',
-            'moinframe.loop.ui.time.days_ago' => 'vor {count} Tagen'
+            'moinframe.loop.ui.time.days_ago' => 'vor {count} Tagen',
+            'loading' => 'Lädt...'
         ]
     ],
     'hooks' => [
@@ -230,5 +340,8 @@ Kirby::plugin('moinframe/loop', [
     'routes' => Routes::register(),
     'snippets' => [
         'loop/app' => __DIR__ . '/snippets/loop/app.php'
+    ],
+    'api' => [
+        'routes' => Routes::registerPanelRoutes()
     ]
 ]);

@@ -196,4 +196,45 @@ class App
             return false;
         }
     }
+
+    /**
+     * Deletes a comment and its replies
+     * @param int $commentId Comment ID to delete
+     * @return bool Success status
+     */
+    public static function deleteComment(int $commentId): bool
+    {
+        try {
+            return self::db()::deleteComment($commentId);
+        } catch (\Exception $e) {
+            return false;
+        }
+    }
+
+    /**
+     * Deletes a reply
+     * @param int $replyId Reply ID to delete
+     * @return bool Success status
+     */
+    public static function deleteReply(int $replyId): bool
+    {
+        try {
+            return self::db()::deleteReply($replyId);
+        } catch (\Exception $e) {
+            return false;
+        }
+    }
+
+    /**
+     * Gets all comments with page information for Panel display
+     * @return array Comments with page details
+     */
+    public static function getAllCommentsWithPageInfo(): array
+    {
+        try {
+            return self::db()::getAllCommentsWithPageInfo();
+        } catch (\Exception $e) {
+            return [];
+        }
+    }
 }

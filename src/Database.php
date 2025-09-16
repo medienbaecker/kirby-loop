@@ -353,4 +353,75 @@ class Database
             return false;
         }
     }
+
+    /**
+     * Deletes a comment and its replies from the database
+     * @param int $id Comment ID
+     * @return bool Success status
+     */
+    public static function deleteComment(int $id): bool
+    {
+        try {
+            // First delete all replies (foreign key cascade should handle this, but being explicit)
+            self::tableReplies()->where('parentId', '=', $id)->delete();
+
+            // Then delete the comment
+            return self::tableComments()->where('id', '=', $id)->delete();
+        } catch (\Exception $e) {
+            return false;
+        }
+    }
+
+    /**
+     * Deletes a reply from the database
+     * @param int $id Reply ID
+     * @return bool Success status
+     */
+    public static function deleteReply(int $id): bool
+    {
+        try {
+            return self::tableReplies()->where('id', '=', $id)->delete();
+        } catch (\Exception $e) {
+            return false;
+        }
+    }
+
+    /**
+     * Retrieves all comments with page information for Panel display
+     * @return array Array of comments with page details
+     */
+    public static function getAllCommentsWithPageInfo(): array
+    {
+        try {
+            $comments = self::getCommentsWithReplies();
+            $result = [];
+
+            foreach ($comments as $comment) {
+                $commentArray = $comment;
+
+                // Try to get page information
+                $page = null;
+                if ($comment['page'] === 'home') {
+                    $page = kirby()->site()->homePage();
+                } else {
+                    $page = page('page://' . $comment['page']);
+                    // If not found, try as draft
+                    if (!$page) {
+                        $page = kirby()->page('page://' . $comment['page']);
+                    }
+                }
+
+                $commentArray['pageTitle'] = $page ? $page->title()->value() : 'Unknown Page';
+                $commentArray['pageUrl'] = $page ? $page->url() : '#';
+                $commentArray['pagePanelUrl'] = $page ? $page->panel()->url() : '#';
+                $commentArray['pageExists'] = $page !== null;
+
+                $result[] = $commentArray;
+            }
+
+            return $result;
+        } catch (\Exception $e) {
+            return [];
+        }
+    }
 }
