@@ -67,28 +67,42 @@ Use context7 to find out about Kirby CMS, Documentation for this plugin is place
 
 ## Translations
 
-**IMPORTANT: When adding new translatable text to the frontend:**
+**Translation files are managed in JSON format in the `translations/` directory.**
 
-1. **Add translation key to PHP backend** (`index.php`):
-   ```php
-   'moinframe.loop.ui.component.key' => 'Default English text',
+**IMPORTANT: When adding new translatable text:**
+
+1. **Add translation key to JSON files** (`translations/en.json`, `translations/de.json`):
+   ```json
+   {
+     "ui.component.key": "English text",
+     ...
+   }
    ```
+   Note: Keys in JSON do NOT include the `moinframe.loop.` prefix
 
-2. **Add translation key to snippet** (`snippets/loop/app.php`):
-   ```php
-   'ui.component.key' => t('moinframe.loop.ui.component.key'),
-   ```
-
-3. **Use translation in Svelte components**:
+2. **Use translation in Svelte components**:
    ```svelte
    {t("ui.component.key", "Default fallback text")}
    ```
 
 **Translation Architecture:**
-- PHP translations defined in `index.php` under `'translations'` key
-- Frontend translations passed via `snippets/loop/app.php`
-- Svelte components use `t()` function from `store/translations.svelte.ts`
+- **Source files:** `translations/en.json`, `translations/de.json`
+- **Backend (PHP):** Loaded in `index.php` with automatic `moinframe.loop.` prefix for use in PHP code
+- **Frontend (JavaScript):** Snippet (`snippets/loop/app.php`) reads JSON files directly and passes to Svelte
+- **Svelte components:** Use `t()` function from `store/translations.svelte.ts`
 - Always provide fallback text in components for development
+
+**Translation Flow:**
+```
+translations/*.json
+    ├─> index.php (for PHP/backend with prefix)
+    └─> snippets/loop/app.php (direct read for frontend, no prefix)
+         └─> Svelte components
+```
+
+**Available languages:**
+- English (`en.json`) - Primary language
+- German (`de.json`) - German translations
 
 ## Linting and Code Quality
 
