@@ -415,6 +415,7 @@ class Database
                 $commentArray['pageUrl'] = $page ? $page->url() : '#';
                 $commentArray['pagePanelUrl'] = $page ? $page->panel()->url() : '#';
                 $commentArray['pageExists'] = $page !== null;
+                $commentArray['pageNum'] = $page?->num();
 
                 $result[] = $commentArray;
             }

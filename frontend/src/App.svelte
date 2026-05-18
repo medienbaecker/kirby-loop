@@ -1,7 +1,7 @@
 <svelte:options customElement="kirby-loop" />
 
 <script lang="ts">
-  import { onMount } from "svelte";
+  import { onMount, tick } from "svelte";
   import Header from "./lib/Header.svelte";
   import Marker from "./lib/Marker.svelte";
   import Panel from "./lib/Panel.svelte";
@@ -11,7 +11,7 @@
   import CommentDialog from "./lib/CommentDialog.svelte";
   import WelcomeDialog from "./lib/WelcomeDialog.svelte";
   import { formData, reset } from "./store/form.svelte";
-  import { overlay, guestName } from "./store/ui.svelte";
+  import { overlay, guestName, panel } from "./store/ui.svelte";
   import { setTranslations } from "./store/translations.svelte";
   import type {
     LoopProps,
@@ -70,6 +70,48 @@
   const scrollIntoView = (id: string) => {
     const marker = $host().shadowRoot?.getElementById(`marker-${id}`);
     if (marker) marker.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+
+  /**
+   * Open the comment referenced by the `loop-comment` URL parameter
+   * (used by the Panel "open page" deep link).
+   */
+  const focusDeepLinkedComment = async () => {
+    const params = new URLSearchParams(window.location.search);
+    const raw = params.get("loop-comment");
+    if (!raw) return;
+
+    const id = Number(raw);
+    const target = store.comments.find((c) => c.id === id);
+
+    // Clean the URL so a refresh or back navigation doesn't re-trigger
+    params.delete("loop-comment");
+    const query = params.toString();
+    history.replaceState(
+      null,
+      "",
+      window.location.pathname +
+        (query ? `?${query}` : "") +
+        window.location.hash,
+    );
+
+    if (!target) return;
+
+    // Resolved comments are hidden by default, so reveal them
+    panel.showResolvedOnly = target.status === "RESOLVED";
+    panel.open = true;
+    panel.currentCommentId = id;
+    panel.pulseMarkerId = id;
+
+    await tick();
+
+    const root = $host().shadowRoot;
+    root
+      ?.getElementById(`marker-${id}`)
+      ?.scrollIntoView({ behavior: "smooth", block: "center" });
+    root
+      ?.getElementById(`comment-${id}`)
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   /**
@@ -172,6 +214,10 @@
     // Even if welcome is disabled, show dialog for non-authenticated users without a name
     else if (!isAuthenticated && !guestName.get() && showLoop) {
       welcomeDialog?.showModal();
+    }
+
+    if (showLoop) {
+      await focusDeepLinkedComment();
     }
   });
 

@@ -25,7 +25,7 @@ Kirby::plugin('moinframe/loop', [
     'areas' => [
         'loop' => function () {
             return [
-                'label' => 'Feedback',
+                'label' => t('moinframe.loop.ui.panel.title'),
                 'icon' => 'chat',
                 'menu' => true,
                 'views' => [
@@ -34,76 +34,77 @@ Kirby::plugin('moinframe/loop', [
                         'action' => function () {
                             return [
                                 'component' => 'k-loop-view',
+                                'title' => t('moinframe.loop.ui.panel.title'),
+                                'breadcrumb' => [
+                                    [
+                                        'label' => t('moinframe.loop.ui.panel.title'),
+                                        'link' => 'loop'
+                                    ]
+                                ],
                                 'props' => [
-                                    'comments' => function () {
+                                    'groups' => function () {
                                         $comments = App::getAllCommentsWithPageInfo();
-                                        $panelComments = [];
+                                        $groups = [];
+
                                         foreach ($comments as $comment) {
-                                            $page = page("page://" . $comment['page']);
-                                            $pageTitle = $comment['pageExists'] ? $comment['pageTitle'] : $comment['pageTitle'] . ' (missing)';
+                                            $pageId = $comment['page'];
 
-                                            // Count replies
+                                            if (!isset($groups[$pageId])) {
+                                                $groups[$pageId] = [
+                                                    'pageId' => $pageId,
+                                                    'pageTitle' => $comment['pageTitle'],
+                                                    'pageMissing' => !$comment['pageExists'],
+                                                    'pageNum' => $comment['pageNum'],
+                                                    'previewUrl' => $comment['pageUrl'],
+                                                    'panelUrl' => $comment['pagePanelUrl'],
+                                                    'open' => 0,
+                                                    'total' => 0,
+                                                    'comments' => [],
+                                                ];
+                                            }
+
                                             $replyCount = isset($comment['replies']) ? count($comment['replies']) : 0;
-                                            $replyInfo = $replyCount > 0 ? ' • ' . $replyCount . ' ' . ($replyCount === 1 ? t('moinframe.loop.ui.panel.reply.singular') : t('moinframe.loop.ui.panel.reply.plural')) : '';
 
-                                            $panelComments[] = [
+                                            $groups[$pageId]['comments'][] = [
                                                 'id' => $comment['id'],
                                                 'text' => '#' . $comment['id'] . ' — ' . Str::excerpt($comment['comment'], 120),
-                                                'info' => $pageTitle . ' • ' . $comment['author'] . $replyInfo,
-                                                'comment' => $comment,
-                                                'preview' => $page?->url(),
-                                                'panel' => $page?->panel()->url()
+                                                'author' => $comment['author'],
+                                                'replyCount' => $replyCount,
+                                                'status' => $comment['status'],
+                                                'previewUrl' => $comment['pageUrl'],
                                             ];
+
+                                            $groups[$pageId]['total']++;
+                                            if ($comment['status'] === 'OPEN') {
+                                                $groups[$pageId]['open']++;
+                                            }
                                         }
 
-                                        // Sort by page sorting number first, then by status (open before resolved), then by ID
-                                        usort($panelComments, function ($a, $b) {
-                                            // Get page objects to access sorting numbers
-                                            $pageA = page("page://" . $a['comment']['page']);
-                                            $pageB = page("page://" . $b['comment']['page']);
+                                        // Within each group: OPEN before RESOLVED, then by ID
+                                        foreach ($groups as &$group) {
+                                            usort($group['comments'], function ($a, $b) {
+                                                $statusA = $a['status'] === 'OPEN' ? 0 : 1;
+                                                $statusB = $b['status'] === 'OPEN' ? 0 : 1;
+                                                if ($statusA !== $statusB) {
+                                                    return $statusA - $statusB;
+                                                }
+                                                return $a['id'] - $b['id'];
+                                            });
+                                        }
+                                        unset($group);
 
-                                            $sortA = $pageA ? $pageA->num() : 999999;
-                                            $sortB = $pageB ? $pageB->num() : 999999;
-
-                                            $pageCompare = $sortA - $sortB;
-                                            if ($pageCompare !== 0) {
-                                                return $pageCompare;
+                                        // Groups by page sort number (unsorted pages last), then title
+                                        $groups = array_values($groups);
+                                        usort($groups, function ($a, $b) {
+                                            $numA = $a['pageNum'] ?? PHP_INT_MAX;
+                                            $numB = $b['pageNum'] ?? PHP_INT_MAX;
+                                            if ($numA !== $numB) {
+                                                return $numA <=> $numB;
                                             }
-
-                                            // Sort by status (OPEN before RESOLVED)
-                                            $statusA = $a['comment']['status'] === 'OPEN' ? 0 : 1;
-                                            $statusB = $b['comment']['status'] === 'OPEN' ? 0 : 1;
-                                            $statusCompare = $statusA - $statusB;
-                                            if ($statusCompare !== 0) {
-                                                return $statusCompare;
-                                            }
-
-                                            // Finally sort by ID
-                                            return $a['id'] - $b['id'];
+                                            return strcmp($a['pageTitle'], $b['pageTitle']);
                                         });
 
-                                        return $panelComments;
-                                    },
-                                    'translations' => function () {
-                                        return [
-                                            'title' => 'Feedback',
-                                            'comments' => t('moinframe.loop.ui.panel.section.comments'),
-                                            'filter_label' => t('moinframe.loop.ui.panel.filter.label'),
-                                            'filter_placeholder' => t('moinframe.loop.ui.panel.show.all'),
-                                            'filter_open' => t('moinframe.loop.ui.panel.filter.open.inactive'),
-                                            'filter_resolved' => t('moinframe.loop.ui.panel.filter.resolved.inactive'),
-                                            'empty_no_comments' => t('moinframe.loop.ui.panel.no.comments'),
-                                            'empty_no_open' => t('moinframe.loop.ui.panel.no.open'),
-                                            'empty_no_resolved' => t('moinframe.loop.ui.panel.no.resolved'),
-                                            'action_open_page' => t('moinframe.loop.ui.panel.action.open_page'),
-                                            'action_resolve' => t('moinframe.loop.ui.panel.action.resolve'),
-                                            'action_reopen' => t('moinframe.loop.ui.panel.action.reopen'),
-                                            'action_delete' => t('moinframe.loop.ui.panel.action.delete'),
-                                            'message_resolved' => 'Comment resolved successfully',
-                                            'message_reopened' => 'Comment reopened successfully',
-                                            'message_deleted' => 'Comment deleted successfully',
-                                            'loading' => 'Loading...'
-                                        ];
+                                        return $groups;
                                     }
                                 ]
                             ];
